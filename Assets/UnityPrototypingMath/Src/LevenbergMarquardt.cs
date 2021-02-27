@@ -1,0 +1,291 @@
+﻿//#define NUMERIC_CHECK
+#if NUMERIC_CHECK
+    using UnityEngine; 
+#endif
+namespace AntilatencyMath {
+    using System;
+    using System.Collections;
+    using System.Collections.Generic;
+    using System.Linq;
+
+
+    public class ResidualAndDerivativesCollector : IResidualCollector {
+        #if NUMERIC_CHECK
+            public List<double> residuals = new List<double>();
+            public List<double[]> jacobiT = new List<double[]>();
+        #endif
+        public int size {
+            get { return gradient == null ? 0 : gradient.Length; }
+        }
+
+        public int numResiduals;
+        public double errorSqSum;
+        public double[] gradient;
+        public double[,] hessian;
+
+        public ResidualAndDerivativesCollector(int nParameters) {
+            gradient = new double[nParameters];
+            hessian = new double[nParameters, nParameters];
+        }
+
+        public void Reset() {
+            numResiduals = 0;
+            errorSqSum = 0;
+            for (int i = 0; i < gradient.Length; i++)
+                gradient[i] = 0;
+
+            for (int i = 0; i < hessian.GetLength(0); i++) {
+                for (int j=0; j < hessian.GetLength(1); j++)
+                    hessian[i, j] = 0;
+            }
+            #if NUMERIC_CHECK
+                residuals.Clear();
+                jacobiT.Clear();
+            #endif
+        }
+
+        public void AddResidual(double value, double[] derivatives) {
+            #if NUMERIC_CHECK
+                residuals.Add(value);
+                jacobiT.Add(derivatives);
+            #endif
+            errorSqSum += value * value;
+            numResiduals++;
+
+            for (int dofIndex = 0; dofIndex < derivatives.Length; dofIndex++) {
+                gradient[dofIndex] -= value * derivatives[dofIndex];
+
+                for (int j = 0; j < derivatives.Length; j++)
+                    hessian[dofIndex, j] += derivatives[dofIndex] * derivatives[j];
+            }
+        }
+    }
+
+    public class ResidualsOnlyCollector : IResidualCollector {
+        #if NUMERIC_CHECK
+            public List<double> residuals = new List<double>(); 
+        #endif
+        public int numResiduals;
+        public double errorSqSum;
+
+        public void Reset() {
+            numResiduals = 0;
+            errorSqSum = 0;
+            #if NUMERIC_CHECK
+                residuals.Clear();
+            #endif
+        }
+
+        public void AddResidual(double value, double[] derivatives) {
+            #if NUMERIC_CHECK 
+                residuals.Add(value);
+            #endif
+            errorSqSum += value * value;
+            numResiduals++;
+        }
+    }
+
+    public class LevenbergMarquardtSolver {
+
+        public enum IterationOutcomeKind {
+            Success,
+            AttemptsExausted,
+            SumOfSquaresTooSmall,
+            DeltaTooSmall,
+            GradientTooSmall,
+            InverseMatrixFail
+        }
+
+        #if UNITY_5_3_OR_NEWER
+        [System.Serializable]
+        #endif
+        public struct IterationOutcome {
+            public IterationOutcomeKind kind;
+            public int initialNumResiduals;
+            public double initialSumSqrResiduals;
+            public double initialAverageSqrResidual;
+            public int finalNumResiduals;
+            public double finalSumSqrResiduals;
+            public double finalAverageSqrResidual;
+        }
+
+        public double epsilonGradient = 1e-09;
+        public double epsilonSumOfSquares = 1e-15;
+        public double epsilonParamDelta = 1e-09;
+        public double[] lambdas;
+        
+        public static IterationOutcome Solve(ILevenbergMarquardtModel model, int maxIterations = 100, int nAttempts = 50) {
+            var solver = new LevenbergMarquardtSolver();
+
+            IterationOutcome outcome = new IterationOutcome();
+            outcome.kind = IterationOutcomeKind.AttemptsExausted;
+
+            for (int iter = 0; iter < maxIterations; iter++) {
+                outcome = solver.DoIteration(model, nAttempts);
+                if (outcome.kind != IterationOutcomeKind.Success)
+                    break;
+            }
+
+            return outcome;
+        }
+
+        public static IEnumerable<IterationOutcome> Iterate(ILevenbergMarquardtModel model, int maxIterations = 100, int nAttempts = 50, float initialLambda = 1.0f) {
+            var solver = new LevenbergMarquardtSolver();
+
+            IterationOutcome outcome = new IterationOutcome();
+            outcome.kind = IterationOutcomeKind.AttemptsExausted;
+            solver.lambdas = new double[model.DegreesOfFreedom];
+            for (int i = 0; i < solver.lambdas.Length; i++){
+                solver.lambdas[i] = initialLambda;
+            }
+
+            for (int iter = 0; iter < maxIterations; iter++) {
+                outcome = solver.DoIteration(model, nAttempts);
+                yield return outcome;
+                if (outcome.kind != IterationOutcomeKind.Success){
+                    yield break;
+                }
+            }
+        }
+
+        public IterationOutcome DoIteration(
+                ILevenbergMarquardtModel model, int nAttempts = 50) {
+
+            object state = model.CaptureState();
+
+            int size = model.DegreesOfFreedom;
+            var initialCollector = new ResidualAndDerivativesCollector(size);
+
+            initialCollector.Reset();
+            model.CollectResiduals(initialCollector, withDerivatives: true);
+
+            #if NUMERIC_CHECK
+                double delta = 0.0001;
+                BitArray outOfRange = new BitArray(size);
+                var numericJacobi = new double[size, initialCollector.numResiduals];
+                for(int idDof = 0; idDof < size; ++idDof){
+                    var curDeltas = new double[size];
+                    curDeltas[idDof] = delta;
+                    
+                    model.ApplyDelta(curDeltas, outOfRange);
+                    var deltaCollector = new ResidualsOnlyCollector();
+                    deltaCollector.Reset();
+                    model.CollectResiduals(deltaCollector, false);
+                    for(int c = 0; c < deltaCollector.numResiduals; ++c){
+                        numericJacobi[idDof, c] = (deltaCollector.residuals[c] - initialCollector.residuals[c])/delta;
+                    }
+                    model.ApplyState(state);
+                }
+
+                var originalJacobi = new double[size, initialCollector.numResiduals];
+                for(int r = 0; r < size; ++r){
+                    for(int c = 0; c < initialCollector.numResiduals; ++c){
+                        originalJacobi[r, c] = initialCollector.jacobiT[c][r];
+                    }
+                }
+                var numericHessian = new double[size, size];
+                for(int i = 0; i < size; ++i){
+                    for(int j = i; j < size; ++j){
+                        for(int ir = 0; ir < initialCollector.numResiduals; ++ir){
+                            numericHessian[i, j] += numericJacobi[i, ir] * numericJacobi[j, ir];
+                        } 
+                    }
+                }
+                var deltaJacobi = Mathx.minus(numericJacobi, originalJacobi);
+
+                UnityEngine.Debug.Log($"numericJacobi: \r\n{numericJacobi.ToDebugString()}\r\noriginalJacobi: \r\n{originalJacobi.ToDebugString()}\r\n");
+            #endif
+ 
+            var outcome = new IterationOutcome {
+                initialNumResiduals = initialCollector.numResiduals,
+                initialSumSqrResiduals = initialCollector.errorSqSum,
+                initialAverageSqrResidual = initialCollector.errorSqSum / initialCollector.numResiduals
+            };
+
+            if (initialCollector.errorSqSum < epsilonSumOfSquares) {
+                outcome.kind = IterationOutcomeKind.SumOfSquaresTooSmall;
+                return outcome;
+            }
+
+            if (lambdas == null || lambdas.Length != size) {
+                lambdas = new double[size];
+                for (int i = 0; i<lambdas.Length; i++)
+                    lambdas[i] = 1f;
+            }
+
+            double maxAbsGradient = initialCollector.gradient.Max(x => Math.Abs(x));
+            if (maxAbsGradient < epsilonGradient) {
+                outcome.kind = IterationOutcomeKind.GradientTooSmall;
+                return outcome;
+            }
+            
+            var shiftedHessian = new double[size, size];
+            var deltas = new double[size];
+
+            var newErrCollector = new ResidualsOnlyCollector();
+
+            for (int iAttempt = 0; iAttempt < nAttempts; ++iAttempt) {
+                for (int i = 0; i < shiftedHessian.GetLength(0); i++) {
+                    for (int j = 0; j < shiftedHessian.GetLength(1); j++) {
+                        shiftedHessian[i, j] = initialCollector.hessian[i, j];
+                        if (i == j)
+                            shiftedHessian[i, j] += lambdas[i];
+                    }
+                }
+
+                var cholesky = new double[size, size];
+                bool ok = Mathx.choleskyDecompose(shiftedHessian, result: cholesky);
+
+                if (!ok) {
+                    outcome.kind = IterationOutcomeKind.InverseMatrixFail;
+                    return outcome;
+                }
+
+                Mathx.choleskySolve(cholesky, initialCollector.gradient, result: deltas);
+
+                double maxAbsElement = deltas.Max(x => Math.Abs(x));
+                if (maxAbsElement < epsilonParamDelta) {
+                    outcome.kind = IterationOutcomeKind.DeltaTooSmall;
+                    return outcome;
+                }
+
+                var outOfRangeParameters = new BitArray(initialCollector.size);
+                bool everythingInRange = model.ApplyDelta(deltas, outOfRangeParameters);
+
+                newErrCollector.Reset();
+                model.CollectResiduals(newErrCollector, withDerivatives: false);
+
+                if (everythingInRange) {
+                    if (newErrCollector.errorSqSum < initialCollector.errorSqSum) {
+                        for (int i = 0; i < lambdas.Length; i++)
+                            lambdas[i] *= 0.5f;
+
+                        outcome.kind = IterationOutcomeKind.Success;
+                        outcome.finalNumResiduals = newErrCollector.numResiduals;
+                        outcome.finalSumSqrResiduals = newErrCollector.errorSqSum;
+                        outcome.finalAverageSqrResidual = newErrCollector.errorSqSum / newErrCollector.numResiduals;
+                        return outcome;
+                    } else {
+                        for (int i = 0; i < lambdas.Length; i++)
+                            lambdas[i] *= 2f;
+
+                        model.ApplyState(state);
+                        continue;
+                    }
+                } else {
+                    for (int i = 0; i < outOfRangeParameters.Length; i++) {
+                        if (outOfRangeParameters[i])
+                            lambdas[i] *= 8f;
+                    }
+
+                    model.ApplyState(state);
+                    continue;
+                }
+            }
+
+            model.ApplyState(state);
+            outcome.kind = IterationOutcomeKind.AttemptsExausted;
+            return outcome;
+        }
+    }
+}

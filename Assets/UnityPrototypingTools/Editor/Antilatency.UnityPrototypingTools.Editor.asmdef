@@ -1,0 +1,17 @@
+{
+    "name": "Antilatency.UnityPrototypingTools.Editor",
+    "references": [
+        "GUID:c3865828808c8b14db67bb8159a8e8ab"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

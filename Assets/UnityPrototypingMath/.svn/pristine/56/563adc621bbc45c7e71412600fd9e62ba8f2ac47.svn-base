@@ -1,0 +1,27 @@
+﻿<#@ assembly name="Microsoft.CSharp" #>
+<# // The above assembly reference is required for 'dynamic' to work. #>
+<#+
+    public static class MultipleOutputs {
+        public static string OutputDirectory = null;
+        public static string OutputExtension = ".cs";
+
+        public static void ForEachVariant<T>(
+				System.Text.StringBuilder genEnv,
+				System.Collections.Generic.IEnumerable<T> variants,
+				System.Action<T> producer) {
+
+            foreach (var variant in variants) {
+                dynamic dynVariant = variant;
+                var outputName = (string)dynVariant.outputName;
+                var outputFilename = System.IO.Path.Combine(
+						OutputDirectory, outputName + OutputExtension);
+
+                genEnv.Clear();
+                producer(variant);
+                System.IO.File.WriteAllText(outputFilename, genEnv.ToString());
+            }
+            
+            genEnv.Clear();
+        }
+    }
+#>

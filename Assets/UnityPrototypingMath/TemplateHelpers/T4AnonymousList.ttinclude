@@ -1,0 +1,5 @@
+﻿<#+
+    System.Collections.Generic.IList<T> CreateList<T>(params T[] items) {
+        return items;
+    }
+#>

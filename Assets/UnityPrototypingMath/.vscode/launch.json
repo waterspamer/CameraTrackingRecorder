@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Regenerate Current File",
+            "type": "PowerShell",
+            "request": "launch",
+            "script": "${workspaceFolder}/Regenerate.ps1",
+            "args": ["${file}"]
+        }
+    ]
+}

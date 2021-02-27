@@ -1,0 +1,46 @@
+﻿<#+
+    string Gen<T>(
+			System.Collections.Generic.IEnumerable<T> seq,
+			System.Func<int, T, string> f,
+			string sep = null) {
+
+        var env = this.GenerationEnvironment;
+		var indent = "";
+		if (sep == null) {
+			var indentWidth = 0;
+			while (indentWidth < env.Length) {
+				if (env[env.Length - indentWidth - 1] == '\n')
+					break;
+				++indentWidth;
+			}
+
+			indent = "".PadLeft(indentWidth);
+			sep = Environment.NewLine;
+		}
+
+        var sb = new System.Text.StringBuilder();
+        var i = 0;
+        foreach (var x in seq) {
+            if (i != 0)
+                sb.Append(indent);
+
+            sb.Append(f(i, x));
+            sb.Append(sep);
+            i++;
+        }
+
+        return sb.ToString(0, sb.Length - sep.Length);
+    }
+
+	string Gen<T>(
+			System.Collections.Generic.IEnumerable<T> seq,
+			System.Func<T, string> f,
+			string sep = null) {
+
+	    return Gen(seq, (i, x) => f(x), sep: sep);
+	}
+
+	string GenN(int num, System.Func<int, string> f, string sep = null) {
+	    return Gen(System.Linq.Enumerable.Range(0, num), (i, x) => f(i), sep: sep);
+	}
+#>

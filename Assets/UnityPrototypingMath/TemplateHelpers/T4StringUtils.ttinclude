@@ -1,0 +1,11 @@
+﻿<#+
+    string Capitalize(string str) {
+        if (str == null)
+            throw new System.ArgumentNullException("str");
+
+        if (str == "")
+            return "";
+
+        return char.ToUpper(str[0]) + str.Substring(1);
+    }
+#>
