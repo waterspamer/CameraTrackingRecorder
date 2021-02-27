@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\maxim.sviridov\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\maxim.sviridov\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_CameraTrackingRecorder.1651527431.00" t="ExcludeRecursive" />
+    <e p="D:\CameraTracker\CameraTrackingRecorder" t="IncludeRecursive">
+      <e p="Antilatency.Integration.csproj" t="IncludeRecursive" />
+      <e p="Antilatency.Integration.Editor.csproj" t="IncludeRecursive" />
+      <e p="Antilatency.UnityPrototypingTools.csproj" t="IncludeRecursive" />
+      <e p="Antilatency.UnityPrototypingTools.Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Antilatency" t="Include">
+          <e p="Integration" t="Include">
+            <e p="Antilatency.Integration.asmdef" t="Include" />
+            <e p="LICENSE.txt" t="Include" />
+            <e p="Samples" t="Include">
+              <e p="Materials" t="Include">
+                <e p="Checker.shader" t="Include" />
+                <e p="Sky.shader" t="Include" />
+              </e>
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="Alt" t="Include">
+                <e p="Environment" t="Include">
+                  <e p="AltEnvironment.cs" t="Include" />
+                  <e p="AltEnvironmentComponent.cs" t="Include" />
+                  <e p="AltEnvironmentContour.cs" t="Include" />
+                  <e p="AltEnvironmentContoursDrawer.cs" t="Include" />
+                  <e p="AltEnvironmentMarkersDrawer.cs" t="Include" />
+                </e>
+                <e p="Tracking" t="Include">
+                  <e p="AltTracking.cs" t="Include" />
+                  <e p="AltTrackingDirect.cs" t="Include" />
+                  <e p="AltTrackingTag.cs" t="Include" />
+                  <e p="AltTrackingUsbSocket.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Bracer" t="Include">
+                <e p="Bracer.cs" t="Include" />
+                <e p="BracerComponent.cs" t="Include" />
+              </e>
+              <e p="Core" t="Include">
+                <e p="AndroidJniWrapper.cs" t="Include" />
+                <e p="Antilatency.Alt.Tracking.cs" t="Include" />
+                <e p="Antilatency.Bracer.cs" t="Include" />
+                <e p="Antilatency.DeviceNetwork.cs" t="Include" />
+                <e p="Antilatency.DeviceNetwork.Interop.cs" t="Include" />
+                <e p="Antilatency.HardwareExtensionInterface.cs" t="Include" />
+                <e p="Antilatency.HardwareExtensionInterface.Interop.cs" t="Include" />
+                <e p="Antilatency.InterfaceContract.cs" t="Include" />
+                <e p="Antilatency.Math.cs" t="Include" />
+                <e p="Antilatency.RadioMetrics.cs" t="Include" />
+                <e p="Antilatency.RadioMetrics.Interop.cs" t="Include" />
+                <e p="Antilatency.StorageClient.cs" t="Include" />
+                <e p="Antilatency.TrackingAlignment.cs" t="Include" />
+              </e>
+              <e p="DeviceNetwork" t="Include">
+                <e p="DeviceNetwork.cs" t="Include" />
+                <e p="DeviceNetworkTypes.cs" t="Include" />
+              </e>
+              <e p="Editor" t="Include">
+                <e p="AltEnvironmentContourEditor.cs" t="Include" />
+                <e p="AltEnvironmentContoursDrawerEditor.cs" t="Include" />
+                <e p="Antilatency.Integration.Editor.asmdef" t="Include" />
+                <e p="AntilatencyInterfaceContractEnumPropertyDrawer.cs" t="Include" />
+                <e p="CustomPropertyDrawers.cs" t="Include" />
+                <e p="RadioMetricsExampleEditor.cs" t="Include" />
+              </e>
+              <e p="HardwareExtensionInterface" t="Include">
+                <e p="ExtensionBoardExample.cs" t="Include" />
+              </e>
+              <e p="Math" t="Include">
+                <e p="MathTypes.cs" t="Include" />
+              </e>
+              <e p="RadioMetrics" t="Include">
+                <e p="RadioMetricsExample.cs" t="Include" />
+              </e>
+              <e p="StorageClient.cs" t="Include" />
+            </e>
+            <e p="Shaders" t="Include">
+              <e p="AltTrackingBoundaries.shader" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="colladaTestFile.txt" t="Include" />
+        <e p="Plugins" t="Include">
+          <e p="NativeShare" t="Include">
+            <e p="Android" t="Include">
+              <e p="NSCallbackHelper.cs" t="Include" />
+              <e p="NSShareResultCallbackAndroid.cs" t="Include" />
+            </e>
+            <e p="Editor" t="Include">
+              <e p="NativeShare.Editor.asmdef" t="Include" />
+              <e p="NSPostProcessBuild.cs" t="Include" />
+            </e>
+            <e p="iOS" t="Include">
+              <e p="NSShareResultCallbackiOS.cs" t="Include" />
+            </e>
+            <e p="NativeShare.cs" t="Include" />
+            <e p="NativeShare.Runtime.asmdef" t="Include" />
+            <e p="README.txt" t="Include" />
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="AnimationCurveBuilder.cs" t="Include" />
+          <e p="CsvToAnimHelper.cs" t="Include" />
+          <e p="DataVizualiser.cs" t="Include" />
+          <e p="Editor" t="Include">
+            <e p="CsvToAnimHelperEditor.cs" t="Include" />
+            <e p="ExporterEditor.cs" t="Include" />
+          </e>
+          <e p="Exporter.cs" t="Include" />
+          <e p="FPSSetter.cs" t="Include" />
+          <e p="LocalPoseTrender.cs" t="Include" />
+          <e p="Trender.cs" t="Include" />
+          <e p="UIElementManager.cs" t="Include" />
+        </e>
+        <e p="TextMesh Pro" t="Include">
+          <e p="Fonts" t="Include">
+            <e p="LiberationSans - OFL.txt" t="Include" />
+          </e>
+          <e p="Resources" t="Include">
+            <e p="LineBreaking Following Characters.txt" t="Include" />
+            <e p="LineBreaking Leading Characters.txt" t="Include" />
+          </e>
+          <e p="Shaders" t="Include">
+            <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
+            <e p="TMP_Bitmap-Mobile.shader" t="Include" />
+            <e p="TMP_Bitmap.shader" t="Include" />
+            <e p="TMP_SDF Overlay.shader" t="Include" />
+            <e p="TMP_SDF SSD.shader" t="Include" />
+            <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
+            <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
+            <e p="TMP_SDF-Mobile SSD.shader" t="Include" />
+            <e p="TMP_SDF-Mobile.shader" t="Include" />
+            <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
+            <e p="TMP_SDF-Surface.shader" t="Include" />
+            <e p="TMP_SDF.shader" t="Include" />
+            <e p="TMP_Sprite.shader" t="Include" />
+            <e p="TMPro.cginc" t="Include" />
+            <e p="TMPro_Mobile.cginc" t="Include" />
+            <e p="TMPro_Properties.cginc" t="Include" />
+            <e p="TMPro_Surface.cginc" t="Include" />
+          </e>
+          <e p="Sprites" t="Include">
+            <e p="EmojiOne Attribution.txt" t="Include" />
+          </e>
+        </e>
+        <e p="UnityPrototypingMath" t="Include">
+          <e p="Src" t="Include">
+            <e p="Bisection.cs" t="Include" />
+            <e p="Constants.cs" t="Include" />
+            <e p="DispersionCalculator.cs" t="Include" />
+            <e p="Generated" t="Include">
+              <e p="double2.cs" t="Include" />
+              <e p="double2x2.cs" t="Include" />
+              <e p="double2x3.cs" t="Include" />
+              <e p="double2x4.cs" t="Include" />
+              <e p="double3.cs" t="Include" />
+              <e p="double3x2.cs" t="Include" />
+              <e p="double3x3.cs" t="Include" />
+              <e p="double3x4.cs" t="Include" />
+              <e p="double4.cs" t="Include" />
+              <e p="double4x2.cs" t="Include" />
+              <e p="double4x3.cs" t="Include" />
+              <e p="double4x4.cs" t="Include" />
+              <e p="doubleP3Q.cs" t="Include" />
+              <e p="doubleQ.cs" t="Include" />
+              <e p="float2.cs" t="Include" />
+              <e p="float2x2.cs" t="Include" />
+              <e p="float2x3.cs" t="Include" />
+              <e p="float2x4.cs" t="Include" />
+              <e p="float3.cs" t="Include" />
+              <e p="float3x2.cs" t="Include" />
+              <e p="float3x3.cs" t="Include" />
+              <e p="float3x4.cs" t="Include" />
+              <e p="float4.cs" t="Include" />
+              <e p="float4x2.cs" t="Include" />
+              <e p="float4x3.cs" t="Include" />
+              <e p="float4x4.cs" t="Include" />
+              <e p="floatP3Q.cs" t="Include" />
+              <e p="floatQ.cs" t="Include" />
+              <e p="Mathx_ArrayMatrix_double.cs" t="Include" />
+              <e p="Mathx_ArrayMatrix_float.cs" t="Include" />
+              <e p="Mathx_ArrayVector_double.cs" t="Include" />
+              <e p="Mathx_ArrayVector_float.cs" t="Include" />
+              <e p="Mathx_Cholesky_double.cs" t="Include" />
+              <e p="Mathx_Cholesky_float.cs" t="Include" />
+              <e p="Mathx_ScalarFunctions_double.cs" t="Include" />
+              <e p="Mathx_ScalarFunctions_float.cs" t="Include" />
+              <e p="Mathx_Utils_double.cs" t="Include" />
+              <e p="Mathx_Utils_float.cs" t="Include" />
+            </e>
+            <e p="LevenbergMarquardt.cs" t="Include" />
+            <e p="LevenbergMarquardtModels.cs" t="Include" />
+            <e p="LinearCombination.cs" t="Include" />
+            <e p="NumericIntegration.cs" t="Include" />
+            <e p="NumericLevenbergMarquardtModel.cs" t="Include" />
+            <e p="RandomExt.cs" t="Include" />
+            <e p="UnityConversions.cs" t="Include" />
+          </e>
+        </e>
+        <e p="UnityPrototypingTools" t="Include">
+          <e p="Antilatency.UnityPrototypingTools.asmdef" t="Include" />
+          <e p="DeferredAction.cs" t="Include" />
+          <e p="Editor" t="Include">
+            <e p="Antilatency.UnityPrototypingTools.Editor.asmdef" t="Include" />
+            <e p="GrayedOutFieldDrawer.cs" t="Include" />
+            <e p="HelpBoxDisplayDrawer.cs" t="Include" />
+            <e p="InspectorButtonEditor.cs" t="Include" />
+            <e p="UnityEditorScreenshot.cs" t="Include" />
+          </e>
+          <e p="FieldChangeMonitor.cs" t="Include" />
+          <e p="GrayedOutFieldAttribute.cs" t="Include" />
+          <e p="HelpBoxDisplay.cs" t="Include" />
+          <e p="InspectorButton.cs" t="Include" />
+          <e p="QuaternionH.cs" t="Include" />
+          <e p="ShowWorldPosition.cs" t="Include" />
+          <e p="TransformChangeNotifier.cs" t="Include" />
+          <e p="UnityEditorUtils.cs" t="Include" />
+        </e>
+      </e>
+      <e p="CameraTrackingRecorder.sln" t="IncludeFlat" />
+      <e p="NativeShare.Editor.csproj" t="IncludeRecursive" />
+      <e p="NativeShare.Runtime.csproj" t="IncludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

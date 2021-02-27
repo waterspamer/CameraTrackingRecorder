@@ -25,7 +25,7 @@ public class DataVizualiser : MonoBehaviour
         var height = UIRecordPrefab.GetComponent<RectTransform>().rect.height;
         var rect = contentView.GetComponent<RectTransform>();
         //rect.height = (height + 10) * fileInfo.Length;
-        rect.sizeDelta = new Vector2(0, (height +10)* fileInfo.Length);
+        rect.sizeDelta = new Vector2(0, (height)* fileInfo.Length);
         var parentGameObject = contentView;
         for (int i = 0; i < fileInfo.Length; ++i)
         {
