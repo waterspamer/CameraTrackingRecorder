@@ -2,6 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using FileUtils;
+using Persistent;
+using RecordVisualization;
 using UnityEngine;
 using UnityEngine.Android;
 using UnityEngine.UI;
@@ -18,6 +21,20 @@ public class UIElementManager : MonoBehaviour
     public void Initialize() =>
         nameText.text = fileName;
     
+    
+    
+    public void AssignReplayMatrices(Matrix4x4[] matrices) =>
+        SettingsManager.GetInstance().CurrentReplayMatrixArray = matrices;
+
+
+    public void StartReplay()
+    {
+        SettingsManager.GetInstance().CurrentReplayMatrixArray =
+            ColladaFileHelper.GetUnityMatricesFromFile(Path.Combine(Application.persistentDataPath, fileName));
+        
+        (FindObjectOfType(typeof (ReplayManager)) as ReplayManager)?.StartPlaying();
+    }
+
     
     
     public void ShareFile()

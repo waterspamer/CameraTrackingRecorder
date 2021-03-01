@@ -84,9 +84,13 @@ public class Exporter : MonoBehaviour
         _transformData.Clear();
         for(int i = 0; i < _positions.Count; ++i)
         {
-            var newQuaternion = ConvertSensorToRightHanded(_rotations[i] * Quaternion.AngleAxis(90, Vector3.left));
+            //var newQuaternion = ConvertSensorToRightHanded(_rotations[i] * Quaternion.AngleAxis(90, Vector3.left));
+            var newQuaternion = _rotations[i];
+            var newVector = _positions[i];
+            
+            
 
-            var newVector = ConvertVectorToGL(_positions[i]);
+            //var newVector = ConvertVectorToGL(_positions[i]);
             
             var matrix =  Matrix4x4.TRS(newVector, newQuaternion , Vector3.one);
             
@@ -97,7 +101,7 @@ public class Exporter : MonoBehaviour
                 matrix.m30, matrix.m31, matrix.m32, matrix.m33}));
         }
         MakeStrings();
-        CreateColladaFile(Application.persistentDataPath +"/testOutputNew.dae");
+        CreateColladaFile(Application.persistentDataPath +"/testOutputSuperNew.dae");
     }
     
     Quaternion ConvertSensorToRightHanded(float x, float y, float z, float w) {

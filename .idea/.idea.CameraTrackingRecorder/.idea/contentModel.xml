@@ -112,8 +112,22 @@
             <e p="ExporterEditor.cs" t="Include" />
           </e>
           <e p="Exporter.cs" t="Include" />
+          <e p="FileUtils" t="Include">
+            <e p="ColladaFileHelper.cs" t="Include" />
+          </e>
           <e p="FPSSetter.cs" t="Include" />
           <e p="LocalPoseTrender.cs" t="Include" />
+          <e p="Maths" t="Include">
+            <e p="MatrixExtensions.cs" t="Include" />
+          </e>
+          <e p="Persistent" t="Include">
+            <e p="SettingsManager.cs" t="Include" />
+          </e>
+          <e p="RecordVisualization" t="Include">
+            <e p="ReplayManager.cs" t="Include" />
+          </e>
+          <e p="SceneManager.cs" t="Include" />
+          <e p="SettingsController.cs" t="Include" />
           <e p="Trender.cs" t="Include" />
           <e p="UIElementManager.cs" t="Include" />
         </e>
