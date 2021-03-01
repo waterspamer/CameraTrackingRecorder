@@ -28,9 +28,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/SceneManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FileUtils/ColladaFileHelper.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RecordVisualization/ReplayManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Exporter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Persistent/SettingsManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SettingsController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Exporter.cs" />
       </list>
     </option>
   </component>
@@ -75,7 +75,7 @@
       <option name="presentableId" value="Default" />
       <updated>1614433382159</updated>
       <workItem from="1614433395836" duration="1323000" />
-      <workItem from="1614598498751" duration="13904000" />
+      <workItem from="1614598498751" duration="14701000" />
     </task>
     <servers />
   </component>
