@@ -86,13 +86,13 @@ public class Exporter : MonoBehaviour
         for(int i = 0; i < _positions.Count; ++i)
         {
             //var newQuaternion = ConvertSensorToRightHanded(_rotations[i] * Quaternion.AngleAxis(90, Vector3.left));
-            var newQuaternion = _rotations[i];
-            var newVector = _positions[i];
             
             
 
             //var newVector = ConvertVectorToGL(_positions[i]);
-            
+            var newQuaternion = _rotations[i];
+            var newVector = _positions[i];
+
             var matrix =  Matrix4x4.TRS(newVector, newQuaternion , Vector3.one);
             
             _transformData.AddRange((new float[] {
@@ -105,7 +105,7 @@ public class Exporter : MonoBehaviour
         CreateColladaFile(Application.persistentDataPath +$"/{SettingsManager.GetInstance().fileName}.dae");
     }
     
-    Quaternion ConvertSensorToRightHanded(float x, float y, float z, float w) {
+    public static Quaternion ConvertSensorToRightHanded(float x, float y, float z, float w) {
 
         Quaternion output;
         output.x = -x;
@@ -116,10 +116,10 @@ public class Exporter : MonoBehaviour
         return output;
     }
     
-    Vector3 ConvertVectorToGL (Vector3 v3)=>
+    public static Vector3 ConvertVectorToGL (Vector3 v3)=>
         new Vector3(v3.x, v3.z, v3.y);
 
-    Quaternion ConvertSensorToRightHanded(Quaternion q) =>
+    public static Quaternion ConvertSensorToRightHanded(Quaternion q) =>
         ConvertSensorToRightHanded(q.x, q.y, q.z, q.w);
     
 
