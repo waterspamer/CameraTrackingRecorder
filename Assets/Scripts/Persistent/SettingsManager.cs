@@ -4,10 +4,14 @@ namespace Persistent
 {
     public class SettingsManager
     {
-        private static int _fpsCount;
+        public int _fpsCount;
+
+        public string fileName;
 
         public Matrix4x4[] CurrentReplayMatrixArray;
-        
+
+        public void SetFileName(string value) =>
+            fileName = value;
         
         public void SetFPS(int value) => 
             _fpsCount = value;

@@ -18,7 +18,7 @@ namespace FileUtils
             var path = Path.Combine(Application.persistentDataPath, fileName);
             var sr = new StreamReader(path);
             var linesFromFile = File.ReadAllLines(path);
-            Debug.Log(linesFromFile[90].Length);
+            Debug.Log(linesFromFile[45].Length);
             
             string r = 
                 @"<(?'tag'\w+?).*>"      +  
@@ -26,12 +26,12 @@ namespace FileUtils
                 @"</\k'tag'>";               
 
 
-            var m = Regex.Match(linesFromFile[90], r);
+            var m = Regex.Match(linesFromFile[45], r);
             
             
             var floats = m.Groups["text"].ToString().Split(' ');
             
-            var output = new Matrix4x4[floats.Length];
+            var output = new Matrix4x4[floats.Length /16];
             for (int i = 0; i < floats.Length-1; i += 16)
             {
 
@@ -55,7 +55,7 @@ namespace FileUtils
                     m33 = (float) Convert.ToDouble(floats[i + 15])
                 };
 
-                output[i] = outputMatrix;
+                output[i/16] = outputMatrix;
             }
             return output;
         

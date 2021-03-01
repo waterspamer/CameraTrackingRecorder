@@ -12,6 +12,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FPSSetter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FileUtils/ColladaFileHelper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Maths/MatrixExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/RecordVisualization/ReplayManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -22,13 +23,14 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/FPSSetter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SettingsManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DataVizualiser.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SettingsController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Persistent/SettingsManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UIElementManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Maths/MatrixExtensions.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SceneManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FileUtils/ColladaFileHelper.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RecordVisualization/ReplayManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Maths/MatrixExtensions.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Exporter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Persistent/SettingsManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SettingsController.cs" />
       </list>
     </option>
   </component>
@@ -73,7 +75,7 @@
       <option name="presentableId" value="Default" />
       <updated>1614433382159</updated>
       <workItem from="1614433395836" duration="1323000" />
-      <workItem from="1614598498751" duration="11531000" />
+      <workItem from="1614598498751" duration="13904000" />
     </task>
     <servers />
   </component>

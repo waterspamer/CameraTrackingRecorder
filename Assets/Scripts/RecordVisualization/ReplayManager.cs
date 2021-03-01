@@ -9,11 +9,13 @@ namespace RecordVisualization
     {
 
         [SerializeField] private Transform replayCamera;
+        [SerializeField] private GameObject replayWindow;
 
 
 
         public void StartPlaying()
         {
+            replayWindow.SetActive(true);
             StartCoroutine(Play());
         }
 
@@ -32,7 +34,7 @@ namespace RecordVisualization
             for (int i = 0; i < matrices.Length; ++i)
             {
                 SetTransformFromMatrix(replayCamera, matrices[i]);
-                yield return new WaitForSeconds(.1f);
+                yield return new WaitForSeconds(1f / 60f);
             }
         }
 
@@ -41,7 +43,7 @@ namespace RecordVisualization
             
             refTransform.localScale = matrix.ExtractScale();
             refTransform.rotation = matrix.ExtractRotation();
-            refTransform.position = matrix.ExtractPosition();
+            refTransform.localPosition = matrix.ExtractPosition();
         }
 
     }

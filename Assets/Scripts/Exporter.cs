@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 using Antilatency;
+using Persistent;
 
 public class Exporter : MonoBehaviour
 {
@@ -101,7 +102,7 @@ public class Exporter : MonoBehaviour
                 matrix.m30, matrix.m31, matrix.m32, matrix.m33}));
         }
         MakeStrings();
-        CreateColladaFile(Application.persistentDataPath +"/testOutputSuperNew.dae");
+        CreateColladaFile(Application.persistentDataPath +$"/{SettingsManager.GetInstance().fileName}.dae");
     }
     
     Quaternion ConvertSensorToRightHanded(float x, float y, float z, float w) {
