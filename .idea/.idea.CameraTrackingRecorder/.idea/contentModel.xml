@@ -84,6 +84,7 @@
             </e>
           </e>
         </e>
+        <e p="ButtonExtension.cs" t="Include" />
         <e p="colladaTestFile.txt" t="Include" />
         <e p="Plugins" t="Include">
           <e p="NativeShare" t="Include">
@@ -109,6 +110,7 @@
           <e p="CsvToAnimHelper.cs" t="Include" />
           <e p="DataVizualiser.cs" t="Include" />
           <e p="Editor" t="Include">
+            <e p="ButtonExtensionEditor.cs" t="Include" />
             <e p="CsvToAnimHelperEditor.cs" t="Include" />
             <e p="ExporterEditor.cs" t="Include" />
           </e>
