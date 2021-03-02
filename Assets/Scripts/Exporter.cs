@@ -67,9 +67,6 @@ public class Exporter : MonoBehaviour
         
     }
 
-
-    public Antilatency.UnityPrototypingTools.InspectorButton _Export;
-
     public void Export()
     {
         _transformData.Clear();
@@ -110,9 +107,6 @@ public class Exporter : MonoBehaviour
     {
         var resultColladaFile = new StringBuilder();
         var linesFromFile = referenceColladaTextAsset.text.Split(new string[]{"\n"}, StringSplitOptions.None);
-
-        UnityEngine.Debug.Log($"num strings: {linesFromFile.Length}");
-            
         for (int i = 0; i < linesFromFile.Length; ++i)
         {
             if (i == 37)
@@ -126,7 +120,7 @@ public class Exporter : MonoBehaviour
             }
             else if (i == 39)
             {
-                resultColladaFile.AppendLine($"<accessor source=\"#Camera_001_Camera_001_testRecord_Animation_Base_Layer_transform-input-array\" count=\"{frameCounter}\" stride=\"1\">");
+                resultColladaFile.AppendLine($"<accessor source=\"#Camera_001_Camera_001_testRecord_Animation_Base_Layer_transform-input-array\" count=\"{frameCounter/16}\" stride=\"1\">");
             }
             else if (i == 47)
             {
@@ -145,6 +139,11 @@ public class Exporter : MonoBehaviour
     }
 
     private float _startTime = 0f;
+    
+    
+    
+    
+    
 
     void FixedUpdate()
     {

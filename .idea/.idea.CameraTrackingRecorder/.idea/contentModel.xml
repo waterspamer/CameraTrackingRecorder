@@ -105,6 +105,7 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="AnimationCurveBuilder.cs" t="Include" />
+          <e p="BaseExporter.cs" t="Include" />
           <e p="CsvToAnimHelper.cs" t="Include" />
           <e p="DataVizualiser.cs" t="Include" />
           <e p="Editor" t="Include">
