@@ -91,25 +91,41 @@ public class UIElementManager : MonoBehaviour
                 string r = 
                     @"<(?'tag'\w+?).*>"      +  
                     @"(?'text'.*?)"          +   
-                    @"</\k'tag'>";               
+                    @"</\k'tag'>";
 
 
-                var match = Regex.Match(linesFromFile[45], r);
-            
+
+                string leftTagPattern = @"<(?'tag'\w+?).*>";
+
+                string rightTagPattern = @"</\k'tag'>";
+
+                string valuePattern = @">.*<";
                 
-                var floats = match.Groups["text"].ToString().Split(' ');
-                var dataString = match.Groups["tag1"].ToString();
+                
+                Debug.Log(linesFromFile[45]);
+                
+                var match = Regex.Match(linesFromFile[45], valuePattern);
+            
+                Debug.Log(match.Value);
+                
+                //var floats = match.Groups["text"].ToString().Split(' ');
+                //var dataString = match.Groups["tag1"].ToString();
+                StringBuilder dataString = new StringBuilder(); 
                 foreach (var item in data)
                 {
-                    dataString +=(item.ToString());
+                    dataString.Append($"{item} ");
+                    //dataString +=(item.ToString());
                 }
 
-                dataString += match.Groups["secondTag"].ToString();
-                    resultColladaFile.AppendLine(dataString);
+                var replace = linesFromFile[45].Replace(match.Value, $">{dataString}<");
+                resultColladaFile.AppendLine(replace);
+                /*
+            dataString += match.Groups["secondTag"].ToString();
+                
+                */
             }
             else resultColladaFile.AppendLine(linesFromFile[i]);
         }
-        string filePath = Path.Combine(Application.persistentDataPath, fileName);
         //var data = File.ReadAllBytes(filePath);
         string cachePath = Path.Combine( Application.temporaryCachePath, "colladaExport.dae" );
         

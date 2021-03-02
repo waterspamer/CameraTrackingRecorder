@@ -1057,9 +1057,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6600495030851630523}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 724083576507063326}
+        m_MethodName: ShareFileToBlender
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
