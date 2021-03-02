@@ -68,16 +68,6 @@ public class Exporter : MonoBehaviour
     }
 
 
-    public string fileName;
-    public void OnFinish()
-    {
-        Debug.Log($"Finalizing started at {DateTime.Now}");
-        _flag = !_flag;
-        //CreateColladaFile(Application.persistentDataPath +"/testOutputNew.dae");
-        //CreateColladaFile("D:\\records\\testOutputNew1.dae");
-
-    }
-
     public Antilatency.UnityPrototypingTools.InspectorButton _Export;
 
     public void Export()
@@ -85,16 +75,9 @@ public class Exporter : MonoBehaviour
         _transformData.Clear();
         for(int i = 0; i < _positions.Count; ++i)
         {
-            //var newQuaternion = ConvertSensorToRightHanded(_rotations[i] * Quaternion.AngleAxis(90, Vector3.left));
-            
-            
-
-            //var newVector = ConvertVectorToGL(_positions[i]);
             var newQuaternion = _rotations[i];
             var newVector = _positions[i];
-
             var matrix =  Matrix4x4.TRS(newVector, newQuaternion , Vector3.one);
-            
             _transformData.AddRange((new float[] {
                 matrix.m00, matrix.m01, matrix.m02, matrix.m03,
                 matrix.m10, matrix.m11, matrix.m12, matrix.m13,
