@@ -35,10 +35,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/SettingsManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Maths/MatrixExtensions.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SceneManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/RecordVisualization/ReplayManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Persistent/SettingsManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SettingsController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/FileUtils/ColladaFileHelper.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Exporter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BaseExporter.cs" />
         <option value="$PROJECT_DIR$/Assets/Shaders/UIGradientShader.shader" />
@@ -50,6 +48,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Editor/ButtonExtensionEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/ButtonExtension.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIArrowsRotation.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FileUtils/ColladaFileHelper.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/RecordVisualization/ReplayManager.cs" />
       </list>
     </option>
   </component>
@@ -97,7 +97,7 @@
       <workItem from="1614598498751" duration="17401000" />
       <workItem from="1614686948356" duration="11823000" />
       <workItem from="1614774311916" duration="4094000" />
-      <workItem from="1614859533322" duration="3353000" />
+      <workItem from="1614859533322" duration="6994000" />
     </task>
     <servers />
   </component>

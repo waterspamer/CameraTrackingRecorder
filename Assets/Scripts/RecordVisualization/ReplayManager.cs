@@ -1,7 +1,11 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using Maths;
 using Persistent;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.UI;
 
 namespace RecordVisualization
 {
@@ -10,22 +14,44 @@ namespace RecordVisualization
 
         [SerializeField] private Transform replayCamera;
         [SerializeField] private GameObject replayWindow;
+        [SerializeField] private Slider timeLine;
+        
 
 
+
+        public UnityEvent onWindowActivated;
+        public UnityEvent onWindowDeactivated;
+        
 
         public void StartPlaying()
         {
+            
+            onWindowActivated?.Invoke();
+            timeLine.minValue = 0;
+            timeLine.maxValue = SettingsManager.GetInstance().CurrentReplayMatrixArray.Length;
+            
             replayWindow.SetActive(true);
-            StartCoroutine(Play());
+            _playableRoutine = new TypeCache.TypeCollection.Enumerator();
+            _playableRoutine = Play();
+            StartCoroutine(_playableRoutine);
         }
 
 
         public void StopPlaying()
         {
-            StopCoroutine(Play());   
+            
+            onWindowDeactivated?.Invoke();
+            StopCoroutine(_playableRoutine);
+            //_playableRoutine.
         }
-        
-        
+
+        private void Awake()
+        {
+            _playableRoutine = Play();
+        }
+
+
+        private IEnumerator _playableRoutine;
         
         
         IEnumerator Play()
@@ -33,6 +59,7 @@ namespace RecordVisualization
             var matrices = SettingsManager.GetInstance().CurrentReplayMatrixArray;
             for (int i = 0; i < matrices.Length; ++i)
             {
+                timeLine.value = i;
                 SetTransformFromMatrix(replayCamera, matrices[i]);
                 yield return new WaitForSeconds(1f / 60f);
             }
@@ -45,6 +72,5 @@ namespace RecordVisualization
             refTransform.rotation = matrix.ExtractRotation();
             refTransform.localPosition = matrix.ExtractPosition();
         }
-
     }
 }
