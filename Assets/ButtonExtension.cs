@@ -32,7 +32,7 @@ public class ButtonExtension : Button
         base.OnPointerUp(eventData);
         StopCoroutine(scalingRoutine);
         circle.transform.localScale = Vector3.one * .01f;
-        GetComponent<Animator>().enabled = true;
+        //GetComponent<Animator>().enabled = true;
     }
 
 

@@ -19,11 +19,19 @@ public class UIElementManager : MonoBehaviour
 
 
     [HideInInspector] public string fileName;
+    [HideInInspector] public string creationDate;
+    
     [SerializeField] private Text nameText;
+    [SerializeField] private Text creationDateText;
 
 
-    public void Initialize() =>
+
+    public void Initialize()
+    {
         nameText.text = fileName;
+        creationDateText.text = creationDate;
+    }
+        
     
     
     

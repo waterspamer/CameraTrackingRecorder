@@ -37,6 +37,7 @@ public class DataVizualiser : MonoBehaviour
             tr.anchorMin = new Vector2(0, 1);
             var tmp = obj.GetComponent<UIElementManager>();
             tmp.fileName = fileInfo[i].Name;
+            tmp.creationDate = fileInfo[i].CreationTime.ToShortDateString();
             tmp.Initialize();
             parentGameObject = obj;
         }

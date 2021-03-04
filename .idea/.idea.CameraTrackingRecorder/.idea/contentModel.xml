@@ -133,6 +133,8 @@
           <e p="SettingsController.cs" t="Include" />
           <e p="Trender.cs" t="Include" />
           <e p="UI" t="Include">
+            <e p="BlurAnimationController.cs" t="Include" />
+            <e p="UIArrowsRotation.cs" t="Include" />
             <e p="UIElementScaler.cs" t="Include" />
           </e>
           <e p="UIElementManager.cs" t="Include" />

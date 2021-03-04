@@ -14,8 +14,10 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E5B75411-C8CD-4BFA-A9E7-60BE20206F29/fd/c8ac2019/Quaternion.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4A3ACBF9-5658-4327-8F33-A8C814FDDBD1/2a/f60c04eb/GeneratedByOldBindingsGeneratorAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ButtonExtension.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIArrowsRotation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIElementScaler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/ButtonExtensionEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/BlurAnimationController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Maths/MatrixExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/RecordVisualization/ReplayManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/62FFEEB7-EC02-4BEA-B61E-5FBF8D44AC5B/81/7d57688e/Assembly.cs" root0="SKIP_HIGHLIGHTING" />
@@ -31,21 +33,23 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/FPSSetter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SettingsManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/DataVizualiser.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Maths/MatrixExtensions.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SceneManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RecordVisualization/ReplayManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Persistent/SettingsManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SettingsController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FileUtils/ColladaFileHelper.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UIElementManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Exporter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BaseExporter.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Editor/ButtonExtensionEditor.cs" />
-        <option value="$PROJECT_DIR$/Assets/ButtonExtension.cs" />
         <option value="$PROJECT_DIR$/Assets/Shaders/UIGradientShader.shader" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIElementScaler.cs" />
         <option value="$PROJECT_DIR$/Assets/Shaders/SimpleGrabPassBlur.shader" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/BlurAnimationController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UIElementManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DataVizualiser.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Editor/ButtonExtensionEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/ButtonExtension.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIArrowsRotation.cs" />
       </list>
     </option>
   </component>
@@ -92,7 +96,8 @@
       <workItem from="1614433395836" duration="1323000" />
       <workItem from="1614598498751" duration="17401000" />
       <workItem from="1614686948356" duration="11823000" />
-      <workItem from="1614774311916" duration="3501000" />
+      <workItem from="1614774311916" duration="4094000" />
+      <workItem from="1614859533322" duration="3353000" />
     </task>
     <servers />
   </component>
