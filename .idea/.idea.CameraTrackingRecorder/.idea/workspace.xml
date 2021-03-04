@@ -16,15 +16,18 @@
     <setting file="file://$PROJECT_DIR$/Assets/ButtonExtension.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIArrowsRotation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIElementScaler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/ExtendedSliderEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/ButtonExtensionEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/BlurAnimationController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Maths/MatrixExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/RecordVisualization/ReplayManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/ExtendedSlider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/62FFEEB7-EC02-4BEA-B61E-5FBF8D44AC5B/81/7d57688e/Assembly.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FPSSetter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FileUtils/ColladaFileHelper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://C:/Program Files/Unity/Hub/Editor/2019.3.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/ScrollRect.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://C:/Program Files/Unity/Hub/Editor/2019.3.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Slider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/62FFEEB7-EC02-4BEA-B61E-5FBF8D44AC5B/71/36ff7a01/Attribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BaseExporter.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -49,6 +52,8 @@
         <option value="$PROJECT_DIR$/Assets/ButtonExtension.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIArrowsRotation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FileUtils/ColladaFileHelper.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Editor/ExtendedSliderEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/ExtendedSlider.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RecordVisualization/ReplayManager.cs" />
       </list>
     </option>
@@ -97,7 +102,7 @@
       <workItem from="1614598498751" duration="17401000" />
       <workItem from="1614686948356" duration="11823000" />
       <workItem from="1614774311916" duration="4094000" />
-      <workItem from="1614859533322" duration="6994000" />
+      <workItem from="1614859533322" duration="13614000" />
     </task>
     <servers />
   </component>

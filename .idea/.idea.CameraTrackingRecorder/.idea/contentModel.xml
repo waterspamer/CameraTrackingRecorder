@@ -113,6 +113,7 @@
             <e p="ButtonExtensionEditor.cs" t="Include" />
             <e p="CsvToAnimHelperEditor.cs" t="Include" />
             <e p="ExporterEditor.cs" t="Include" />
+            <e p="ExtendedSliderEditor.cs" t="Include" />
           </e>
           <e p="Exporter.cs" t="Include" />
           <e p="FileUtils" t="Include">
@@ -134,6 +135,7 @@
           <e p="Trender.cs" t="Include" />
           <e p="UI" t="Include">
             <e p="BlurAnimationController.cs" t="Include" />
+            <e p="ExtendedSlider.cs" t="Include" />
             <e p="UIArrowsRotation.cs" t="Include" />
             <e p="UIElementScaler.cs" t="Include" />
           </e>
