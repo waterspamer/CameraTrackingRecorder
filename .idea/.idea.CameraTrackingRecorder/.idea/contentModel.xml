@@ -120,6 +120,9 @@
             <e p="ColladaFileHelper.cs" t="Include" />
           </e>
           <e p="FPSSetter.cs" t="Include" />
+          <e p="Helpers" t="Include">
+            <e p="SceneStart.cs" t="Include" />
+          </e>
           <e p="LocalPoseTrender.cs" t="Include" />
           <e p="Maths" t="Include">
             <e p="MatrixExtensions.cs" t="Include" />
