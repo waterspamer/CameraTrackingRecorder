@@ -117,6 +117,7 @@
           </e>
           <e p="Exporter.cs" t="Include" />
           <e p="FileUtils" t="Include">
+            <e p="AsyncFileUtils.cs" t="Include" />
             <e p="ColladaFileHelper.cs" t="Include" />
           </e>
           <e p="FPSSetter.cs" t="Include" />

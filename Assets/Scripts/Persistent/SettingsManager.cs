@@ -10,6 +10,8 @@ namespace Persistent
 
         public Matrix4x4[] CurrentReplayMatrixArray;
 
+        public string persistentDataPath = Application.persistentDataPath;
+
         public void SetFileName(string value) =>
             fileName = value;
         

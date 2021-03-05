@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 using FileUtils;
 using Maths;
 using Persistent;
@@ -31,22 +32,33 @@ public class UIElementManager : MonoBehaviour
         nameText.text = fileName;
         creationDateText.text = creationDate;
     }
-        
-    
-    
-    
+
+    private void Awake()
+    {
+        _peristentDataPath = Application.persistentDataPath;
+    }
+
+    private string _peristentDataPath;
+
     public void AssignReplayMatrices(Matrix4x4[] matrices) =>
         SettingsManager.GetInstance().CurrentReplayMatrixArray = matrices;
 
 
-    public void StartReplay()
+    public async void StartReplay()
     {
-        SettingsManager.GetInstance().CurrentReplayMatrixArray =
-            ColladaFileHelper.GetUnityMatricesFromFile(Path.Combine(Application.persistentDataPath, fileName));
-        
-        (FindObjectOfType(typeof (ReplayManager)) as ReplayManager)?.StartPlaying();
-    }
+        FindObjectOfType<ReplayManager>().onWindowActivated?.Invoke();
 
+
+            //await Task.Run(() =>
+                 //ColladaFileHelper.SetMatricesFromFileToPersistent(Path.Combine(_peristentDataPath, fileName)));
+                 SettingsManager.GetInstance().CurrentReplayMatrixArray = await
+                ColladaFileHelper.GetUnityMatricesFromFile(Path.Combine(Application.persistentDataPath, fileName));
+
+        (FindObjectOfType(typeof (ReplayManager)) as ReplayManager)?.StartPlaying();
+
+
+    }
+    
     
     
     public void ShareFile()
@@ -62,7 +74,7 @@ public class UIElementManager : MonoBehaviour
     }
 
 
-    public void ShareFileToBlender()
+    public async Task ShareFileToBlender()
     {
         var resultColladaFile = new StringBuilder();
         var linesFromFile = File.ReadAllLines(Path.Combine(Application.persistentDataPath, fileName));
@@ -70,7 +82,7 @@ public class UIElementManager : MonoBehaviour
         {
             if (i == 45)
             {
-                var matrices = ColladaFileHelper.GetUnityMatricesFromFile(fileName);
+                var matrices = await ColladaFileHelper.GetUnityMatricesFromFile(fileName);
                 var data = new List<float>();
                 foreach (var m in matrices)
                 {

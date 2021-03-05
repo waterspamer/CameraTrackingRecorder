@@ -34,7 +34,7 @@ namespace RecordVisualization
             
             
             
-            onWindowActivated?.Invoke();
+            //onWindowActivated?.Invoke();
             timeLine.minValue = 0;
             timeLine.maxValue = SettingsManager.GetInstance().CurrentReplayMatrixArray.Length -1 ;
             replayWindow.SetActive(true);

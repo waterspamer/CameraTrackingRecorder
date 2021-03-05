@@ -3,7 +3,12 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
-//using Accord.Math;
+using System.Threading.Tasks;
+using Persistent;
+using Unity.Collections;
+using Unity.Collections.LowLevel.Unsafe;
+using Unity.IO.LowLevel.Unsafe;
+using Unity.Jobs;
 using UnityEngine;
 using Matrix4x4 = UnityEngine.Matrix4x4;
 
@@ -11,13 +16,35 @@ namespace FileUtils
 {
     public static class ColladaFileHelper 
     {
-        public static Matrix4x4[] GetUnityMatricesFromFile(string fileName)
+        
+        
+        private static ReadHandle readHandle;
+        static NativeArray<ReadCommand> cmds;
+
+
+
+
+        public static async Task SetMatricesFromFileToPersistent(string fileName)
         {
-           
-            var resultColladaFile = new StringBuilder();
+            var ms = GetUnityMatricesFromFile(fileName);
+            SettingsManager.GetInstance().CurrentReplayMatrixArray = await ms;
+        }
+
+
+
+        public struct DataJob : IJob
+        {
+            public void Execute()
+            {
+                throw new NotImplementedException();
+            }
+        }
+        
+        public static async Task<Matrix4x4[]> GetUnityMatricesFromFile(string fileName)
+
+        {
             var path = Path.Combine(Application.persistentDataPath, fileName);
-            var sr = new StreamReader(path);
-            var linesFromFile = File.ReadAllLines(path);
+            var linesFromFile = await AsyncFileUtils.ReadAllLinesAsync(fileName);
             Debug.Log(linesFromFile[45].Length);
             
             string r = 
@@ -32,6 +59,12 @@ namespace FileUtils
             var floats = m.Groups["text"].ToString().Split(' ');
             
             var output = new Matrix4x4[floats.Length /16];
+            
+            
+            var reloadMatrices = new AsyncOperation();
+            
+            
+            
             for (int i = 0; i < floats.Length-1; i += 16)
             {
 
@@ -58,7 +91,11 @@ namespace FileUtils
                 output[i/16] = outputMatrix;
             }
             return output;
-        
         }
+
+
+        
+        
+        
     }
 }
