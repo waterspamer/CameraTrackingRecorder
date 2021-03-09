@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
 using FileUtils;
 using Maths;
@@ -12,6 +13,7 @@ using Persistent;
 using RecordVisualization;
 using UnityEngine;
 using UnityEngine.Android;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class UIElementManager : MonoBehaviour
@@ -35,30 +37,34 @@ public class UIElementManager : MonoBehaviour
 
     private void Awake()
     {
-        _peristentDataPath = Application.persistentDataPath;
+        _onThreadedLoadingEnded = new UnityEvent();
+        _onThreadedLoadingEnded.AddListener(StartPlaying);
     }
 
-    private string _peristentDataPath;
-
-    public void AssignReplayMatrices(Matrix4x4[] matrices) =>
-        SettingsManager.GetInstance().CurrentReplayMatrixArray = matrices;
 
 
-    public async void StartReplay()
+    public void StartReplay()
     {
         FindObjectOfType<ReplayManager>().onWindowActivated?.Invoke();
-
-
-            //await Task.Run(() =>
-                 //ColladaFileHelper.SetMatricesFromFileToPersistent(Path.Combine(_peristentDataPath, fileName)));
-                 SettingsManager.GetInstance().CurrentReplayMatrixArray = await
-                ColladaFileHelper.GetUnityMatricesFromFile(Path.Combine(Application.persistentDataPath, fileName));
-
-        (FindObjectOfType(typeof (ReplayManager)) as ReplayManager)?.StartPlaying();
-
-
+        _cachedStrings = ColladaFileHelper.GetFileStrings(fileName);
+        var thread = new Thread(ThreadedMatrixSetting);
+        thread.Start();
     }
+
+
+    private void StartPlaying() =>
+        Dispatcher.RunOnMainThread(() => (FindObjectOfType(typeof(ReplayManager)) as ReplayManager)?.StartPlaying());
+
+    private string[] _cachedStrings;
     
+    void ThreadedMatrixSetting()
+    {
+        SettingsManager.GetInstance().CurrentReplayMatrixArray = ColladaFileHelper.GetUnityMatricesFromStringArrayThreaded(_cachedStrings);
+        _onThreadedLoadingEnded?.Invoke();
+    }
+
+    private UnityEvent _onThreadedLoadingEnded;
+
     
     
     public void ShareFile()

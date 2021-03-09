@@ -198,7 +198,14 @@ Shader "Custom/SimpleGrabPassBlur" {
                  
                     half4 col = tex2Dproj( _GrabTexture, UNITY_PROJ_COORD(i.uvgrab));
                     half4 tint = tex2D( _MainTex, i.uvmain ) * _Color;
-                 
+
+
+
+
+                    float value = (col.r + col.g + col.b)/3;
+                    
+                    //return half4(value, value, value, 1) * tint;
+                    //return col.rgba;
                     return col * tint;
                 }
                 ENDCG

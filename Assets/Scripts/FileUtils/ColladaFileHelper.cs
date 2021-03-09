@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
 using Persistent;
 using Unity.Collections;
@@ -39,7 +40,7 @@ namespace FileUtils
                 throw new NotImplementedException();
             }
         }
-        
+
         public static async Task<Matrix4x4[]> GetUnityMatricesFromFile(string fileName)
 
         {
@@ -70,22 +71,22 @@ namespace FileUtils
 
                 var outputMatrix = new Matrix4x4
                 {
-                    m00 = (float) Convert.ToDouble(floats[i]),
-                    m01 = (float) Convert.ToDouble(floats[i + 1]),
-                    m02 = (float) Convert.ToDouble(floats[i + 2]),
-                    m03 = (float) Convert.ToDouble(floats[i + 3]),
-                    m10 = (float) Convert.ToDouble(floats[i + 4]),
-                    m11 = (float) Convert.ToDouble(floats[i + 5]),
-                    m12 = (float) Convert.ToDouble(floats[i + 6]),
-                    m13 = (float) Convert.ToDouble(floats[i + 7]),
-                    m20 = (float) Convert.ToDouble(floats[i + 8]),
-                    m21 = (float) Convert.ToDouble(floats[i + 9]),
-                    m22 = (float) Convert.ToDouble(floats[i + 10]),
-                    m23 = (float) Convert.ToDouble(floats[i + 11]),
-                    m30 = (float) Convert.ToDouble(floats[i + 12]),
-                    m31 = (float) Convert.ToDouble(floats[i + 13]),
-                    m32 = (float) Convert.ToDouble(floats[i + 14]),
-                    m33 = (float) Convert.ToDouble(floats[i + 15])
+                    m00 = float.Parse(floats[i]),
+                    m01 = float.Parse(floats[i + 1]),
+                    m02 = float.Parse(floats[i + 2]),
+                    m03 = float.Parse(floats[i + 3]),
+                    m10 = float.Parse(floats[i + 4]),
+                    m11 = float.Parse(floats[i + 5]),
+                    m12 = float.Parse(floats[i + 6]),
+                    m13 = float.Parse(floats[i + 7]),
+                    m20 = float.Parse(floats[i + 8]),
+                    m21 = float.Parse(floats[i + 9]),
+                    m22 = float.Parse(floats[i + 10]),
+                    m23 = float.Parse(floats[i + 11]),
+                    m30 = float.Parse(floats[i + 12]),
+                    m31 = float.Parse(floats[i + 13]),
+                    m32 = float.Parse(floats[i + 14]),
+                    m33 = float.Parse(floats[i + 15])
                 };
 
                 output[i/16] = outputMatrix;
@@ -94,6 +95,59 @@ namespace FileUtils
         }
 
 
+        public static string[] GetFileStrings(string fileName) =>
+            File.ReadAllLines(Path.Combine(Application.persistentDataPath, fileName));
+
+        
+        
+        public static Matrix4x4[] GetUnityMatricesFromStringArrayThreaded(string[] strings)
+        {
+            var linesFromFile = strings;
+            Debug.Log(linesFromFile[45].Length);
+            
+            string r = 
+                @"<(?'tag'\w+?).*>"      +  
+                @"(?'text'.*?)"          +   
+                @"</\k'tag'>";               
+
+
+            var m = Regex.Match(linesFromFile[45], r);
+            
+            
+            var floats = m.Groups["text"].ToString().Split(' ');
+            
+            var output = new Matrix4x4[floats.Length /16];
+
+            
+            
+            
+            for (int i = 0; i < floats.Length-1; i += 16)
+            {
+
+                var outputMatrix = new Matrix4x4
+                {
+                    m00 = float.Parse(floats[i]),
+                    m01 = float.Parse(floats[i + 1]),
+                    m02 = float.Parse(floats[i + 2]),
+                    m03 = float.Parse(floats[i + 3]),
+                    m10 = float.Parse(floats[i + 4]),
+                    m11 = float.Parse(floats[i + 5]),
+                    m12 = float.Parse(floats[i + 6]),
+                    m13 = float.Parse(floats[i + 7]),
+                    m20 = float.Parse(floats[i + 8]),
+                    m21 = float.Parse(floats[i + 9]),
+                    m22 = float.Parse(floats[i + 10]),
+                    m23 = float.Parse(floats[i + 11]),
+                    m30 = float.Parse(floats[i + 12]),
+                    m31 = float.Parse(floats[i + 13]),
+                    m32 = float.Parse(floats[i + 14]),
+                    m33 = float.Parse(floats[i + 15])
+                };
+
+                output[i/16] = outputMatrix;
+            }
+            return output;
+        }
         
         
         

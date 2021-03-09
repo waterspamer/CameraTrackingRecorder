@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Threading;
 using Maths;
 using Persistent;
 using UnityEditor;
@@ -23,17 +24,10 @@ namespace RecordVisualization
         public UnityEvent onWindowActivated;
         public UnityEvent onWindowDeactivated;
 
-
-
-        
         
         
         public void StartPlaying()
         {
-            
-            
-            
-            
             //onWindowActivated?.Invoke();
             timeLine.minValue = 0;
             timeLine.maxValue = SettingsManager.GetInstance().CurrentReplayMatrixArray.Length -1 ;
