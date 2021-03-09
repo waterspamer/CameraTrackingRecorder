@@ -28,7 +28,6 @@ namespace RecordVisualization
         
         public void StartPlaying()
         {
-            //onWindowActivated?.Invoke();
             timeLine.minValue = 0;
             timeLine.maxValue = SettingsManager.GetInstance().CurrentReplayMatrixArray.Length -1 ;
             replayWindow.SetActive(true);
@@ -46,24 +45,21 @@ namespace RecordVisualization
         {
 
 
-            if (!_isPaused)
+            if (!isPaused)
             {
-                //onWindowDeactivated?.Invoke();
-            
                 StopCoroutine(_playableRoutine);
                 _currentFrame = 0;
             }
         }
 
 
-
-        public bool _isUserMoving
+        private bool isUserMoving
         {
             get;
             set;
         }
 
-        public bool _isPaused
+        private bool isPaused
         {
             get;
             set;
@@ -92,7 +88,7 @@ namespace RecordVisualization
         
         public void SetReplayFrame()
         {
-            if (_isUserMoving)
+            if (isUserMoving)
                 SetTransformFromMatrix(replayCamera, _currentReplayMatrices[(int)timeLine.value]);
         }
         
@@ -101,7 +97,13 @@ namespace RecordVisualization
 
 
         private int _currentFrame = 0;
-        
+
+        public ReplayManager(bool isPaused, bool isUserMoving)
+        {
+            this.isPaused = isPaused;
+            this.isUserMoving = isUserMoving;
+        }
+
         IEnumerator Play()
         {
             _currentReplayMatrices = SettingsManager.GetInstance().CurrentReplayMatrixArray;

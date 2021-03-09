@@ -84,8 +84,8 @@ public class Exporter : MonoBehaviour
         MakeStrings();
         CreateColladaFile(Application.persistentDataPath +$"/{SettingsManager.GetInstance().fileName}.dae");
     }
-    
-    public static Quaternion ConvertSensorToRightHanded(float x, float y, float z, float w) {
+
+    private static Quaternion ConvertSensorToRightHanded(float x, float y, float z, float w) {
 
         Quaternion output;
         output.x = -x;
@@ -139,16 +139,30 @@ public class Exporter : MonoBehaviour
     }
 
     private float _startTime = 0f;
-    
-    
-    
-    
-    
+
+
+
+
+
+    private IEnumerator WritingCoroutine(int fps)
+    {
+        while (true)
+        {
+            _startTime += Time.deltaTime;
+            frameCounter++;
+            _timeData.Add(_startTime);
+            _positions.Add(_trackedObject.position);
+            _rotations.Add(_trackedObject.rotation);
+            yield return new WaitForSeconds(1f / fps);
+        }
+    }
+
+    public void SetRecordingState(bool state) => _recording = state; 
 
     void FixedUpdate()
     {
         
-        if (_flag) return;
+        if (!_recording) return;
         
         _startTime += Time.deltaTime;
         frameCounter++;
@@ -157,5 +171,5 @@ public class Exporter : MonoBehaviour
         _rotations.Add(_trackedObject.rotation);
     }
 
-    private bool _flag;
+    private bool _recording;
 }
