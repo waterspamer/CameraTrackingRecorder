@@ -31,7 +31,7 @@ namespace RecordVisualization
             timeLine.minValue = 0;
             timeLine.maxValue = SettingsManager.GetInstance().CurrentReplayMatrixArray.Length -1 ;
             replayWindow.SetActive(true);
-            _playableRoutine = new TypeCache.TypeCollection.Enumerator();
+            //_playableRoutine = new TypeCache.TypeCollection.Enumerator();
             _playableRoutine = Play();
             StartCoroutine(_playableRoutine);
         }
@@ -53,13 +53,13 @@ namespace RecordVisualization
         }
 
 
-        private bool isUserMoving
+        public bool isUserMoving
         {
             get;
             set;
         }
 
-        private bool isPaused
+        public bool isPaused
         {
             get;
             set;
