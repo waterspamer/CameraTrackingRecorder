@@ -23,16 +23,18 @@ public class UIElementManager : MonoBehaviour
 
     [HideInInspector] public string fileName;
     [HideInInspector] public string creationDate;
+    [HideInInspector] public string fileSize;
     
     [SerializeField] private Text nameText;
     [SerializeField] private Text creationDateText;
-
+    [SerializeField] private Text fileSizeText;
 
 
     public void Initialize()
     {
         nameText.text = fileName;
         creationDateText.text = creationDate;
+        fileSizeText.text = fileSize;
     }
 
     private void Awake()

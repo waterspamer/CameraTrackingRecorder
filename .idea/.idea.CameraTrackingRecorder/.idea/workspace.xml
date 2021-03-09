@@ -56,7 +56,6 @@
         <option value="$PROJECT_DIR$/Assets/Shaders/UIGradientShader.shader" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIElementScaler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/BlurAnimationController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/DataVizualiser.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Editor/ButtonExtensionEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/ButtonExtension.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIArrowsRotation.cs" />
@@ -66,11 +65,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/FileUtils/AsyncFileUtils.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Persistent/SettingsManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Threading/Dispatcher.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UIElementManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Shaders/SimpleGrabPassBlur.shader" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FileUtils/ColladaFileHelper.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Exporter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RecordVisualization/ReplayManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DataVizualiser.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UIElementManager.cs" />
       </list>
     </option>
   </component>
@@ -124,7 +124,7 @@
       <workItem from="1614859533322" duration="14935000" />
       <workItem from="1614951840606" duration="8482000" />
       <workItem from="1615206863288" duration="469000" />
-      <workItem from="1615294198270" duration="10173000" />
+      <workItem from="1615294198270" duration="11797000" />
     </task>
     <servers />
   </component>
