@@ -13,6 +13,6 @@ public class SceneStart : MonoBehaviour
     IEnumerator Delay()
     {
         yield return new WaitForSeconds(1.8f);
-        UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
+        UnityEngine.SceneManagement.SceneManager.LoadSceneAsync("MainMenuMaterialUI");
     }
 }
