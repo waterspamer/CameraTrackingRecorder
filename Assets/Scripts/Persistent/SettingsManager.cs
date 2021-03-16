@@ -6,6 +6,10 @@ namespace Persistent
     {
         public int _fpsCount;
 
+        public UIElementsSelector Selector;
+
+        public float longPressTime = .25f;
+
         public string fileName;
 
         public Matrix4x4[] CurrentReplayMatrixArray;

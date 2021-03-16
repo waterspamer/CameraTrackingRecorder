@@ -33,8 +33,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/ButtonExtension.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9577AC7A-62EF-4317-9789-031239BA8798/8f/f40b627d/AwaitTaskContinuation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E5B75411-C8CD-4BFA-A9E7-60BE20206F29/c6/9982cf2c/AsyncOperation.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://C:/Program Files/Unity/Hub/Editor/2019.3.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Button.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/BlurAnimationController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Maths/MatrixExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://C:/Program Files/Unity/Hub/Editor/2019.3.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Selectable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/ButtonLongPress.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/62FFEEB7-EC02-4BEA-B61E-5FBF8D44AC5B/6d/9240eb41/StreamReader.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/62FFEEB7-EC02-4BEA-B61E-5FBF8D44AC5B/81/7d57688e/Assembly.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E5B75411-C8CD-4BFA-A9E7-60BE20206F29/f6/a63098b4/Object.cs" root0="SKIP_HIGHLIGHTING" />
@@ -45,6 +48,7 @@
     <setting file="file://C:/Program Files/Unity/Hub/Editor/2019.3.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/ScrollRect.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/62FFEEB7-EC02-4BEA-B61E-5FBF8D44AC5B/71/36ff7a01/Attribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BaseExporter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIElementManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -58,13 +62,10 @@
         <option value="$PROJECT_DIR$/Assets/Shaders/UIGradientShader.shader" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIElementScaler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/BlurAnimationController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Editor/ButtonExtensionEditor.cs" />
-        <option value="$PROJECT_DIR$/Assets/ButtonExtension.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIArrowsRotation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Editor/ExtendedSliderEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/ExtendedSlider.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FileUtils/AsyncFileUtils.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Persistent/SettingsManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Threading/Dispatcher.cs" />
         <option value="$PROJECT_DIR$/Assets/Shaders/SimpleGrabPassBlur.shader" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FileUtils/ColladaFileHelper.cs" />
@@ -73,7 +74,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UIElementManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DataVizualiser.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Helpers/SceneStart.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Editor/ButtonExtensionEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/ButtonExtension.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/ButtonLongPress.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIElementsSelector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIElementManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Persistent/SettingsManager.cs" />
       </list>
     </option>
   </component>
@@ -129,7 +135,7 @@
       <workItem from="1615206863288" duration="469000" />
       <workItem from="1615294198270" duration="12611000" />
       <workItem from="1615810747849" duration="663000" />
-      <workItem from="1615900771010" duration="664000" />
+      <workItem from="1615900771010" duration="9601000" />
     </task>
     <servers />
   </component>

@@ -142,6 +142,7 @@
           <e p="Trender.cs" t="Include" />
           <e p="UI" t="Include">
             <e p="BlurAnimationController.cs" t="Include" />
+            <e p="ButtonLongPress.cs" t="Include" />
             <e p="ExtendedSlider.cs" t="Include" />
             <e p="UIArrowsRotation.cs" t="Include" />
             <e p="UIElementManager.cs" t="Include" />

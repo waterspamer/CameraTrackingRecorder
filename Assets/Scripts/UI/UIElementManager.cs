@@ -30,12 +30,43 @@ public class UIElementManager : MonoBehaviour
     [SerializeField] private Text fileSizeText;
 
 
+
+    private bool _selected = false;
+    
+
+    public  UnityEvent onSelected;
+    
+    public  UnityEvent onDeselected;
+
+
+    public void Select()
+    {
+        Debug.Log("This Item Selected");
+        _selected = !_selected;
+        if (_selected)
+        {
+            onSelected?.Invoke();
+            return;
+        }
+        Deselect();
+    }
+
+    public void Deselect()
+    {
+        onDeselected?.Invoke();
+    }
+
+
     public void Initialize()
     {
         nameText.text = fileName;
         creationDateText.text = creationDate;
         fileSizeText.text = fileSize;
     }
+
+
+
+    
 
     private void Awake()
     {
@@ -44,6 +75,9 @@ public class UIElementManager : MonoBehaviour
     }
 
 
+    public void AddToSelected() => SettingsManager.GetInstance().Selector.AddItemToSelectedList(this);
+    
+    public void RemoveFromSelected() => SettingsManager.GetInstance().Selector.RemoveItemFromSelectedList(this);
 
     public void StartReplay()
     {

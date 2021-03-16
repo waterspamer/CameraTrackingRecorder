@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Accord.Math;
+using Persistent;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -38,8 +39,24 @@ public class UIElementsSelector : MonoBehaviour
             onItemsDeselected?.Invoke();
     }
 
+    public void RemoveAllItemsFromSelectedList()
+    {
+        foreach (var item in selectedElements)
+        {
+            item.Deselect();
+        }
+        onItemsDeselected?.Invoke();
+        _selectedItemsCount = 0;
+        selectedCountText.text = "0";
+        selectedElements.Clear();
+        
+    }
+
     private void Awake()
     {
         selectedElements = new List<UIElementManager>();
+        onFirstItemSelected.AddListener(() => SettingsManager.GetInstance().longPressTime = 0f);
+        onItemsDeselected.AddListener(() => SettingsManager.GetInstance().longPressTime = .5f);
+        SettingsManager.GetInstance().Selector = this;
     }
 }

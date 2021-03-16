@@ -17,6 +17,10 @@ public class ButtonExtensionEditor : UnityEditor.UI.ButtonEditor
         component.circle = (GameObject)EditorGUILayout.ObjectField("Circle Game Object", 
             component.circle, typeof(GameObject), true);
         
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("onLongPointerDown"));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("onRegularPointerDown"));
+        
+        
         serializedObject.ApplyModifiedProperties();
     }
 }
