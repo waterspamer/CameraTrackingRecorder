@@ -73,6 +73,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UIElementManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DataVizualiser.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Helpers/SceneStart.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIElementsSelector.cs" />
       </list>
     </option>
   </component>
@@ -127,7 +128,8 @@
       <workItem from="1614951840606" duration="8482000" />
       <workItem from="1615206863288" duration="469000" />
       <workItem from="1615294198270" duration="12611000" />
-      <workItem from="1615810747849" duration="660000" />
+      <workItem from="1615810747849" duration="663000" />
+      <workItem from="1615900771010" duration="664000" />
     </task>
     <servers />
   </component>
