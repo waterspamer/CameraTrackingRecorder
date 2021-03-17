@@ -10,8 +10,8 @@ using UnityEngine.UI;
 public class UIElementsSelector : MonoBehaviour
 {
 
-    [Header("Selection Settings")] [SerializeField]
-    private List<UIElementManager> selectedElements;
+    [Header("Selection Settings")]
+    public List<UIElementManager> selectedElements;
 
 
     [SerializeField] private Text selectedCountText;

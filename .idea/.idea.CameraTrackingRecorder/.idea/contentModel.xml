@@ -119,6 +119,7 @@
           <e p="FileUtils" t="Include">
             <e p="AsyncFileUtils.cs" t="Include" />
             <e p="ColladaFileHelper.cs" t="Include" />
+            <e p="NativeAndroidExporter.cs" t="Include" />
           </e>
           <e p="FPSSetter.cs" t="Include" />
           <e p="Helpers" t="Include">
