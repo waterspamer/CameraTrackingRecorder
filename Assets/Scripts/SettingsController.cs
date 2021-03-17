@@ -10,7 +10,14 @@ public class SettingsController : MonoBehaviour
 {
 
     public TextMeshProUGUI TextMeshPro;
-    
+
+    public ScrollRect listParentRect;
+
+    private void Awake()
+    {
+        SettingsManager.GetInstance.listParentRect = listParentRect;
+    }
+
     public void SetRecordFPS(Slider slider) => 
         SettingsManager.GetInstance.SetFPS((int)slider.value);
 

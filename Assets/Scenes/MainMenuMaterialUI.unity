@@ -5107,7 +5107,7 @@ MonoBehaviour:
     m_FontSize: 93
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 0
     m_MaxSize: 134
     m_Alignment: 3
     m_AlignByGeometry: 0
@@ -5154,6 +5154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TextMeshPro: {fileID: 205769849}
+  listParentRect: {fileID: 61620611}
 --- !u!4 &1307931338
 Transform:
   m_ObjectHideFlags: 0

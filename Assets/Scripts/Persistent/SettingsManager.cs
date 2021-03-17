@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 namespace Persistent
 {
@@ -11,6 +12,8 @@ namespace Persistent
         public float longPressTime = .25f;
 
         public bool isSelectingMode;
+
+        public ScrollRect listParentRect;
 
         public string fileName;
 

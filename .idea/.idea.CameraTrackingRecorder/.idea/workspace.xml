@@ -17,6 +17,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIElementScaler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/ExtendedSliderEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://C:/Program Files/Unity/Hub/Editor/2019.3.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/VertexModifiers/Shadow.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/22BACE76-DF44-4A70-B57C-8B9F1CA83160/35/bb18fb4a/IPointerUpHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/ButtonExtensionEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FileUtils/AsyncFileUtils.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/RecordVisualization/ReplayManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -73,13 +74,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIElementManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RecordVisualization/ReplayManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Threading/Dispatcher.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SettingsController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FileUtils/ColladaFileHelper.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Exporter.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Persistent/SettingsManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIElementsSelector.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/ButtonLongPress.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DataVizualiser.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIElementsSelector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Persistent/SettingsManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SettingsController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/ButtonLongPress.cs" />
       </list>
     </option>
   </component>
@@ -136,7 +137,7 @@
       <workItem from="1615294198270" duration="12611000" />
       <workItem from="1615810747849" duration="663000" />
       <workItem from="1615900771010" duration="9937000" />
-      <workItem from="1615972268566" duration="5996000" />
+      <workItem from="1615972268566" duration="13877000" />
     </task>
     <servers />
   </component>

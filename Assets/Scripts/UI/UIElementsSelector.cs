@@ -60,11 +60,7 @@ public class UIElementsSelector : MonoBehaviour
         SettingsManager.GetInstance.isSelectingMode = false;
 
     }
-
-    private void Update()
-    {
-        Debug.Log(_selectedItemsCount);
-    }
+    
 
     private void Awake()
     {
