@@ -29,9 +29,8 @@ namespace RecordVisualization
         public void StartPlaying()
         {
             timeLine.minValue = 0;
-            timeLine.maxValue = SettingsManager.GetInstance().CurrentReplayMatrixArray.Length -1 ;
+            timeLine.maxValue = SettingsManager.GetInstance.CurrentReplayMatrixArray.Length -1 ;
             replayWindow.SetActive(true);
-            //_playableRoutine = new TypeCache.TypeCollection.Enumerator();
             _playableRoutine = Play();
             StartCoroutine(_playableRoutine);
         }
@@ -106,7 +105,7 @@ namespace RecordVisualization
 
         IEnumerator Play()
         {
-            _currentReplayMatrices = SettingsManager.GetInstance().CurrentReplayMatrixArray;
+            _currentReplayMatrices = SettingsManager.GetInstance.CurrentReplayMatrixArray;
             
             for (_currentFrame = (int)timeLine.value; _currentFrame < _currentReplayMatrices.Length; ++_currentFrame)
             {

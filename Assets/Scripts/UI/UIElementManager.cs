@@ -82,9 +82,9 @@ public class UIElementManager : MonoBehaviour
     }
 
 
-    public void AddToSelected() => SettingsManager.GetInstance().Selector.AddItemToSelectedList(this);
+    public void AddToSelected() => SettingsManager.GetInstance.Selector.AddItemToSelectedList(this);
     
-    public void RemoveFromSelected() => SettingsManager.GetInstance().Selector.RemoveItemFromSelectedList(this);
+    public void RemoveFromSelected() => SettingsManager.GetInstance.Selector.RemoveItemFromSelectedList(this);
 
     public void StartReplay()
     {
@@ -102,7 +102,7 @@ public class UIElementManager : MonoBehaviour
     
     void ThreadedMatrixSetting()
     {
-        SettingsManager.GetInstance().CurrentReplayMatrixArray = ColladaFileHelper.GetUnityMatricesFromStringArrayThreaded(_cachedStrings);
+        SettingsManager.GetInstance.CurrentReplayMatrixArray = ColladaFileHelper.GetUnityMatricesFromStringArrayThreaded(_cachedStrings);
         _onThreadedLoadingEnded?.Invoke();
     }
 

@@ -5,36 +5,42 @@ using UnityEngine.EventSystems;
  
 public class ButtonLongPress : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerExitHandler
 {
-    [SerializeField]
-    public float holdTime => SettingsManager.GetInstance().longPressTime;
- 
+    private float holdTime => SettingsManager.GetInstance.longPressTime;
+    private bool isSelectingMode => SettingsManager.GetInstance.isSelectingMode;
 
+
+    public bool isSelectMode = false;
+    public GameObject circleVisual;
+    
+    
     private bool held = false;
     public UnityEvent onClick = new UnityEvent();
  
     public UnityEvent onLongPress = new UnityEvent();
+    
+    public UnityEvent onPointerDown = new UnityEvent();
  
-    public void OnPointerDown(PointerEventData eventData)
-    {
+    public void OnPointerDown(PointerEventData eventData) {
+        circleVisual.GetComponent<RectTransform>().position = eventData.position;
+        onPointerDown?.Invoke();
         held = false;
-        Invoke("OnLongPress", holdTime);
+        if (!eventData.dragging && !eventData.IsPointerMoving() && !isSelectingMode)
+            Invoke("OnLongPress", holdTime);
     }
  
-    public void OnPointerUp(PointerEventData eventData)
-    {
+    public void OnPointerUp(PointerEventData eventData) {
         CancelInvoke("OnLongPress");
- 
-        if (!held && !eventData.dragging)
+        if (!held && !eventData.dragging && !isSelectingMode)
             onClick.Invoke();
+        if (!held && !eventData.dragging && isSelectingMode)
+            Invoke("OnLongPress", holdTime);
     }
  
-    public void OnPointerExit(PointerEventData eventData)
-    {
+    public void OnPointerExit(PointerEventData eventData) {
         CancelInvoke("OnLongPress");
     }
  
-    private void OnLongPress()
-    {
+    private void OnLongPress() {
         held = true;
         onLongPress.Invoke();
     }

@@ -28,7 +28,7 @@ namespace FileUtils
         public static async Task SetMatricesFromFileToPersistent(string fileName)
         {
             var ms = GetUnityMatricesFromFile(fileName);
-            SettingsManager.GetInstance().CurrentReplayMatrixArray = await ms;
+            SettingsManager.GetInstance.CurrentReplayMatrixArray = await ms;
         }
 
 

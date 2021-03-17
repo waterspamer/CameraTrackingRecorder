@@ -12,9 +12,9 @@ public class SettingsController : MonoBehaviour
     public TextMeshProUGUI TextMeshPro;
     
     public void SetRecordFPS(Slider slider) => 
-        SettingsManager.GetInstance().SetFPS((int)slider.value);
+        SettingsManager.GetInstance.SetFPS((int)slider.value);
 
 
     public void SetFileName() =>
-        SettingsManager.GetInstance().SetFileName(TextMeshPro.text);
+        SettingsManager.GetInstance.SetFileName(TextMeshPro.text);
 }

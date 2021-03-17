@@ -57,7 +57,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/SettingsManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Maths/MatrixExtensions.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SceneManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SettingsController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BaseExporter.cs" />
         <option value="$PROJECT_DIR$/Assets/Shaders/UIGradientShader.shader" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIElementScaler.cs" />
@@ -66,20 +65,21 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Editor/ExtendedSliderEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/ExtendedSlider.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FileUtils/AsyncFileUtils.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Threading/Dispatcher.cs" />
         <option value="$PROJECT_DIR$/Assets/Shaders/SimpleGrabPassBlur.shader" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/FileUtils/ColladaFileHelper.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Exporter.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/RecordVisualization/ReplayManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UIElementManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/DataVizualiser.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Helpers/SceneStart.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Editor/ButtonExtensionEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/ButtonExtension.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/ButtonLongPress.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Persistent/SettingsManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DataVizualiser.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIElementManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/RecordVisualization/ReplayManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Threading/Dispatcher.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SettingsController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FileUtils/ColladaFileHelper.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Exporter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Persistent/SettingsManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIElementsSelector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/ButtonLongPress.cs" />
       </list>
     </option>
   </component>
@@ -136,7 +136,7 @@
       <workItem from="1615294198270" duration="12611000" />
       <workItem from="1615810747849" duration="663000" />
       <workItem from="1615900771010" duration="9937000" />
-      <workItem from="1615972268566" duration="414000" />
+      <workItem from="1615972268566" duration="5018000" />
     </task>
     <servers />
   </component>
@@ -221,9 +221,9 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2536" y="240" key="run.anything.popup/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1614955343643" />
-    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1615301682618">
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1615972637355">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1615301682618" />
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1615972637355" />
   </component>
 </project>

@@ -82,7 +82,7 @@ public class Exporter : MonoBehaviour
                 matrix.m30, matrix.m31, matrix.m32, matrix.m33}));
         }
         MakeStrings();
-        CreateColladaFile(Application.persistentDataPath +$"/{SettingsManager.GetInstance().fileName}.dae");
+        CreateColladaFile(Application.persistentDataPath +$"/{SettingsManager.GetInstance.fileName}.dae");
     }
 
     private static Quaternion ConvertSensorToRightHanded(float x, float y, float z, float w) {

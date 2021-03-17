@@ -13,8 +13,7 @@ public class Dispatcher : MonoBehaviour
         ThreadPool.QueueUserWorkItem(o => action(o), state);
     }
  
-    public static void RunOnMainThread(Action action)
-    {
+    public static void RunOnMainThread(Action action) {
         lock(_backlog) {
             _backlog.Add(action);
             _queued = true;
@@ -22,30 +21,26 @@ public class Dispatcher : MonoBehaviour
     }
  
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
-    private static void Initialize()
-    {
-        if(_instance == null) {
-            _instance = new GameObject("Dispatcher").AddComponent<Dispatcher>();
-            DontDestroyOnLoad(_instance.gameObject);
-        }
+    private static void Initialize() {
+        if (_instance != null) return;
+        _instance = new GameObject("Dispatcher").AddComponent<Dispatcher>();
+        DontDestroyOnLoad(_instance.gameObject);
     }
  
     private void Update()
     {
-        if(_queued)
-        {
-            lock(_backlog) {
-                var tmp = _actions;
-                _actions = _backlog;
-                _backlog = tmp;
-                _queued = false;
-            }
- 
-            foreach(var action in _actions)
-                action();
- 
-            _actions.Clear();
+        if (!_queued) return;
+        lock(_backlog) {
+            var tmp = _actions;
+            _actions = _backlog;
+            _backlog = tmp;
+            _queued = false;
         }
+ 
+        foreach(var action in _actions)
+            action();
+ 
+        _actions.Clear();
     }
  
     static Dispatcher _instance;

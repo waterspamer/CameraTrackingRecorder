@@ -24,7 +24,11 @@ public class UIElementsSelector : MonoBehaviour
     public void AddItemToSelectedList(UIElementManager element)
     {
         if (selectedElements.Count == 0)
+        {
             onFirstItemSelected?.Invoke();
+            SettingsManager.GetInstance.isSelectingMode = true;
+        }
+            
         _selectedItemsCount++;
         selectedCountText.text = _selectedItemsCount.ToString();
         selectedElements.Add(element);
@@ -36,7 +40,11 @@ public class UIElementsSelector : MonoBehaviour
         _selectedItemsCount--;
         selectedCountText.text = _selectedItemsCount.ToString();
         if (selectedElements.Count == 0)
+        {
+            SettingsManager.GetInstance.isSelectingMode = false;
             onItemsDeselected?.Invoke();
+        }
+            
     }
 
     public void RemoveAllItemsFromSelectedList()
@@ -49,7 +57,8 @@ public class UIElementsSelector : MonoBehaviour
         _selectedItemsCount = 0;
         selectedCountText.text = "0";
         selectedElements.Clear();
-        
+        SettingsManager.GetInstance.isSelectingMode = false;
+
     }
 
     private void Update()
@@ -60,8 +69,8 @@ public class UIElementsSelector : MonoBehaviour
     private void Awake()
     {
         selectedElements = new List<UIElementManager>();
-        onFirstItemSelected.AddListener(() => SettingsManager.GetInstance().longPressTime = 0f);
-        onItemsDeselected.AddListener(() => SettingsManager.GetInstance().longPressTime = .5f);
-        SettingsManager.GetInstance().Selector = this;
+        onFirstItemSelected.AddListener(() => SettingsManager.GetInstance.longPressTime = 0f);
+        onItemsDeselected.AddListener(() => SettingsManager.GetInstance.longPressTime = .5f);
+        SettingsManager.GetInstance.Selector = this;
     }
 }

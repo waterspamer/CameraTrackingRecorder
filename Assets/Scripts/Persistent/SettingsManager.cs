@@ -10,6 +10,8 @@ namespace Persistent
 
         public float longPressTime = .25f;
 
+        public bool isSelectingMode;
+
         public string fileName;
 
         public Matrix4x4[] CurrentReplayMatrixArray;
@@ -21,7 +23,7 @@ namespace Persistent
             _fpsCount = value;
 
         private static SettingsManager _instance;
-        public static SettingsManager GetInstance() =>
+        public static SettingsManager GetInstance =>
             _instance ?? (_instance = new SettingsManager());
         
     }
