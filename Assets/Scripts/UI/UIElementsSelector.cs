@@ -34,6 +34,17 @@ public class UIElementsSelector : MonoBehaviour
         selectedElements.Add(element);
     }
 
+
+    public void DeleteSelectedElements()
+    {
+        foreach (var element in selectedElements)
+        {
+            element.DeleteElement();
+        }
+    }
+
+
+
     public void RemoveItemFromSelectedList(UIElementManager element)
     {
         selectedElements.Remove(element);

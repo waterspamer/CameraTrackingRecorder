@@ -106,6 +106,16 @@ public class UIElementManager : MonoBehaviour
         _onThreadedLoadingEnded?.Invoke();
     }
 
+
+
+    public void DeleteElement()
+    {
+        FileDeletingUtility.DeleteRecordFile(Path.Combine(Application.persistentDataPath, fileName));
+    }
+    
+    
+    
+
     private UnityEvent _onThreadedLoadingEnded;
 
     
