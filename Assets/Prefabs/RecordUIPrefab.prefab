@@ -534,7 +534,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 724083576507063326}
-        m_MethodName: Select
+        m_MethodName: SelectManually
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

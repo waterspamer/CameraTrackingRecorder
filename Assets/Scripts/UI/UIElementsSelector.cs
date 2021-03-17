@@ -43,13 +43,18 @@ public class UIElementsSelector : MonoBehaviour
     {
         foreach (var item in selectedElements)
         {
-            item.Deselect();
+            item.DeselectAutomatically();
         }
         onItemsDeselected?.Invoke();
         _selectedItemsCount = 0;
         selectedCountText.text = "0";
         selectedElements.Clear();
         
+    }
+
+    private void Update()
+    {
+        Debug.Log(_selectedItemsCount);
     }
 
     private void Awake()

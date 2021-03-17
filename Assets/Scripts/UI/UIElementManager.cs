@@ -39,7 +39,7 @@ public class UIElementManager : MonoBehaviour
     public  UnityEvent onDeselected;
 
 
-    public void Select()
+    public void SelectManually()
     {
         Debug.Log("This Item Selected");
         _selected = !_selected;
@@ -49,6 +49,13 @@ public class UIElementManager : MonoBehaviour
             return;
         }
         Deselect();
+    }
+
+
+    public void DeselectAutomatically()
+    {
+        GetComponent<Animator>().Play("OnDeselect");
+        _selected = false;
     }
 
     public void Deselect()
