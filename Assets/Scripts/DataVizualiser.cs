@@ -1,8 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
+using Accord.Math;
 using UnityEngine;
 using UnityEngine.Android;
+using Vector3 = UnityEngine.Vector3;
 
 public class DataVizualiser : MonoBehaviour
 {
@@ -19,7 +22,8 @@ public class DataVizualiser : MonoBehaviour
     private void CreateContentScrollView()
     {
         var info = new DirectoryInfo(Application.persistentDataPath);
-        var fileInfo = info.GetFiles();
+        var fileInfo =  info.GetFiles().OrderByDescending(file => file.CreationTime).ToArray();
+        
         var objects = new List<GameObject>();
         Debug.Log(info.FullName);
         var height = UIRecordPrefab.GetComponent<RectTransform>().rect.height;
@@ -37,7 +41,7 @@ public class DataVizualiser : MonoBehaviour
             tr.anchorMin = new Vector2(0, 1);
             var tmp = obj.GetComponent<UIElementManager>();
             tmp.fileName = fileInfo[i].Name;
-            tmp.creationDate = fileInfo[i].CreationTime.ToString("dd/MM/yyyy").Replace('/', '.');
+            tmp.creationDate = fileInfo[i].CreationTime.ToString("dd/MMM").Replace('/', ' ');
             tmp.fileSize = $"{(int) (fileInfo[i].Length / 1000f)} KB";
             tmp.Initialize();
             parentGameObject = obj;

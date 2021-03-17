@@ -70,7 +70,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Helpers/SceneStart.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Editor/ButtonExtensionEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/ButtonExtension.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/DataVizualiser.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIElementManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RecordVisualization/ReplayManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Threading/Dispatcher.cs" />
@@ -80,6 +79,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Persistent/SettingsManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIElementsSelector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/ButtonLongPress.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DataVizualiser.cs" />
       </list>
     </option>
   </component>
@@ -136,7 +136,7 @@
       <workItem from="1615294198270" duration="12611000" />
       <workItem from="1615810747849" duration="663000" />
       <workItem from="1615900771010" duration="9937000" />
-      <workItem from="1615972268566" duration="5018000" />
+      <workItem from="1615972268566" duration="5996000" />
     </task>
     <servers />
   </component>
