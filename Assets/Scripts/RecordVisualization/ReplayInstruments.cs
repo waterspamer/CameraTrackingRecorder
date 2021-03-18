@@ -12,8 +12,8 @@ namespace RecordVisualization
         public Camera thirdPersonViewCamera;
 
 
-        public RenderTexture fpsTexture;
-        public RenderTexture tpsTexture;
+        private RenderTexture fpsTexture;
+        private RenderTexture tpsTexture;
 
         public RawImage renderingPath;
         public TrailRenderer trailRenderer;
@@ -26,11 +26,18 @@ namespace RecordVisualization
         private void Awake()
         {
             _renderTexture = firstPersonViewCamera.activeTexture;
+            var rect = renderingPath.rectTransform.rect;
+            fpsTexture = new RenderTexture( Screen.width, Screen.height, 24 );
+            tpsTexture = new RenderTexture( Screen.width, Screen.height, 24 );
+            firstPersonViewCamera.targetTexture = fpsTexture;
+            thirdPersonViewCamera.targetTexture = tpsTexture;
             _trailColor = trailRenderer.material.color;
+            renderingPath.texture = fpsTexture;
         }
 
         public void SwitchCameraView()
         {
+            renderingPath.texture = fpsTexture;
             _isFps = !_isFps;
             renderingPath.texture = _isFps ? fpsTexture : tpsTexture;
         }

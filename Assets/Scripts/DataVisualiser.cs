@@ -6,6 +6,7 @@ using Accord.Math;
 using UI;
 using UnityEngine;
 using UnityEngine.Android;
+using UnityEngine.UI;
 using Vector3 = UnityEngine.Vector3;
 
 public class DataVisualiser : MonoBehaviour
@@ -16,6 +17,8 @@ public class DataVisualiser : MonoBehaviour
 
     [SerializeField] private GameObject contentView;
 
+    [SerializeField] private GameObject newElementText;
+
 
 
 
@@ -23,6 +26,9 @@ public class DataVisualiser : MonoBehaviour
     {
         var info = new DirectoryInfo(Application.persistentDataPath);
         var fileInfo =  info.GetFiles().OrderByDescending(file => file.CreationTime).ToArray();
+
+        newElementText.SetActive(fileInfo.Length == 0);
+        
         var height = UIRecordPrefab.GetComponent<RectTransform>().rect.height;
         var rect = contentView.GetComponent<RectTransform>();
         rect.sizeDelta = new Vector2(0, (height)* fileInfo.Length);
@@ -33,13 +39,14 @@ public class DataVisualiser : MonoBehaviour
     {
         var info = new DirectoryInfo(Application.persistentDataPath);
         var fileInfo =  info.GetFiles().OrderByDescending(file => file.CreationTime).ToArray();
-        
+        newElementText.SetActive(fileInfo.Length == 0);
         var objects = new List<GameObject>();
         Debug.Log(info.FullName);
         var height = UIRecordPrefab.GetComponent<RectTransform>().rect.height;
         var rect = contentView.GetComponent<RectTransform>();
         rect.sizeDelta = new Vector2(0, (height)* fileInfo.Length);
         var parentGameObject = contentView;
+        
         for (int i = 0; i < fileInfo.Length; ++i)
         {
             var obj = Instantiate(UIRecordPrefab, new Vector3(contentView.GetComponent<RectTransform>().rect.width/2, -(i+1) * height , 0), 
