@@ -18,6 +18,15 @@ public class DataVizualiser : MonoBehaviour
 
 
 
+    public void RecalculateScrollViewSize()
+    {
+        var info = new DirectoryInfo(Application.persistentDataPath);
+        var fileInfo =  info.GetFiles().OrderByDescending(file => file.CreationTime).ToArray();
+        var height = UIRecordPrefab.GetComponent<RectTransform>().rect.height;
+        var rect = contentView.GetComponent<RectTransform>();
+        rect.sizeDelta = new Vector2(0, (height)* fileInfo.Length);
+    }
+    
 
     private void CreateContentScrollView()
     {

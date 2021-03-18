@@ -78,14 +78,14 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Threading/Dispatcher.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FileUtils/ColladaFileHelper.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Exporter.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/DataVizualiser.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Persistent/SettingsManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SettingsController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/ButtonLongPress.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FileUtils/NativeAndroidExporter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FileUtils/FileDeletingUtility.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIElementManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIElementsSelector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DataVizualiser.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIElementManager.cs" />
       </list>
     </option>
   </component>
@@ -142,7 +142,8 @@
       <workItem from="1615294198270" duration="12611000" />
       <workItem from="1615810747849" duration="663000" />
       <workItem from="1615900771010" duration="9937000" />
-      <workItem from="1615972268566" duration="18828000" />
+      <workItem from="1615972268566" duration="18994000" />
+      <workItem from="1616062519829" duration="1337000" />
     </task>
     <servers />
   </component>

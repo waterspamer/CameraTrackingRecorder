@@ -111,11 +111,25 @@ public class UIElementManager : MonoBehaviour
     public void DeleteElement()
     {
         FileDeletingUtility.DeleteRecordFile(Path.Combine(Application.persistentDataPath, fileName));
+        DeleteVisualisation();
+    }
+
+    void DeleteVisualisation()
+    {
+        var components = GetComponentsInChildren<UIElementManager>();
+        var child = (components.Length == 1) ? null :  components[1].gameObject ;
+        if (child != null)
+        {
+            child.transform.SetParent(gameObject.transform.parent);
+            child.GetComponent<RectTransform>().position = gameObject.transform.position;
+            
+        }
+        gameObject.SetActive(false);
     }
     
-    
-    
 
+    
+    
     private UnityEvent _onThreadedLoadingEnded;
 
     
