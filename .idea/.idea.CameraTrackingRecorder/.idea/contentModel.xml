@@ -108,7 +108,7 @@
           <e p="AnimationCurveBuilder.cs" t="Include" />
           <e p="BaseExporter.cs" t="Include" />
           <e p="CsvToAnimHelper.cs" t="Include" />
-          <e p="DataVizualiser.cs" t="Include" />
+          <e p="DataVisualiser.cs" t="Include" />
           <e p="Editor" t="Include">
             <e p="ButtonExtensionEditor.cs" t="Include" />
             <e p="CsvToAnimHelperEditor.cs" t="Include" />
@@ -134,6 +134,7 @@
             <e p="SettingsManager.cs" t="Include" />
           </e>
           <e p="RecordVisualization" t="Include">
+            <e p="ReplayInstruments.cs" t="Include" />
             <e p="ReplayManager.cs" t="Include" />
           </e>
           <e p="SceneManager.cs" t="Include" />

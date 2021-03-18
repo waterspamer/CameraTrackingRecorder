@@ -20,6 +20,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/22BACE76-DF44-4A70-B57C-8B9F1CA83160/35/bb18fb4a/IPointerUpHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/ButtonExtensionEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FileUtils/AsyncFileUtils.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RecordVisualization/ReplayInstruments.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/RecordVisualization/ReplayManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/ExtendedSlider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9577AC7A-62EF-4317-9789-031239BA8798/ff/883d7d5b/CultureInfo.cs" root0="SKIP_HIGHLIGHTING" />
@@ -81,11 +82,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Persistent/SettingsManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SettingsController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/ButtonLongPress.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/FileUtils/NativeAndroidExporter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FileUtils/FileDeletingUtility.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIElementsSelector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DataVizualiser.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FileUtils/NativeAndroidExporter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DataVisualiser.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIElementManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/RecordVisualization/ReplayInstruments.cs" />
       </list>
     </option>
   </component>
@@ -143,7 +146,7 @@
       <workItem from="1615810747849" duration="663000" />
       <workItem from="1615900771010" duration="9937000" />
       <workItem from="1615972268566" duration="18994000" />
-      <workItem from="1616062519829" duration="1337000" />
+      <workItem from="1616062519829" duration="5931000" />
     </task>
     <servers />
   </component>
