@@ -22,16 +22,16 @@ namespace RecordVisualization
 
 
         private bool _isFps = true;
-
+        private Color _trailColor;
         private void Awake()
         {
             _renderTexture = firstPersonViewCamera.activeTexture;
+            _trailColor = trailRenderer.material.color;
         }
 
         public void SwitchCameraView()
         {
             _isFps = !_isFps;
-            trailRenderer.enabled = !_isFps;
             renderingPath.texture = _isFps ? fpsTexture : tpsTexture;
         }
     
