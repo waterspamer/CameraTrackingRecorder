@@ -107,10 +107,10 @@ namespace FileUtils
             
             
             WriteToTemporaryFile(element.fileName, element);
-            var data = File.ReadAllBytes(filePath);
-            var cachePath = Path.Combine( SettingsManager.GetInstance.TemporaryDataPath, element.fileName );
-            File.WriteAllBytes( cachePath, data);
-            _nativeAndroidShare.AddFile(cachePath);
+            //var data = File.ReadAllBytes(filePath);
+            //var cachePath = Path.Combine( SettingsManager.GetInstance.TemporaryDataPath, element.fileName );
+            //File.WriteAllBytes( cachePath, data); 
+            //_nativeAndroidShare.AddFile(cachePath);
             _threadCount--;
         }
 
@@ -157,15 +157,9 @@ namespace FileUtils
             string cachePath = Path.Combine( SettingsManager.GetInstance.TemporaryDataPath, $"{element.fileName}" );
         
             File.WriteAllLines(cachePath, resultColladaFile.ToString().Split('\n'));
+            _nativeAndroidShare.AddFile(cachePath);
         }
         
-        
-        
-        
-        
-        
-    
-    
         public void ShareRecords()
         {
         
