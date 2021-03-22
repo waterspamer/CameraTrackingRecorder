@@ -25,10 +25,10 @@ namespace FileUtils
 
 
 
-        public static async Task SetMatricesFromFileToPersistent(string fileName)
+        public static  void SetMatricesFromFileToPersistent(string fileName)
         {
             var ms = GetUnityMatricesFromFile(fileName);
-            SettingsManager.GetInstance.CurrentReplayMatrixArray = await ms;
+            SettingsManager.GetInstance.CurrentReplayMatrixArray =ms;
         }
 
 
@@ -41,11 +41,11 @@ namespace FileUtils
             }
         }
 
-        public static async Task<Matrix4x4[]> GetUnityMatricesFromFile(string fileName)
+        public static Matrix4x4[] GetUnityMatricesFromFile(string fileName)
 
         {
-            var path = Path.Combine(Application.persistentDataPath, fileName);
-            var linesFromFile = await AsyncFileUtils.ReadAllLinesAsync(fileName);
+            var path = Path.Combine(SettingsManager.GetInstance.PersistentDataPath, fileName);
+            var linesFromFile = File.ReadAllLines(path);
             Debug.Log(linesFromFile[45].Length);
             
             string r = 
@@ -96,7 +96,7 @@ namespace FileUtils
 
 
         public static string[] GetFileStrings(string fileName) =>
-            File.ReadAllLines(Path.Combine(Application.persistentDataPath, fileName));
+            File.ReadAllLines(Path.Combine(SettingsManager.GetInstance.PersistentDataPath, fileName));
 
         
         

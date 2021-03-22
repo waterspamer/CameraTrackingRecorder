@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
@@ -36,6 +37,28 @@ namespace UI
         public  UnityEvent onSelected;
     
         public  UnityEvent onDeselected;
+
+        public float packagingProgress;
+
+        public Image progressBar;
+
+
+
+        public IEnumerator VisualizeProgress()
+        {
+            progressBar.gameObject.SetActive(true);
+            while (packagingProgress < 0.99f)
+            {
+                //Debug.Log(packagingProgress);
+                progressBar.fillAmount = Mathf.Lerp(progressBar.fillAmount,packagingProgress, Time.deltaTime * 20f );
+                if (progressBar.fillAmount > 0.97f)
+                {
+                    progressBar.gameObject.SetActive(false);
+                    yield break;
+                }
+                yield return new WaitForSeconds(0.016f);
+            }
+        }
 
 
         public void SelectManually()
@@ -149,7 +172,7 @@ namespace UI
         }
 
 
-        public async Task ShareFileToBlender()
+        public void ShareFileToBlender()
         {
             var resultColladaFile = new StringBuilder();
             var linesFromFile = File.ReadAllLines(Path.Combine(Application.persistentDataPath, fileName));
@@ -157,7 +180,7 @@ namespace UI
             {
                 if (i == 45)
                 {
-                    var matrices = await ColladaFileHelper.GetUnityMatricesFromFile(fileName);
+                    var matrices =ColladaFileHelper.GetUnityMatricesFromFile(fileName);
                     var data = new List<float>();
                     foreach (var m in matrices)
                     {

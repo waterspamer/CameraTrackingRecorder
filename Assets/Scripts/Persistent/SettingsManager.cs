@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace Persistent
@@ -14,6 +15,10 @@ namespace Persistent
         public bool isSelectingMode;
 
         public ScrollRect listParentRect;
+
+        public string PersistentDataPath;
+
+        public string TemporaryDataPath;
 
         public string fileName;
 

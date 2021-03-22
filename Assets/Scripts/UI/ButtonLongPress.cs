@@ -46,7 +46,6 @@ public class ButtonLongPress : MonoBehaviour, IPointerDownHandler, IPointerUpHan
     
     
     public void OnPointerDown(PointerEventData eventData) {
-        Debug.Log("PointerDown");
         if (!isSelectingMode)
             Invoke("OnLongPress", holdTime);
         //else onSelect?.Invoke();
@@ -60,7 +59,7 @@ public class ButtonLongPress : MonoBehaviour, IPointerDownHandler, IPointerUpHan
     }
  
     public void OnPointerUp(PointerEventData eventData) {
-        Debug.Log("PointerUp");
+
         CancelInvoke("OnLongPress");
         if (!held && !_dragging && !isSelectingMode)
             onClick.Invoke();
@@ -69,7 +68,7 @@ public class ButtonLongPress : MonoBehaviour, IPointerDownHandler, IPointerUpHan
     }
  
     public void OnPointerExit(PointerEventData eventData) {
-        Debug.Log("PointerExit");
+
         //CancelInvoke("OnLongPress");
     }
  
