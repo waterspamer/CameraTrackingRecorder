@@ -16,6 +16,7 @@ namespace RecordVisualization
         [SerializeField] private Transform replayCamera;
         [SerializeField] private GameObject replayWindow;
         [SerializeField] private ExtendedSlider timeLine;
+        [SerializeField] private Text replayHeader;
 
 
         public UnityEvent onPlayButtonActivate;
@@ -30,6 +31,7 @@ namespace RecordVisualization
         {
             timeLine.minValue = 0;
             timeLine.maxValue = SettingsManager.GetInstance.CurrentReplayMatrixArray.Length -1 ;
+            replayHeader.text = SettingsManager.GetInstance.fileName;
             replayWindow.SetActive(true);
             _playableRoutine = Play();
             StartCoroutine(_playableRoutine);

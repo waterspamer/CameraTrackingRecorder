@@ -87,7 +87,9 @@ namespace UI
 
         public void StartReplay()
         {
+            SettingsManager.GetInstance.SetFileName(fileName);
             FindObjectOfType<ReplayManager>().onWindowActivated?.Invoke();
+            
             _cachedStrings = ColladaFileHelper.GetFileStrings(fileName);
             var thread = new Thread(ThreadedMatrixSetting);
             thread.Start();
@@ -101,6 +103,7 @@ namespace UI
     
         void ThreadedMatrixSetting()
         {
+            
             SettingsManager.GetInstance.CurrentReplayMatrixArray = ColladaFileHelper.GetUnityMatricesFromStringArrayThreaded(_cachedStrings);
             _onThreadedLoadingEnded?.Invoke();
         }
