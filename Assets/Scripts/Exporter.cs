@@ -157,8 +157,23 @@ public class Exporter : MonoBehaviour
         }
     }
 
-    public void SetRecordingState(bool state) => _recording = state; 
+    public void SetRecordingState(bool state) => _recording = state;
 
+
+    IEnumerator Writer()
+    {
+        while (_recording)
+        {
+            _startTime += Time.deltaTime;
+            frameCounter++;
+            _timeData.Add(_startTime);
+            _positions.Add(_trackedObject.position);
+            _rotations.Add(_trackedObject.rotation);
+            yield return new WaitForSeconds(1f/60f);
+        }
+    }
+    
+    
     void FixedUpdate()
     {
         

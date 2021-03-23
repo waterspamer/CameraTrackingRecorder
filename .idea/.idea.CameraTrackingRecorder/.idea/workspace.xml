@@ -79,7 +79,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Helpers/SceneStart.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Editor/ButtonExtensionEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/ButtonExtension.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Exporter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SettingsController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FileUtils/FileDeletingUtility.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DataVizualiser.cs" />
@@ -92,9 +91,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Persistent/SettingsManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/AndroidGestureInvoker.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIElementManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIElementsSelector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Vibration.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FileUtils/NativeAndroidExporter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIElementsSelector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Exporter.cs" />
       </list>
     </option>
   </component>
@@ -154,7 +154,7 @@
       <workItem from="1615972268566" duration="18994000" />
       <workItem from="1616062519829" duration="12922000" />
       <workItem from="1616412906310" duration="13041000" />
-      <workItem from="1616501396056" duration="2855000" />
+      <workItem from="1616501396056" duration="4190000" />
     </task>
     <servers />
   </component>
