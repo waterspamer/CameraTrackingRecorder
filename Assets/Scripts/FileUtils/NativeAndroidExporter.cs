@@ -32,15 +32,13 @@ namespace FileUtils
         {
             _nativeAndroidShare = new NativeShare();
             onThreadsRipped = new UnityEvent();
+            _threadPool = new List<Thread>();
             onThreadsRipped.AddListener(FinalizeSharing);
             SettingsManager.GetInstance.PersistentDataPath = Application.persistentDataPath;
             SettingsManager.GetInstance.TemporaryDataPath = Application.temporaryCachePath;
             
             Debug.Log(Application.persistentDataPath);
             Debug.Log(SettingsManager.GetInstance.PersistentDataPath);
-            
-            
-            //Dispatcher.onThreadsRipped.AddListener(FinalizeSharing);
         }
 
 
@@ -70,26 +68,24 @@ namespace FileUtils
                 //var thread = new ParameterizedThreadStart(AsyncFilePackaging(element));
                 Dispatcher.RunOnMainThread(()=> StartCoroutine(element.VisualizeProgress()));
                 var thread = new Thread(()=> AsyncFilePackaging(element));
+                _threadPool.Add(thread);
                 thread.Start();
-                
-                //Dispatcher.RunOnMainThread(() => AsyncFilePackaging(element));
             }
-            
-            /*
-            nativeAndroidObj.SetSubject( "Collada export" ).SetText( $"Collada (.dae) file(s) generated at {DateTime.Now}, sent by Antilatency Android sharing plug-in" )
-                .SetCallback( ( result, shareTarget ) => Debug.Log( "Share result: " + result + ", selected app: " + shareTarget ) )
-                .Share();
-            */
-            
-            
         }
 
+        private List<Thread> _threadPool;
 
         private UnityEvent onWritingFinished;
 
 
         private void FinalizeSharing()
         {
+
+            foreach (var thread in _threadPool)
+            {
+                thread.Abort();
+            }
+            
             _nativeAndroidShare.SetSubject( "Collada export" ).SetText( $"Collada (.dae) file(s) generated at {DateTime.Now}, sent by Antilatency Android sharing plug-in" )
                 .SetCallback( ( result, shareTarget ) => Debug.Log( "Share result: " + result + ", selected app: " + shareTarget ) )
                 .Share();
@@ -100,17 +96,7 @@ namespace FileUtils
         
         private void AsyncFilePackaging(UIElementManager element)
         {
-
-            var filePath = Path.Combine(SettingsManager.GetInstance.PersistentDataPath, element.fileName);
-
-
-            
-            
             WriteToTemporaryFile(element.fileName, element);
-            //var data = File.ReadAllBytes(filePath);
-            //var cachePath = Path.Combine( SettingsManager.GetInstance.TemporaryDataPath, element.fileName );
-            //File.WriteAllBytes( cachePath, data); 
-            //_nativeAndroidShare.AddFile(cachePath);
             _threadCount--;
         }
 

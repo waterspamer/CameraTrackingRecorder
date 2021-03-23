@@ -135,6 +135,7 @@ namespace UI
 
         public void DeleteElement()
         {
+            
             FileDeletingUtility.DeleteRecordFile(Path.Combine(Application.persistentDataPath, fileName));
             DeleteVisualisation();
         }

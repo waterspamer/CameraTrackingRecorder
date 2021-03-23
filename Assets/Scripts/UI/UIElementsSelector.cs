@@ -29,7 +29,7 @@ public class UIElementsSelector : MonoBehaviour
             onFirstItemSelected?.Invoke();
             SettingsManager.GetInstance.isSelectingMode = true;
         }
-            
+        Vibration.Vibrate(200);
         _selectedItemsCount++;
         selectedCountText.text = _selectedItemsCount.ToString();
         selectedElements.Add(element);

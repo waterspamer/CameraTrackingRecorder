@@ -3,14 +3,13 @@ using UnityEngine.Events;
 
 namespace UI
 {
-    public class AndroidGestureInvoker : MonoBehaviour
+    public static class AndroidGestureInvoker
     {
-        public UnityEvent onBackGesture;
-
-        void Update()
+        //public static UnityEvent onBackGesture;
+        public static void Vibrate(float duration)
         {
-            if (Input.GetKeyDown(KeyCode.Escape))
-                onBackGesture?.Invoke();
         }
+        //Handheld.Vibrate(duration);
+            
     }
 }
