@@ -45,6 +45,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Maths/MatrixExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://C:/Program Files/Unity/Hub/Editor/2019.3.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Selectable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/ButtonLongPress.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.formats.fbx@3.2.1-preview.2/Editor/FbxExporter.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/62FFEEB7-EC02-4BEA-B61E-5FBF8D44AC5B/6d/9240eb41/StreamReader.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/62FFEEB7-EC02-4BEA-B61E-5FBF8D44AC5B/81/7d57688e/Assembly.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E5B75411-C8CD-4BFA-A9E7-60BE20206F29/f6/a63098b4/Object.cs" root0="SKIP_HIGHLIGHTING" />
@@ -154,7 +155,8 @@
       <workItem from="1615972268566" duration="18994000" />
       <workItem from="1616062519829" duration="12922000" />
       <workItem from="1616412906310" duration="13041000" />
-      <workItem from="1616501396056" duration="4190000" />
+      <workItem from="1616501396056" duration="4221000" />
+      <workItem from="1616595560735" duration="2777000" />
     </task>
     <servers />
   </component>

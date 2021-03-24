@@ -5,6 +5,7 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using UnityEngine;
 using Antilatency;
 using Persistent;
@@ -37,6 +38,8 @@ public class Exporter : MonoBehaviour
         _transformData = new List<float>();
         _dataString = String.Empty;
         _timeString = String.Empty;
+        _writingRoutine = Writer();
+        //_writingThread = new Thread(()=> StartCoroutine(_writingRoutine));
     }
 
     private void MakeStrings()
@@ -157,9 +160,31 @@ public class Exporter : MonoBehaviour
         }
     }
 
+    public void StartWriting()
+    {
+        _recording = true;
+        StartCoroutine(_writingRoutine);
+        //_writingThread.Start();
+    }
+
+    public void StopWriting()
+    {
+        _recording = false;
+        StopCoroutine(_writingRoutine);
+        Export();
+        //_writingThread.Abort();
+    }
+    
+    
+
     public void SetRecordingState(bool state) => _recording = state;
 
 
+    private Thread _writingThread;
+
+
+    private IEnumerator _writingRoutine;
+    
     IEnumerator Writer()
     {
         while (_recording)
@@ -173,7 +198,7 @@ public class Exporter : MonoBehaviour
         }
     }
     
-    
+    /*
     void FixedUpdate()
     {
         
@@ -185,6 +210,7 @@ public class Exporter : MonoBehaviour
         _positions.Add(_trackedObject.position);
         _rotations.Add(_trackedObject.rotation);
     }
+    */
 
     private bool _recording;
 }
