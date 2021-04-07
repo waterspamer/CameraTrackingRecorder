@@ -8,7 +8,7 @@
       <e p="Antilatency.Integration.Editor.csproj" t="IncludeRecursive" />
       <e p="Antilatency.UnityPrototypingTools.csproj" t="IncludeRecursive" />
       <e p="Antilatency.UnityPrototypingTools.Editor.csproj" t="IncludeRecursive" />
-      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="ApplicationAssembly.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Antilatency" t="Include">
@@ -84,8 +84,12 @@
             </e>
           </e>
         </e>
-        <e p="ButtonExtension.cs" t="Include" />
         <e p="colladaTestFile.txt" t="Include" />
+        <e p="PlayModeTests" t="Include">
+          <e p="ExportTestSuite.cs" t="Include" />
+          <e p="PlayModeApplicationTests.asmdef" t="Include" />
+          <e p="RuntimeUITestSuite.cs" t="Include" />
+        </e>
         <e p="Plugins" t="Include">
           <e p="NativeShare" t="Include">
             <e p="Android" t="Include">
@@ -106,7 +110,9 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="AnimationCurveBuilder.cs" t="Include" />
+          <e p="ApplicationAssembly.asmdef" t="Include" />
           <e p="BaseExporter.cs" t="Include" />
+          <e p="ButtonExtension.cs" t="Include" />
           <e p="CsvToAnimHelper.cs" t="Include" />
           <e p="DataVisualiser.cs" t="Include" />
           <e p="Editor" t="Include">
@@ -158,6 +164,18 @@
         <e p="Shaders" t="Include">
           <e p="SimpleGrabPassBlur.shader" t="Include" />
           <e p="UIGradientShader.shader" t="Include" />
+        </e>
+        <e p="Tests" t="Include">
+          <e p="FileRoutinesTests" t="Include">
+            <e p="FileRoutinesTestSuite.cs" t="Include" />
+          </e>
+          <e p="Tests.asmdef" t="Include" />
+          <e p="ThreadingTests" t="Include">
+            <e p="ThreadingTestSuite.cs" t="Include" />
+          </e>
+          <e p="UITests" t="Include">
+            <e p="UITestSuite.cs" t="Include" />
+          </e>
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
@@ -281,7 +299,9 @@
       <e p="Nobi.UiRoundedCorners.csproj" t="IncludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
+      <e p="PlayModeApplicationTests.csproj" t="IncludeRecursive" />
       <e p="Temp\bin" t="ExcludeRecursive" />
+      <e p="Tests.csproj" t="IncludeRecursive" />
     </e>
   </component>
 </project>

@@ -32,7 +32,7 @@ namespace FileUtils
         {
             _nativeAndroidShare = new NativeShare();
             onThreadsRipped = new UnityEvent();
-            _threadPool = new List<Thread>();
+            threadPool = new List<Thread>();
             onThreadsRipped.AddListener(FinalizeSharing);
             SettingsManager.GetInstance.PersistentDataPath = Application.persistentDataPath;
             SettingsManager.GetInstance.TemporaryDataPath = Application.temporaryCachePath;
@@ -55,7 +55,6 @@ namespace FileUtils
         }
 
         public void RepackRecordsAndShare() {
-            var nativeAndroidObj = new NativeShare();
             _currentlySharingRecords = new Dictionary<UIElementManager, float>();
             _threadCount = selector.selectedElements.Count;
             StartCoroutine(FinalizingCheck());
@@ -65,15 +64,14 @@ namespace FileUtils
             }
             foreach (var element in selector.selectedElements)
             {
-                //var thread = new ParameterizedThreadStart(AsyncFilePackaging(element));
                 Dispatcher.RunOnMainThread(()=> StartCoroutine(element.VisualizeProgress()));
                 var thread = new Thread(()=> AsyncFilePackaging(element));
-                _threadPool.Add(thread);
+                threadPool.Add(thread);
                 thread.Start();
             }
         }
 
-        private List<Thread> _threadPool;
+        public List<Thread> threadPool { get; private set; }
 
         private UnityEvent onWritingFinished;
 
@@ -81,7 +79,7 @@ namespace FileUtils
         private void FinalizeSharing()
         {
 
-            foreach (var thread in _threadPool)
+            foreach (var thread in threadPool)
             {
                 thread.Abort();
             }
