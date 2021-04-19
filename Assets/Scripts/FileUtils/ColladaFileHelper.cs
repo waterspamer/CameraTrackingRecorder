@@ -113,7 +113,7 @@ namespace FileUtils
 
             var m = Regex.Match(linesFromFile[45], r);
             
-            
+            Debug.Log(m.Groups["text"].ToString());
             var floats = m.Groups["text"].ToString().Split(' ');
             
             var output = new Matrix4x4[floats.Length /16];

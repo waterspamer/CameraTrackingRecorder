@@ -143,23 +143,6 @@ public class Exporter : MonoBehaviour
 
     private float _startTime = 0f;
 
-
-
-
-
-    private IEnumerator WritingCoroutine(int fps)
-    {
-        while (true)
-        {
-            _startTime += Time.deltaTime;
-            frameCounter++;
-            _timeData.Add(_startTime);
-            _positions.Add(_trackedObject.position);
-            _rotations.Add(_trackedObject.rotation);
-            yield return new WaitForSeconds(1f / fps);
-        }
-    }
-
     public void StartWriting()
     {
         _recording = true;

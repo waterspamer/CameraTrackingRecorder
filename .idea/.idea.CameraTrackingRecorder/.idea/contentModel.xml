@@ -151,6 +151,7 @@
           <e p="Trender.cs" t="Include" />
           <e p="UI" t="Include">
             <e p="AndroidGestureInvoker.cs" t="Include" />
+            <e p="BackGestureInvoker.cs" t="Include" />
             <e p="BlurAnimationController.cs" t="Include" />
             <e p="ButtonLongPress.cs" t="Include" />
             <e p="ExtendedSlider.cs" t="Include" />
