@@ -9,12 +9,13 @@ using System.Threading;
 using UnityEngine;
 using Antilatency;
 using Persistent;
+using UnityEngine.UI;
 
 public class Exporter : MonoBehaviour
 {
     [SerializeField] private TextAsset referenceColladaTextAsset;
-    
 
+    public Text recordInfoText; 
 
     public Transform _trackedObject;
 
@@ -174,6 +175,7 @@ public class Exporter : MonoBehaviour
         {
             _startTime += Time.deltaTime;
             frameCounter++;
+            recordInfoText.text = $"{Math.Round(frameCounter / 60f, 2)} s ({frameCounter} frames)";
             _timeData.Add(_startTime);
             _positions.Add(_trackedObject.position);
             _rotations.Add(_trackedObject.rotation);

@@ -34,6 +34,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E5B75411-C8CD-4BFA-A9E7-60BE20206F29/c6/9982cf2c/AsyncOperation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E5B75411-C8CD-4BFA-A9E7-60BE20206F29/76/93a907a7/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/Lab5_example.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E5B75411-C8CD-4BFA-A9E7-60BE20206F29/fd/c8ac2019/Quaternion.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E5B75411-C8CD-4BFA-A9E7-60BE20206F29/7a/c11e4210/Matrix4x4.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9577AC7A-62EF-4317-9789-031239BA8798/e7/b6e80f28/Convert.cs" root0="SKIP_HIGHLIGHTING" />
@@ -52,6 +53,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FileUtils/ColladaFileHelper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/62FFEEB7-EC02-4BEA-B61E-5FBF8D44AC5B/6d/9240eb41/StreamReader.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E5B75411-C8CD-4BFA-A9E7-60BE20206F29/88/5c3947c7/Handheld.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.2.17/Editor/DirectorStyles.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/ExtendedSliderEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Vibration.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/AndroidGestureInvoker.cs" root0="FORCE_HIGHLIGHTING" />
@@ -113,6 +115,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Exporter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/BackGestureInvoker.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SettingsController.cs" />
+        <option value="$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.2.17/Editor/DirectorStyles.cs" />
       </list>
     </option>
   </component>
@@ -180,6 +183,7 @@
       <workItem from="1618573408923" duration="1833000" />
       <workItem from="1618837327087" duration="8007000" />
       <workItem from="1618925089096" duration="4243000" />
+      <workItem from="1619093184306" duration="688000" />
     </task>
     <servers />
   </component>
