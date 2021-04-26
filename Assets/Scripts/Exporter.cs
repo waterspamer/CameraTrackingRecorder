@@ -11,6 +11,7 @@ using Antilatency;
 using Antilatency.Alt.Tracking;
 using Antilatency.Integration;
 using Persistent;
+using Threading;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
@@ -30,17 +31,19 @@ public class Exporter : MonoBehaviour
     public List<Vector3> _positions;
     public List<Quaternion> _rotations;
     public List<float> _transformData;
-    public List<float> _timeData;
+    public List<string> _timeData;
+    public AltTrackingDirect TrackingDirect;
 
 
     private void Awake()
     {
-        _trackedObject.GetComponent<AltTrackingDirect>().GetTrackingState(out State state);
-        _objPose = state.pose;
+        //_trackingDirect = GetComponent<AltTrackingDirect>();
+        //_trackedObject.GetComponent<AltTrackingDirect>().GetTrackingState(out State state);
+        //_objPose = state.pose;
         frameCounter = 0;
         _positions = new List<Vector3>();
         _rotations = new List<Quaternion>();
-        _timeData = new List<float>();
+        _timeData = new List<string>();
         _transformData = new List<float>();
         _dataString = String.Empty;
         _timeString = String.Empty;
@@ -165,64 +168,51 @@ public class Exporter : MonoBehaviour
     {
         cToken.Cancel();
     }
-
+    
     CancellationTokenSource cToken = new CancellationTokenSource();
     public void StartWriting()
     {
+        //Debug.Log($"{DateTime.Now:s.ffff}");
+        cToken = new CancellationTokenSource();
+        var startTime = DateTime.Now;
         _recording = true;
-        //_supportThread.Start();
-        //Dispatcher.RunAsync(()=> AppendNewRecordLine());
-        var stateTimer = new TrackingDataRecordUpdater(9999);
-        var autoEvent = new AutoResetEvent(false);
-        //var cToken = new CancellationTokenSource();
-        ThreadedMethodInvoker.ThreadRoutine(cToken, _trackedObject.GetComponent<AltTrackingDirect>());
-        //cToken.Cancel();
-        //var trackingStateTimer = new Timer(stateTimer.CheckStatus, autoEvent, 100000, (int)(1000f/ 120f));
-        //autoEvent.WaitOne();
-        //trackingStateTimer.Start();
-        var startTime = 0;
-        
-        _frameAddingCallback = new UnityEvent();
-        _frameAddingCallback.AddListener(() => AppendNewRecordLine((1f/ 120f)));
-        StartCoroutine(_writingRoutine);
-        
-    }
-
-    public void StopWriting()
-    {
-        _recording = false;
-        StopCoroutine(_writingRoutine);
-        //todo stateTimer.Dispose();
-        Export();
-    }
-    
-    
-    
-    class TrackingDataRecordUpdater
-    {
-        private int invokeCount;
-        private int  maxCount;
-
-        public TrackingDataRecordUpdater(int count)
+        var timeDelta1 = DateTime.Now - startTime;
+        //Debug.Log($"{timeDelta1.ToString("s.ffff")}");
+        ThreadedMethodInvoker.StartSynchronizedRoutine(() =>
         {
-            invokeCount  = 0;
-            maxCount = count;
-        }
-
-        // This method is called by the timer delegate.
-        public void CheckStatus(System.Object stateInfo)
+            frameCounter++;
+            var timeDelta = (DateTime.Now - startTime);
+            _timeData.Add(timeDelta.ToString("s'.'fff"));
+            var pose = TrackingDirect.GetTrackingState(out var state);
+            //Debug.Log(timeDelta.ToString("s'.'fff"));
+            //Debug.Log($"{timeDelta.Seconds.ToString()}.{timeDelta.Milliseconds.ToString()}");
+            //recordInfoText.text = $"{timeDelta.Seconds.ToString()}.{timeDelta.Milliseconds.ToString()} s ({frameCounter} frames)";
+            _positions.Add(state.pose.position);
+            _rotations.Add(state.pose.rotation);
+            //Quaternion.Lerp()
+        }, 8, cToken);
+        /*
+        ThreadedMethodInvoker.StartSynchronizedRoutine(() =>
         {
-            AutoResetEvent autoEvent = (AutoResetEvent)stateInfo;
-            Debug.Log(DateTime.Now.ToString("h:mm:ss.fff"));
-
-            if(invokeCount == maxCount)
-            {
-                // Reset the counter and signal the waiting thread.
-                invokeCount = 0;
-                autoEvent.Set();
-            }
-        }
+            //AppendNewRecordLine(startTime);
+            var timeDelta = DateTime.Now - startTime;
+            //_timeData.Add(float.Parse($"{timeDelta.ToString("s.ffff")}"));
+            Debug.Log($"{timeDelta.ToString("s.ffff")}");
+            //_positions.Add(_objPose.position);
+            //_rotations.Add(_objPose.rotation);
+            //frameCounter++;
+            //recordInfoText.text = $"{timeDelta.Seconds} s ({frameCounter} frames)";
+        }, 8, cToken);
+        *.
+        //_frameAddingCallback = new UnityEvent();
+        //_frameAddingCallback.AddListener(() => AppendNewRecordLine((1f/ 120f)));
+        //StartCoroutine(_writingRoutine);
+        
     }
+    
+    
+    
+    
     
     private void AppendNewRecordLine(float timeGone)
     {
@@ -240,6 +230,20 @@ public class Exporter : MonoBehaviour
         */
     }
     
+    
+    public void StopWriting()
+    {
+        _recording = false;
+        //StopCoroutine(_writingRoutine);
+        cToken.Cancel();
+        Export();
+    }
+
+    private void FixedUpdate()
+    {
+        recordInfoText.text = $"{_timeData.Last()} s {_timeData.Count} frames";
+    }
+
     private Pose _objPose;
     private Thread _supportThread;
     //
@@ -249,7 +253,7 @@ public class Exporter : MonoBehaviour
         {
             //Dispatcher.RunAsync(()=> AppendNewRecordLine());
                 
-            _frameAddingCallback?.Invoke();
+            //_frameAddingCallback?.Invoke();
             /*
             _startTime += Time.deltaTime;
             frameCounter++;

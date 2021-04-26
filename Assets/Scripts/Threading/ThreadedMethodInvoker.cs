@@ -1,31 +1,46 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using System.Threading;
 using System.Threading.Tasks;
-using Accord;
 using Antilatency.Alt.Tracking;
 using Antilatency.Integration;
-using UnityEditor.VersionControl;
+using UnityEngine;
 
-public static class ThreadedMethodInvoker
+namespace Threading
 {
-    //public static CancellationToken source = new CancellationToken();
-    public static void ThreadRoutine(CancellationTokenSource source, AltTrackingDirect altTrackingDirect)
+    public static class ThreadedMethodInvoker
     {
-        var tsk = new System.Threading.Tasks.Task(() =>
+        public static Task StartSynchronizedRoutine(Action invokedAction, int millisecondsDelay, CancellationTokenSource source)
         {
-            while (!source.IsCancellationRequested)
+            var tsk = new Task(() =>
             {
-                altTrackingDirect.GetTrackingState(out State state);
-                Debug.Log(state.pose.position.x);
-                //Debug.Log(DateTime.Now.Millisecond);
-                System.Threading.Tasks.Task.Delay(new TimeSpan(0, 0, 0, 0, 8), source.Token).Wait();
-            }
-        });
-        tsk.Start();
-
+                while (!source.IsCancellationRequested)
+                {
+                    invokedAction?.Invoke();
+                    Task.Delay(new TimeSpan(0, 0, 0, 0, millisecondsDelay)).Wait();
+                }
+            });
+            tsk.Start();
+            return tsk;
+        }
+        
+        
+        // public static Task StartSynchronizedRoutine(Action invokedAction, int millisecondsDelay, CancellationTokenSource source)
+        // {
+        //     var startTime = DateTime.Now;
+        //     var tsk = new System.Threading.Tasks.Task(() =>
+        //     {
+        //         while (!source.IsCancellationRequested)
+        //         {
+        //             trackingDirect.GetTrackingState(out var state);
+        //             invokedAction?.Invoke();
+        //             System.Threading.Tasks.Task.Delay(new TimeSpan(0, 0, 0, 0, millisecondsDelay)).Wait();
+        //         }
+        //     });
+        //     tsk.Start();
+        //     return tsk;
+        // }
+        
+        
     }
-    
 }
