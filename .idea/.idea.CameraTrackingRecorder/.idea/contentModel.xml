@@ -115,6 +115,7 @@
             <e p="ExporterEditor.cs" t="Include" />
             <e p="ExtendedSliderEditor.cs" t="Include" />
           </e>
+          <e p="EnvironmentVisualizer.cs" t="Include" />
           <e p="Exporter.cs" t="Include" />
           <e p="FileUtils" t="Include">
             <e p="AsyncFileUtils.cs" t="Include" />

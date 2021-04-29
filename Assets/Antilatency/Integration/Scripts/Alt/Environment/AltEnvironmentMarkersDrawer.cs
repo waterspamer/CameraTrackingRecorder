@@ -25,8 +25,8 @@ namespace Antilatency.Integration {
         /// </summary>
         public AltEnvironmentComponent Environment;
 
-        private Material _markerMaterial;
-        private List<GameObject> _markers = new List<GameObject>();
+        protected Material _markerMaterial;
+        protected List<GameObject> _markers = new List<GameObject>();
         private Mesh _markerMesh;
         private int _mutableEnvironmentUpdateId = 0;
 
@@ -44,7 +44,7 @@ namespace Antilatency.Integration {
             }
         }
 
-        private void Start() {
+        protected void Start() {
             if (Environment == null) {
                 Debug.LogError("Environment is null");
             }
