@@ -8,7 +8,7 @@ using UnityEngine;
 
 public class EnvironmentVisualizer : AltEnvironmentMarkersDrawer
 {
-    private new void Start()
+    protected new void Start() 
     {
         base.Start();
         _markerMaterial.color = Color.green;

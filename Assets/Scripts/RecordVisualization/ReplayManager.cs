@@ -17,6 +17,7 @@ namespace RecordVisualization
         [SerializeField] private GameObject replayWindow;
         [SerializeField] private ExtendedSlider timeLine;
         [SerializeField] private Text replayHeader;
+        [SerializeField] private Text fpsSettingsLabel;
 
 
         public UnityEvent onPlayButtonActivate;
@@ -32,6 +33,7 @@ namespace RecordVisualization
             timeLine.minValue = 0;
             timeLine.maxValue = SettingsManager.GetInstance.CurrentReplayMatrixArray.Length -1 ;
             replayHeader.text = SettingsManager.GetInstance.fileName;
+            //fpsSettingsLabel.text = SettingsManager.GetInstance._fpsCount.ToString();
             replayWindow.SetActive(true);
             _playableRoutine = Play();
             StartCoroutine(_playableRoutine);
@@ -65,10 +67,6 @@ namespace RecordVisualization
             get;
             set;
         }
-
-
-        
-        
         
         public void EnablePlayButton()
         {
