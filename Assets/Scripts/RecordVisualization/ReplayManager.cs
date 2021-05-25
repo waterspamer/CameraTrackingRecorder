@@ -18,10 +18,8 @@ namespace RecordVisualization
         [SerializeField] private ExtendedSlider timeLine;
         [SerializeField] private Text replayHeader;
         [SerializeField] private Text fpsSettingsLabel;
-
-
+        
         public UnityEvent onPlayButtonActivate;
-
 
         public UnityEvent onWindowActivated;
         public UnityEvent onWindowDeactivated;
