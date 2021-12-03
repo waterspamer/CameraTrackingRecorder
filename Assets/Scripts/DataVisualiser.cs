@@ -11,19 +11,15 @@ using Vector3 = UnityEngine.Vector3;
 
 public class DataVisualiser : MonoBehaviour
 {
-
-
+    
     [SerializeField] private GameObject UIRecordPrefab;
 
     [SerializeField] private GameObject contentView;
 
     [SerializeField] private GameObject newElementText;
+    
 
-
-
-
-    public void RecalculateScrollViewSize()
-    {
+    public void RecalculateScrollViewSize() {
         var info = new DirectoryInfo(Application.persistentDataPath);
         var fileInfo =  info.GetFiles().OrderByDescending(file => file.CreationTime).ToArray();
 
@@ -35,20 +31,17 @@ public class DataVisualiser : MonoBehaviour
     }
     
 
-    private void CreateContentScrollView()
-    {
+    private void CreateContentScrollView() {
         var info = new DirectoryInfo(Application.persistentDataPath);
         var fileInfo =  info.GetFiles().OrderByDescending(file => file.CreationTime).ToArray();
         newElementText.SetActive(fileInfo.Length == 0);
-        var objects = new List<GameObject>();
         Debug.Log(info.FullName);
         var height = UIRecordPrefab.GetComponent<RectTransform>().rect.height;
         var rect = contentView.GetComponent<RectTransform>();
         rect.sizeDelta = new Vector2(0, (height)* fileInfo.Length);
         var parentGameObject = contentView;
         
-        for (int i = 0; i < fileInfo.Length; ++i)
-        {
+        for (int i = 0; i < fileInfo.Length; ++i) {
             var obj = Instantiate(UIRecordPrefab, new Vector3(contentView.GetComponent<RectTransform>().rect.width/2, -(i+1) * height , 0), 
                 Quaternion.identity, parentGameObject.GetComponent<RectTransform>());
             obj.GetComponent<RectTransform>().anchoredPosition = new Vector2(0,   i == 0 ? - height :  -height * 2);
@@ -65,8 +58,7 @@ public class DataVisualiser : MonoBehaviour
         }
     }
     
-    void Awake()
-    {
+    void Awake() {
         Permission.RequestUserPermission(Permission.FineLocation);
         CreateContentScrollView();
     }

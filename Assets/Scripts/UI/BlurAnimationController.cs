@@ -1,18 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-[ExecuteAlways]
-public class BlurAnimationController : MonoBehaviour
+namespace UI
 {
-
-    [Range(0, 5f)]
-    public float blurValue = 0;
-
-    // Update is called once per frame
-    void Update()
+    [ExecuteAlways]
+    public class BlurAnimationController : MonoBehaviour
     {
-        GetComponent<Image>().material.SetFloat("_Size", blurValue);
+
+        [Range(0, 5f)]
+        public float blurValue;
+        
+        //TODO implement coroutine
+        void Update()=>
+            GetComponent<Image>().material.SetFloat("_Size", blurValue);
+        
     }
 }

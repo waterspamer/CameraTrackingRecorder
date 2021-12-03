@@ -41,7 +41,5 @@ namespace RecordVisualization
             _isFps = !_isFps;
             renderingPath.texture = _isFps ? fpsTexture : tpsTexture;
         }
-    
-    
     }
 }

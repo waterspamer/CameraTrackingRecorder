@@ -33,12 +33,6 @@ public class Exporter : MonoBehaviour
     public AltTrackingDirect TrackingDirect;
 
 
-    public Text xText;
-    public Text yText;
-    public Text zText;
-
-
-
     private void Awake()
     {
         frameCounter = 0;
@@ -118,7 +112,8 @@ public class Exporter : MonoBehaviour
     private void CreateColladaFile(string fileName)
     {
         var resultColladaFile = new StringBuilder();
-        var linesFromFile = referenceColladaTextAsset.text.Split(new[]{"\n"}, StringSplitOptions.None);
+        var linesFromFile = referenceColladaTextAsset.text.Split(new[]{"\n"}, StringSplitOptions.RemoveEmptyEntries);
+        Debug.Log(linesFromFile.Length);
         for (var i = 0; i < linesFromFile.Length; ++i)
         {
             switch (i)
@@ -144,7 +139,7 @@ public class Exporter : MonoBehaviour
                     break;
                 }
                 default:
-                    resultColladaFile.AppendLine(linesFromFile[i]);
+                    resultColladaFile.AppendLine(linesFromFile[i]).Replace("\n", "");
                     break;
             }
         }
@@ -190,18 +185,10 @@ public class Exporter : MonoBehaviour
         while (_recording)
         {
             recordInfoText.text = $"{_timeData?.Last()} s {_timeData?.Count} frames";
-            var pos = _positions.Last();
-            xText.text = pos.x.ToString("F3");
-            yText.text = pos.y.ToString("F3");
-            zText.text = pos.z.ToString("F3");
-            
             yield return new WaitForSeconds(1f/60f);
         }
     }
-
-
-
-
+    
 
     private bool _recording;
 }

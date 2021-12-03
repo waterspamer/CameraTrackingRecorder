@@ -23,24 +23,5 @@ namespace Threading
             tsk.Start();
             return tsk;
         }
-        
-        
-        // public static Task StartSynchronizedRoutine(Action invokedAction, int millisecondsDelay, CancellationTokenSource source)
-        // {
-        //     var startTime = DateTime.Now;
-        //     var tsk = new System.Threading.Tasks.Task(() =>
-        //     {
-        //         while (!source.IsCancellationRequested)
-        //         {
-        //             trackingDirect.GetTrackingState(out var state);
-        //             invokedAction?.Invoke();
-        //             System.Threading.Tasks.Task.Delay(new TimeSpan(0, 0, 0, 0, millisecondsDelay)).Wait();
-        //         }
-        //     });
-        //     tsk.Start();
-        //     return tsk;
-        // }
-        
-        
     }
 }

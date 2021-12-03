@@ -25,21 +25,16 @@ public class ButtonLongPress : MonoBehaviour, IPointerDownHandler, IPointerUpHan
 
     private bool _dragging;
     
-    public void OnDrag(PointerEventData eventData)
-    {
-        Debug.Log("Dragging " + gameObject.name);
-        
+    public void OnDrag(PointerEventData eventData) {
         SettingsManager.GetInstance.listParentRect.OnDrag(eventData);
         CancelInvoke("OnLongPress");
     }
     
-    public void OnEndDrag(PointerEventData eventData)
-    {
+    public void OnEndDrag(PointerEventData eventData) {
         _dragging = false;
         SettingsManager.GetInstance.listParentRect.OnEndDrag(eventData);
     }
-    public void OnBeginDrag(PointerEventData eventData)
-    {
+    public void OnBeginDrag(PointerEventData eventData) {
         _dragging = true;
         SettingsManager.GetInstance.listParentRect.OnBeginDrag(eventData);
     }
@@ -48,14 +43,9 @@ public class ButtonLongPress : MonoBehaviour, IPointerDownHandler, IPointerUpHan
     public void OnPointerDown(PointerEventData eventData) {
         if (!isSelectingMode)
             Invoke("OnLongPress", holdTime);
-        //else onSelect?.Invoke();
         circleVisual.GetComponent<RectTransform>().position = eventData.position;
         onPointerDown?.Invoke();
         held = false;
-            //&& !eventData.IsPointerMoving()
-            //!eventData.dragging  && 
-        
-        //else onSelect?.Invoke();
     }
  
     public void OnPointerUp(PointerEventData eventData) {

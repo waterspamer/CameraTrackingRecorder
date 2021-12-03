@@ -5,6 +5,7 @@ using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
+using Antilatency.UnityPrototypingTools;
 using Maths;
 using Persistent;
 using UI;
@@ -16,151 +17,118 @@ namespace FileUtils
 {
     public class NativeAndroidExporter : MonoBehaviour
     {
-
         [SerializeField] private UIElementsSelector selector;
-
-
+        
         private Dictionary<UIElementManager, float> _currentlySharingRecords;
-
         private NativeShare _nativeAndroidShare;
-
-        private UnityEvent onThreadsRipped; 
+        private UnityEvent _onThreadsRipped; 
+        private string _cachedPersistentDataPath;
+        private int _threadCount;
+        private List<Thread> _threadPool;
+        private UnityEvent _onWritingFinished;
         
         
-        
-        private void Awake()
-        {
+        private void Awake() {
             _nativeAndroidShare = new NativeShare();
-            onThreadsRipped = new UnityEvent();
-            threadPool = new List<Thread>();
-            onThreadsRipped.AddListener(FinalizeSharing);
-            SettingsManager.GetInstance.PersistentDataPath = Application.persistentDataPath;
-            SettingsManager.GetInstance.TemporaryDataPath = Application.temporaryCachePath;
-            
-            Debug.Log(Application.persistentDataPath);
-            Debug.Log(SettingsManager.GetInstance.PersistentDataPath);
+            _onThreadsRipped = new UnityEvent();
+            _threadPool = new List<Thread>();
+            _onThreadsRipped.AddListener(FinalizeSharing);
+            var smInstance = SettingsManager.GetInstance;
+            smInstance.PersistentDataPath = Application.persistentDataPath;
+            smInstance.TemporaryDataPath = Application.temporaryCachePath;
         }
 
-
-        private int _threadCount;
-        
-        private IEnumerator FinalizingCheck()
-        {
+        private IEnumerator FinalizingCheck(){
             while (_threadCount !=0)
-            {
                 yield return new WaitForSeconds(.01f);
-            }
-            
-            onThreadsRipped?.Invoke();
+            _onThreadsRipped?.Invoke();
         }
 
         public void RepackRecordsAndShare() {
             _currentlySharingRecords = new Dictionary<UIElementManager, float>();
             _threadCount = selector.selectedElements.Count;
             StartCoroutine(FinalizingCheck());
-            foreach (var element in selector.selectedElements)
-            {
+
+            foreach (var element in selector.selectedElements) {
                 _currentlySharingRecords.Add(element, element.progressBar.fillAmount);
-            }
-            foreach (var element in selector.selectedElements)
-            {
                 Dispatcher.RunOnMainThread(()=> StartCoroutine(element.VisualizeProgress()));
                 var thread = new Thread(()=> AsyncFilePackaging(element));
-                threadPool.Add(thread);
+                _threadPool.Add(thread);
                 thread.Start();
             }
         }
 
-        public List<Thread> threadPool { get; private set; }
-
-        private UnityEvent onWritingFinished;
-
-
-        private void FinalizeSharing()
-        {
-
-            foreach (var thread in threadPool)
-            {
+        private void FinalizeSharing() {
+            foreach (var thread in _threadPool)
                 thread.Abort();
-            }
             
             _nativeAndroidShare.SetSubject( "Collada export" ).SetText( $"Collada (.dae) file(s) generated at {DateTime.Now}, sent by Antilatency Android sharing plug-in" )
                 .SetCallback( ( result, shareTarget ) => Debug.Log( "Share result: " + result + ", selected app: " + shareTarget ) )
                 .Share();
         }
 
-
-        private string _cachedPersistentDataPath;
-        
-        private void AsyncFilePackaging(UIElementManager element)
-        {
+        private void AsyncFilePackaging(UIElementManager element) {
             WriteToTemporaryFile(element.fileName, element);
             _threadCount--;
         }
 
-        private void WriteToTemporaryFile(string fileName, UIElementManager element )
-        {
+        private void WriteToTemporaryFile(string fileName, UIElementManager element ) {
             var resultColladaFile = new StringBuilder();
             var linesFromFile = File.ReadAllLines(Path.Combine(SettingsManager.GetInstance.PersistentDataPath, fileName));
-            for (int i = 0; i < linesFromFile.Length; ++i)
-            {
+            for (int i = 0; i < linesFromFile.Length; ++i) {
                 element.packagingProgress = i / (float)linesFromFile.Length;
-                if (i == 45)
-                {
+                if (i == 45) {
+                    
                     var matrices = ColladaFileHelper.GetUnityMatricesFromFile(fileName);
                     var data = new List<float>();
-                    foreach (var m in matrices)
-                    {
-                        var newQuaternion = Exporter.ConvertSensorToRightHanded(  m.ExtractRotation() * Quaternion.AngleAxis(90, Vector3.left));
-                        var newVector = Exporter.ConvertVectorToGL(m.ExtractPosition());
                     
-                        var matrix =  Matrix4x4.TRS(newVector, newQuaternion , Vector3.one);
-            
+                    for (int j = 0; j < matrices.Length; j++) {
+                        var mrot = Quaternion.AngleAxis(90, Vector3.left).ToRotationMatrix();
+                        Matrix4x4 conv = new Matrix4x4(
+                            new Vector4(1, 0, 0),
+                            new Vector4(0, 0, 1),
+                            new Vector4(0, 1, 0),
+                            Vector4.zero);
+                        
+                        var newVector = Exporter.ConvertVectorToGL(matrices[j].ExtractPosition());
+                        
+                        var matrix = conv * (matrices[j] * mrot) * conv;
+                        var newQuaternion = matrices[j].ExtractRotation();
+                        if (j >= 1 && Quaternion.Dot(matrices[j - 1].ExtractRotation(), newQuaternion) < 0) {
+                            newQuaternion.x = -newQuaternion.x;
+                            newQuaternion.y = -newQuaternion.y;
+                            newQuaternion.z = -newQuaternion.z;
+                            newQuaternion.w = -newQuaternion.w;
+                        }
+                        
+                        matrix = Matrix4x4.TRS(newVector, newQuaternion, Vector3.one);
+                        matrix.SetColumn(3, newVector);
+                        matrix.m33 = 1;
+                        
                         data.AddRange((new float[] {
                             matrix.m00, matrix.m01, matrix.m02, matrix.m03,
                             matrix.m10, matrix.m11, matrix.m12, matrix.m13,
                             matrix.m20, matrix.m21, matrix.m22, matrix.m23, 
                             matrix.m30, matrix.m31, matrix.m32, matrix.m33}));
                     }
-                
                     string valuePattern = @">.*<";
-
                     var match = Regex.Match(linesFromFile[45], valuePattern);
-
                     StringBuilder dataString = new StringBuilder(); 
                     foreach (var item in data)
-                    {
-                        dataString.Append($"{item} ");
-                    }
-
+                        dataString.Append(item.ToString("r") + " ");
                     var replace = linesFromFile[45].Replace(match.Value, $">{dataString}<");
                     resultColladaFile.AppendLine(replace);
                 }
                 else resultColladaFile.AppendLine(linesFromFile[i]);
             }
+
+#if UNITY_EDITOR
+            File.WriteAllLines($"D:\\records\\{element.fileName}", resultColladaFile.ToString().Split('\n'));
+            return;
+#endif
             string cachePath = Path.Combine( SettingsManager.GetInstance.TemporaryDataPath, $"{element.fileName}" );
-        
             File.WriteAllLines(cachePath, resultColladaFile.ToString().Split('\n'));
             _nativeAndroidShare.AddFile(cachePath);
-        }
-        
-        public void ShareRecords()
-        {
-        
-            var nativeAndroidObj = new NativeShare();
-        
-
-            foreach (var element in selector.selectedElements)
-            {
-                var filePath = Path.Combine(Application.persistentDataPath, element.fileName);
-                var data = File.ReadAllBytes(filePath);
-                var cachePath = Path.Combine( Application.temporaryCachePath, element.fileName );
-                File.WriteAllBytes( cachePath, data);
-                nativeAndroidObj.AddFile(cachePath);
-            }
-            nativeAndroidObj.SetSubject( "Collada export" ).SetText( $"Collada (.dae) file(s) generated at {DateTime.Now}, sent by Antilatency Android sharing plug-in" )
-                .SetCallback( ( result, shareTarget ) => Debug.Log( "Share result: " + result + ", selected app: " + shareTarget ) )
-                .Share();
         }
     }
 }

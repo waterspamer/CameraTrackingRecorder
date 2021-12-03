@@ -4,10 +4,7 @@ using UnityEngine;
 
 public class UIArrowsRotation : MonoBehaviour
 {
-
-    // Update is called once per frame
-    void Update()
-    {
+    private void Update() {
         transform.rotation = Quaternion.identity;
     }
 }

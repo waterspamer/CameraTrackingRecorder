@@ -107,6 +107,7 @@
           <e p="AnimationCurveBuilder.cs" t="Include" />
           <e p="BaseExporter.cs" t="Include" />
           <e p="ButtonExtension.cs" t="Include" />
+          <e p="ConnectionConfigurator.cs" t="Include" />
           <e p="CsvToAnimHelper.cs" t="Include" />
           <e p="DataVisualiser.cs" t="Include" />
           <e p="Editor" t="Include">
@@ -159,6 +160,7 @@
           <e p="Vibration.cs" t="Include" />
         </e>
         <e p="Shaders" t="Include">
+          <e p="DiffuseNormalSpecularDissolve.shader" t="Include" />
           <e p="SimpleGrabPassBlur.shader" t="Include" />
           <e p="UIGradientShader.shader" t="Include" />
         </e>
