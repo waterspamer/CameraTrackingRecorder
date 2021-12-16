@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
 using UnityEngine;
-using Antilatency;
-using Antilatency.Alt.Tracking;
-using Antilatency.Integration;
+using Antilatency.SDK;
 using Persistent;
 using Threading;
 using UnityEngine.Events;
@@ -149,18 +147,19 @@ public class Exporter : MonoBehaviour
     private UnityEvent _frameAddingCallback;
     private IEnumerator _textVisualizingRoutine;
 
-    private void OnApplicationQuit()
-    {
+    private void OnApplicationQuit()=>
         _cToken.Cancel();
-    }
     
-    CancellationTokenSource _cToken = new CancellationTokenSource();
+    
+    CancellationTokenSource _cToken;
+    private Task _task;
     public void StartWriting()
     {
         _cToken = new CancellationTokenSource();
         var startTime = DateTime.Now;
         _recording = true;
-        ThreadedMethodInvoker.StartSynchronizedRoutine(() =>
+        Debug.Log("started");
+        _task = ThreadedMethodInvoker.StartSynchronizedRoutine(() =>
         {
             frameCounter++;
             var timeDelta = (DateTime.Now - startTime);
@@ -168,7 +167,10 @@ public class Exporter : MonoBehaviour
             TrackingDirect.GetTrackingState(out var state);
             _positions.Add(state.pose.position);
             _rotations.Add(state.pose.rotation);
+            Debug.Log("written");
         }, 8, _cToken);
+        Debug.Log("ended");
+        _task.Start();
         StartCoroutine(_textVisualizingRoutine);
     }
     

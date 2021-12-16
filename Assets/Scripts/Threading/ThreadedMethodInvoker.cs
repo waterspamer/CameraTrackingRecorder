@@ -1,27 +1,32 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using Antilatency.Alt.Tracking;
-using Antilatency.Integration;
 using UnityEngine;
 
 namespace Threading
 {
     public static class ThreadedMethodInvoker
     {
-        public static Task StartSynchronizedRoutine(Action invokedAction, int millisecondsDelay, CancellationTokenSource source)
+        public static Task StartSynchronizedRoutine(Action invokedAction, int millisecondsDelay,
+            CancellationTokenSource source)
         {
-            var tsk = new Task(() =>
+            return new Task(async () =>
             {
                 while (!source.IsCancellationRequested)
                 {
-                    invokedAction?.Invoke();
-                    Task.Delay(new TimeSpan(0, 0, 0, 0, millisecondsDelay)).Wait();
+                    try
+                    {
+                        invokedAction?.Invoke();
+                        await Task.Delay(new TimeSpan(0, 0, 0, 0, millisecondsDelay));
+                    }
+                    catch(Exception exception)
+                    {
+                        Debug.LogError(exception.Message);
+                        throw;
+                    }
                 }
+                Debug.Log($"IsCancellationRequested {source.IsCancellationRequested}");
             });
-            tsk.Start();
-            return tsk;
         }
     }
 }

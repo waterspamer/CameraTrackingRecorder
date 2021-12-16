@@ -89,3 +89,4 @@ Material:
     - _halfSize: {r: 540, g: 1080, b: 0, a: 0}
     - _r: {r: 50, g: 50, b: 50, a: 50}
     - _rect2props: {r: 0.00012207031, g: -0.00012207031, b: 1110.1577, a: 1110.1577}
+  m_BuildTextureStacks: []

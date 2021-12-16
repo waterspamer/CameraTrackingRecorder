@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Antilatency.Integration;
+using Antilatency.SDK;
 using UnityEngine;
 
 public class EnvironmentVisualizer : AltEnvironmentMarkersDrawer

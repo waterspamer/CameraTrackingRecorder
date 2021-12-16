@@ -82,29 +82,13 @@ namespace FileUtils
                     var matrices = ColladaFileHelper.GetUnityMatricesFromFile(fileName);
                     var data = new List<float>();
                     
-                    for (int j = 0; j < matrices.Length; j++) {
-                        var mrot = Quaternion.AngleAxis(90, Vector3.left).ToRotationMatrix();
-                        Matrix4x4 conv = new Matrix4x4(
-                            new Vector4(1, 0, 0),
-                            new Vector4(0, 0, 1),
-                            new Vector4(0, 1, 0),
-                            Vector4.zero);
-                        
-                        var newVector = Exporter.ConvertVectorToGL(matrices[j].ExtractPosition());
-                        
-                        var matrix = conv * (matrices[j] * mrot) * conv;
-                        var newQuaternion = matrices[j].ExtractRotation();
-                        if (j >= 1 && Quaternion.Dot(matrices[j - 1].ExtractRotation(), newQuaternion) < 0) {
-                            newQuaternion.x = -newQuaternion.x;
-                            newQuaternion.y = -newQuaternion.y;
-                            newQuaternion.z = -newQuaternion.z;
-                            newQuaternion.w = -newQuaternion.w;
-                        }
-                        
-                        matrix = Matrix4x4.TRS(newVector, newQuaternion, Vector3.one);
-                        matrix.SetColumn(3, newVector);
-                        matrix.m33 = 1;
-                        
+                    foreach (var m in matrices)
+                    {
+                        var newQuaternion = Exporter.ConvertSensorToRightHanded(  m.ExtractRotation() * Quaternion.AngleAxis(90, Vector3.left));
+                        var newVector = Exporter.ConvertVectorToGL(m.ExtractPosition());
+                    
+                        var matrix =  Matrix4x4.TRS(newVector, newQuaternion , Vector3.one);
+            
                         data.AddRange((new float[] {
                             matrix.m00, matrix.m01, matrix.m02, matrix.m03,
                             matrix.m10, matrix.m11, matrix.m12, matrix.m13,

@@ -3,21 +3,310 @@
   <component name="ChangeListManager">
     <list default="true" id="8e679506-f19b-409d-ab9d-d5e64c0881d3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CameraTrackingRecorder/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CameraTrackingRecorder/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CameraTrackingRecorder/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CameraTrackingRecorder/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CameraTrackingRecorder/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CameraTrackingRecorder/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/MainMenuUI/WindowsAnimations/ReplayWindow.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/MainMenuUI/WindowsAnimations/ReplayWindow.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/MainMenuUI/WindowsAnimations/ReplayWindowAppear.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/MainMenuUI/WindowsAnimations/ReplayWindowAppear.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Antilatency.Integration.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Antilatency.Integration.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/LICENSE.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Models.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Models/Bracer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Models/Bracer/Bracer.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Models/Bracer/Bracer.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Models/Bracer/Bracer_Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Models/Bracer/Bracer_Textures/Bracer_AO.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Models/Bracer/Bracer_Textures/Bracer_AO.tga.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Models/Bracer/Bracer_Textures/Bracer_AlbedoTransparency.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Models/Bracer/Bracer_Textures/Bracer_AlbedoTransparency.tga.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Models/Bracer/Bracer_Textures/Bracer_EmissionMask.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Models/Bracer/Bracer_Textures/Bracer_EmissionMask.tga.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Models/Bracer/Bracer_Textures/Bracer_MetallicSmoothness.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Models/Bracer/Bracer_Textures/Bracer_MetallicSmoothness.tga.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Models/Bracer/Bracer_Textures/Bracer_Normal.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Models/Bracer/Bracer_Textures/Bracer_Normal.tga.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Models/Bracer/Bracer_lp.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Models/Bracer/Bracer_lp.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Models/Bracer/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Models/Bracer/Materials/Bracer.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Models/Bracer/Materials/Bracer.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Models/Tag.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Models/Tag/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Models/Tag/Materials/Tag.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Models/Tag/Materials/Tag.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Models/Tag/Tag.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Models/Tag/Tag.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Models/Tag/Tag_Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Models/Tag/Tag_Textures/Tag_AO.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Models/Tag/Tag_Textures/Tag_AO.tga.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Models/Tag/Tag_Textures/Tag_AlbedoTransparency.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Models/Tag/Tag_Textures/Tag_AlbedoTransparency.tga.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Models/Tag/Tag_Textures/Tag_EmissionMask.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Models/Tag/Tag_Textures/Tag_EmissionMask.tga.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Models/Tag/Tag_Textures/Tag_MetallicSmoothness.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Models/Tag/Tag_Textures/Tag_MetallicSmoothness.tga.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Models/Tag/Tag_Textures/Tag_Normal.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Models/Tag/Tag_Textures/Tag_Normal.tga.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Models/Tag/Tag_lp.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Models/Tag/Tag_lp.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/Android.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/Android/AntilatencyAltTracking.aar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/Android/AntilatencyAltTracking.aar.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/Android/AntilatencyBracer.aar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/Android/AntilatencyBracer.aar.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/Android/AntilatencyDeviceNetwork.aar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/Android/AntilatencyDeviceNetwork.aar.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/Android/AntilatencyHardwareExtensionInterface.aar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/Android/AntilatencyHardwareExtensionInterface.aar.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/Android/AntilatencyRadioMetrics.aar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/Android/AntilatencyRadioMetrics.aar.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/Android/AntilatencyStorageClient.aar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/Android/AntilatencyStorageClient.aar.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/Android/AntilatencyTrackingAlignment.aar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/Android/AntilatencyTrackingAlignment.aar.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/Android/AntilatencyUsbServiceInterfaces.aar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/Android/AntilatencyUsbServiceInterfaces.aar.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/arm64_v8a.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/arm64_v8a/AntilatencyAltTracking.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/arm64_v8a/AntilatencyAltTracking.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/arm64_v8a/AntilatencyBracer.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/arm64_v8a/AntilatencyBracer.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/arm64_v8a/AntilatencyDeviceNetwork.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/arm64_v8a/AntilatencyDeviceNetwork.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/arm64_v8a/AntilatencyHardwareExtensionInterface.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/arm64_v8a/AntilatencyHardwareExtensionInterface.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/arm64_v8a/AntilatencyRadioMetrics.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/arm64_v8a/AntilatencyRadioMetrics.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/arm64_v8a/AntilatencyStorageClient.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/arm64_v8a/AntilatencyStorageClient.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/arm64_v8a/AntilatencyTrackingAlignment.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/arm64_v8a/AntilatencyTrackingAlignment.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/armeabi_v7a.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/armeabi_v7a/AntilatencyAltTracking.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/armeabi_v7a/AntilatencyAltTracking.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/armeabi_v7a/AntilatencyBracer.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/armeabi_v7a/AntilatencyBracer.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/armeabi_v7a/AntilatencyDeviceNetwork.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/armeabi_v7a/AntilatencyDeviceNetwork.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/armeabi_v7a/AntilatencyHardwareExtensionInterface.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/armeabi_v7a/AntilatencyHardwareExtensionInterface.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/armeabi_v7a/AntilatencyRadioMetrics.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/armeabi_v7a/AntilatencyRadioMetrics.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/armeabi_v7a/AntilatencyStorageClient.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/armeabi_v7a/AntilatencyStorageClient.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/armeabi_v7a/AntilatencyTrackingAlignment.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/armeabi_v7a/AntilatencyTrackingAlignment.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/x64.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/x64/AntilatencyAltTracking.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/x64/AntilatencyAltTracking.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/x64/AntilatencyBracer.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/x64/AntilatencyBracer.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/x64/AntilatencyDeviceNetwork.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/x64/AntilatencyDeviceNetwork.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/x64/AntilatencyHardwareExtensionInterface.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/x64/AntilatencyHardwareExtensionInterface.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/x64/AntilatencyRadioMetrics.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/x64/AntilatencyRadioMetrics.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/x64/AntilatencyStorageClient.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/x64/AntilatencyStorageClient.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/x64/AntilatencyTrackingAlignment.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/x64/AntilatencyTrackingAlignment.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/x86.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/x86/AntilatencyAltTracking.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/x86/AntilatencyAltTracking.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/x86/AntilatencyBracer.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/x86/AntilatencyBracer.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/x86/AntilatencyDeviceNetwork.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/x86/AntilatencyDeviceNetwork.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/x86/AntilatencyHardwareExtensionInterface.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/x86/AntilatencyHardwareExtensionInterface.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/x86/AntilatencyRadioMetrics.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/x86/AntilatencyRadioMetrics.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/x86/AntilatencyStorageClient.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/x86/AntilatencyStorageClient.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/x86/AntilatencyTrackingAlignment.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/WSA/x86/AntilatencyTrackingAlignment.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/Windows.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/Windows/x64.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/Windows/x64/AntilatencyAltTracking.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/Windows/x64/AntilatencyAltTracking.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/Windows/x64/AntilatencyBracer.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/Windows/x64/AntilatencyBracer.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/Windows/x64/AntilatencyDeviceNetwork.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/Windows/x64/AntilatencyDeviceNetwork.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/Windows/x64/AntilatencyHardwareExtensionInterface.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/Windows/x64/AntilatencyHardwareExtensionInterface.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/Windows/x64/AntilatencyRadioMetrics.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/Windows/x64/AntilatencyRadioMetrics.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/Windows/x64/AntilatencyStorageClient.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/Windows/x64/AntilatencyStorageClient.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/Windows/x64/AntilatencyTrackingAlignment.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/Windows/x64/AntilatencyTrackingAlignment.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/Windows/x86.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/Windows/x86/AntilatencyAltTracking.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/Windows/x86/AntilatencyAltTracking.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/Windows/x86/AntilatencyBracer.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/Windows/x86/AntilatencyBracer.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/Windows/x86/AntilatencyDeviceNetwork.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/Windows/x86/AntilatencyDeviceNetwork.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/Windows/x86/AntilatencyHardwareExtensionInterface.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/Windows/x86/AntilatencyHardwareExtensionInterface.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/Windows/x86/AntilatencyRadioMetrics.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/Windows/x86/AntilatencyRadioMetrics.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/Windows/x86/AntilatencyStorageClient.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/Windows/x86/AntilatencyStorageClient.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/Windows/x86/AntilatencyTrackingAlignment.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Plugins/Windows/x86/AntilatencyTrackingAlignment.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Prefabs/AltBracersRig.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Prefabs/AltBracersRig.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Prefabs/AltRig.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Prefabs/AltRig.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Prefabs/AltTagsRig.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Prefabs/AltTagsRig.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Resources.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Resources/AltTrackingBars.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Resources/AltTrackingBars.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Resources/AltTrackingBoundaries.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Resources/AltTrackingBoundaries.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Resources/AltTrackingMarkers.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Resources/AltTrackingMarkers.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Samples.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Samples/AltSample.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Samples/AltSample.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Samples/BracerSample.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Samples/BracerSample.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Samples/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Samples/Materials/Checker.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Samples/Materials/Checker.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Samples/Materials/Checker.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Samples/Materials/Checker.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Samples/Materials/Floor.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Samples/Materials/Floor.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Samples/Materials/Sky.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Samples/Materials/Sky.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Samples/Materials/Sky.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Samples/Materials/Sky.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Samples/Materials/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Samples/Materials/Textures/Checker.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Samples/Materials/Textures/Checker.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Samples/RadioMetricsExample.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Samples/RadioMetricsExample.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Samples/TagSample.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Samples/TagSample.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Alt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Alt/Environment.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Alt/Environment/AltEnvironment.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Alt/Environment/AltEnvironment.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Alt/Environment/AltEnvironmentComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Alt/Environment/AltEnvironmentComponent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Alt/Environment/AltEnvironmentContour.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Alt/Environment/AltEnvironmentContour.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Alt/Environment/AltEnvironmentContoursDrawer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Alt/Environment/AltEnvironmentContoursDrawer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Alt/Environment/AltEnvironmentMarkersDrawer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Alt/Environment/AltEnvironmentMarkersDrawer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Alt/Tracking.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Alt/Tracking/AltTracking.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Alt/Tracking/AltTracking.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Alt/Tracking/AltTrackingDirect.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Alt/Tracking/AltTrackingDirect.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Alt/Tracking/AltTrackingTag.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Alt/Tracking/AltTrackingTag.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Alt/Tracking/AltTrackingUsbSocket.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Alt/Tracking/AltTrackingUsbSocket.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Bracer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Bracer/Bracer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Bracer/Bracer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Bracer/BracerComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Bracer/BracerComponent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Core.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Core/AndroidJniWrapper.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Core/AndroidJniWrapper.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Core/Antilatency.Alt.Tracking.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Core/Antilatency.Alt.Tracking.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Core/Antilatency.Bracer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Core/Antilatency.Bracer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Core/Antilatency.DeviceNetwork.Interop.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Core/Antilatency.DeviceNetwork.Interop.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Core/Antilatency.DeviceNetwork.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Core/Antilatency.DeviceNetwork.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Core/Antilatency.HardwareExtensionInterface.Interop.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Core/Antilatency.HardwareExtensionInterface.Interop.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Core/Antilatency.HardwareExtensionInterface.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Core/Antilatency.HardwareExtensionInterface.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Core/Antilatency.InterfaceContract.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Core/Antilatency.InterfaceContract.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Core/Antilatency.Math.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Core/Antilatency.Math.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Core/Antilatency.RadioMetrics.Interop.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Core/Antilatency.RadioMetrics.Interop.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Core/Antilatency.RadioMetrics.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Core/Antilatency.RadioMetrics.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Core/Antilatency.StorageClient.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Core/Antilatency.StorageClient.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Core/Antilatency.TrackingAlignment.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Core/Antilatency.TrackingAlignment.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/DeviceNetwork.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/DeviceNetwork/DeviceNetwork.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/DeviceNetwork/DeviceNetwork.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/DeviceNetwork/DeviceNetworkTypes.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/DeviceNetwork/DeviceNetworkTypes.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Editor/AltEnvironmentContourEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Editor/AltEnvironmentContourEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Editor/AltEnvironmentContoursDrawerEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Editor/AltEnvironmentContoursDrawerEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Editor/Antilatency.Integration.Editor.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Editor/Antilatency.Integration.Editor.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Editor/AntilatencyInterfaceContractEnumPropertyDrawer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Editor/AntilatencyInterfaceContractEnumPropertyDrawer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Editor/CustomPropertyDrawers.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Editor/CustomPropertyDrawers.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Editor/RadioMetricsExampleEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Editor/RadioMetricsExampleEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/HardwareExtensionInterface.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/HardwareExtensionInterface/ExtensionBoardExample.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/HardwareExtensionInterface/ExtensionBoardExample.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Math.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Math/MathTypes.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Math/MathTypes.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/RadioMetrics.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/RadioMetrics/RadioMetricsExample.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/RadioMetrics/RadioMetricsExample.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/StorageClient.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/StorageClient.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Shaders.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Shaders/AltTrackingBoundaries.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Shaders/AltTrackingBoundaries.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Textures/grid_alpha.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Textures/grid_alpha.tga.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Version.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antilatency/Integration/Version.info.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/UI/UIBlurMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/UI/UIBlurMaterial.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenuMaterialUI.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenuMaterialUI.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/RecordingScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/RecordingScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DataVisualiser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DataVisualiser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/ExtendedSliderEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/ExtendedSliderEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ConnectionConfigurator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ConnectionConfigurator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnvironmentVisualizer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnvironmentVisualizer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Exporter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Exporter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/FileUtils/NativeAndroidExporter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FileUtils/NativeAndroidExporter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RecordVisualization/ReplayInstruments.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RecordVisualization/ReplayInstruments.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RecordVisualization/ReplayManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RecordVisualization/ReplayManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Helpers/SceneStart.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Helpers/SceneStart.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Threading/ThreadedMethodInvoker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Threading/ThreadedMethodInvoker.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/BlurAnimationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/BlurAnimationController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ButtonLongPress.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ButtonLongPress.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ExtendedSlider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ExtendedSlider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIArrowsRotation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIArrowsRotation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIElementManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIElementManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shaders/SimpleGrabPassBlur.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/SimpleGrabPassBlur.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Unity-UI-Rounded-Corners/Examples/RoundedCornersTextureMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Unity-UI-Rounded-Corners/Examples/RoundedCornersTextureMaterial.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +327,7 @@
     <setting file="file://C:/Program Files/Unity/Hub/Editor/2019.3.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Tests/Runtime/Button/TestButton.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIArrowsRotation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Scripts/Dispatcher.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://C:/Program Files/Unity/Hub/Editor/2019.3.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Selectable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://C:/Program Files/Unity/Hub/Editor/2019.3.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Button.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4A3ACBF9-5658-4327-8F33-A8C814FDDBD1/2a/f60c04eb/GeneratedByOldBindingsGeneratorAttribute.cs" root0="SKIP_HIGHLIGHTING" />
@@ -46,18 +336,22 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E5B75411-C8CD-4BFA-A9E7-60BE20206F29/42/ae3ee984/JobProducerTypeAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E81851A0-DC73-4A79-AFA9-F5B7273162BE/14/3f497722/StringBuilder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Scripts/NativeAndroidExporter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/ExecuteEvents.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/62FFEEB7-EC02-4BEA-B61E-5FBF8D44AC5B/81/7d57688e/Assembly.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E5B75411-C8CD-4BFA-A9E7-60BE20206F29/bb/5f377ad7/SceneManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/BackGestureInvoker.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.antilatency.sdk@c2f6864b87/Runtime/Modules/DeviceNetwork/DeviceNetwork.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/62FFEEB7-EC02-4BEA-B61E-5FBF8D44AC5B/71/36ff7a01/Attribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/BlurAnimationController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E5B75411-C8CD-4BFA-A9E7-60BE20206F29/46/ca38ab24/IJob.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9577AC7A-62EF-4317-9789-031239BA8798/a2/3e1c0ab9/ParamsArray.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E5B75411-C8CD-4BFA-A9E7-60BE20206F29/c6/9982cf2c/AsyncOperation.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.antilatency.sdk@c2f6864b87/Runtime/Modules/AltEnvironment/AltEnvironmentMarkersDrawer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E5B75411-C8CD-4BFA-A9E7-60BE20206F29/76/93a907a7/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9577AC7A-62EF-4317-9789-031239BA8798/37/64c83ab0/String.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/Lab5_example.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.antilatency.sdk@c2f6864b87/Runtime/Modules/AltTracking/AltTrackingDirect.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E5B75411-C8CD-4BFA-A9E7-60BE20206F29/12/478006cf/WaitUntil.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E5B75411-C8CD-4BFA-A9E7-60BE20206F29/fd/c8ac2019/Quaternion.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9577AC7A-62EF-4317-9789-031239BA8798/bd/513af8b1/DateTime.cs" root0="SKIP_HIGHLIGHTING" />
@@ -72,6 +366,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9577AC7A-62EF-4317-9789-031239BA8798/c2/bae7aafd/Thread.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Demo_Unity_FireExtinguisher/Assets/Scripts/Editor/FireAreaControllerEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FileUtils/AsyncFileUtils.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Button.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/ButtonLongPress.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E5B75411-C8CD-4BFA-A9E7-60BE20206F29/f6/a63098b4/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9577AC7A-62EF-4317-9789-031239BA8798/e2/3f254aec/AsyncTaskMethodBuilder`1.cs" root0="FORCE_HIGHLIGHTING" />
@@ -79,11 +374,14 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9577AC7A-62EF-4317-9789-031239BA8798/b0/d02cc2ae/AsyncMethodBuilderCore.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Threading/Dispatcher.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FPSSetter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/StandaloneInputModule.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FileUtils/ColladaFileHelper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695D1CC9-3CCA-4506-9C52-8C15C9FDD749/7a/d8d7df76/ExceptionDispatchInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/07C89F75-2069-4139-9913-32D3CF930D48/0e/f4e2f25b/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Threading/ThreadedMethodInvoker.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695D1CC9-3CCA-4506-9C52-8C15C9FDD749/70/6d050e61/ThreadPoolWorkQueue.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/62FFEEB7-EC02-4BEA-B61E-5FBF8D44AC5B/6d/9240eb41/StreamReader.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E5B75411-C8CD-4BFA-A9E7-60BE20206F29/88/5c3947c7/Handheld.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.2.17/Editor/DirectorStyles.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/ExtendedSliderEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E5B75411-C8CD-4BFA-A9E7-60BE20206F29/03/b5206a27/SetupCoroutine.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://C:/Program Files/Unity/Hub/Editor/2019.3.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Layout/CanvasScaler.cs" root0="SKIP_HIGHLIGHTING" />
@@ -94,6 +392,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIElementManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9577AC7A-62EF-4317-9789-031239BA8798/76/090a8415/FileStream.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E81851A0-DC73-4A79-AFA9-F5B7273162BE/90/b9acea6b/Timer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/UIBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIElementScaler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9577AC7A-62EF-4317-9789-031239BA8798/a5/b995e031/ThreadPoolWorkQueue.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/22BACE76-DF44-4A70-B57C-8B9F1CA83160/35/bb18fb4a/IPointerUpHandler.cs" root0="SKIP_HIGHLIGHTING" />
@@ -104,6 +403,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/RecordVisualization/ReplayInstruments.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://C:/Program Files/Unity/Hub/Editor/2019.3.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/ExecuteEvents.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Maths/MatrixExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695D1CC9-3CCA-4506-9C52-8C15C9FDD749/51/d18b2a64/Task.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -118,7 +418,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Editor/ExtendedSliderEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FileUtils/AsyncFileUtils.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UIElementManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Helpers/SceneStart.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Editor/ButtonExtensionEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/ButtonExtension.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FileUtils/FileDeletingUtility.cs" />
@@ -137,23 +436,25 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/BackGestureInvoker.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SettingsController.cs" />
         <option value="$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.2.17/Editor/DirectorStyles.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Threading/ThreadedMethodInvoker.cs" />
         <option value="$PROJECT_DIR$/Assets/Antilatency/Integration/Scripts/Alt/Environment/AltEnvironmentMarkersDrawer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/EnvironmentVisualizer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIElementManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Shaders/SimpleGrabPassBlur.shader" />
         <option value="$PROJECT_DIR$/Assets/Shaders/DiffuseNormalSpecularDissolve.shader" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ConnectionConfigurator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIArrowsRotation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/BlurAnimationController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DataVisualiser.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RecordVisualization/ReplayManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/FileUtils/NativeAndroidExporter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/ExtendedSlider.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/ButtonLongPress.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Persistent/SettingsManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RecordVisualization/ReplayInstruments.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnvironmentVisualizer.cs" />
+        <option value="$PROJECT_DIR$/Library/PackageCache/com.antilatency.sdk@c2f6864b87/Runtime/Modules/AltEnvironment/AltEnvironmentMarkersDrawer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ConnectionConfigurator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Helpers/SceneStart.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Exporter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Threading/ThreadedMethodInvoker.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FileUtils/NativeAndroidExporter.cs" />
       </list>
     </option>
   </component>
@@ -164,8 +465,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.54980695" />
-    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.21003862" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.5491106" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.21036349" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -183,10 +484,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="868">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="868" />
+      <option name="pid" />
       <option name="selectedOptions">
         <set />
       </option>
@@ -238,7 +539,12 @@
       <workItem from="1623227452435" duration="12495000" />
       <workItem from="1634935469041" duration="620000" />
       <workItem from="1638444827385" duration="5242000" />
-      <workItem from="1638519894361" duration="5515000" />
+      <workItem from="1638519894361" duration="9351000" />
+      <workItem from="1638786968597" duration="4222000" />
+      <workItem from="1638882655120" duration="2867000" />
+      <workItem from="1638972278867" duration="742000" />
+      <workItem from="1638975531585" duration="635000" />
+      <workItem from="1639655276477" duration="609000" />
     </task>
     <servers />
   </component>
@@ -251,73 +557,109 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1376" height="464" key="DebuggerActiveHint" timestamp="1638524864202">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1376" height="464" key="DebuggerActiveHint" timestamp="1638788186672">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1376" height="464" key="DebuggerActiveHint/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1638524864202" />
-    <state width="1326" height="394" key="GridCell.Tab.0.bottom" timestamp="1638524774473">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1376" height="464" key="DebuggerActiveHint/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1638788186672" />
+    <state width="1324" height="67" key="GridCell.Tab.0.bottom" timestamp="1638799504699">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1326" height="394" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1638524774473" />
-    <state width="1326" height="394" key="GridCell.Tab.0.center" timestamp="1638524774473">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1325" height="67" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1638539664452" />
+    <state width="1324" height="67" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1638799504699" />
+    <state width="1324" height="67" key="GridCell.Tab.0.center" timestamp="1638799504699">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1326" height="394" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1638524774473" />
-    <state width="1326" height="394" key="GridCell.Tab.0.left" timestamp="1638524774473">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1325" height="67" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1638539664452" />
+    <state width="1324" height="67" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1638799504699" />
+    <state width="1324" height="67" key="GridCell.Tab.0.left" timestamp="1638799504699">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1326" height="394" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1638524774473" />
-    <state width="1326" height="394" key="GridCell.Tab.0.right" timestamp="1638524774473">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1325" height="67" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1638539664452" />
+    <state width="1324" height="67" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1638799504699" />
+    <state width="1324" height="67" key="GridCell.Tab.0.right" timestamp="1638799504699">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1326" height="394" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1638524774473" />
-    <state width="1326" height="394" key="GridCell.Tab.1.bottom" timestamp="1638524785529">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1325" height="67" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1638539664452" />
+    <state width="1324" height="67" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1638799504699" />
+    <state width="1324" height="67" key="GridCell.Tab.1.bottom" timestamp="1638799504699">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1326" height="394" key="GridCell.Tab.1.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1638524785529" />
-    <state width="1326" height="394" key="GridCell.Tab.1.center" timestamp="1638524785529">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1325" height="67" key="GridCell.Tab.1.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1638539673899" />
+    <state width="1324" height="67" key="GridCell.Tab.1.bottom/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1638799504699" />
+    <state width="1324" height="67" key="GridCell.Tab.1.center" timestamp="1638799504699">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1326" height="394" key="GridCell.Tab.1.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1638524785529" />
-    <state width="1326" height="394" key="GridCell.Tab.1.left" timestamp="1638524785529">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1325" height="67" key="GridCell.Tab.1.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1638539673898" />
+    <state width="1324" height="67" key="GridCell.Tab.1.center/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1638799504699" />
+    <state width="1324" height="67" key="GridCell.Tab.1.left" timestamp="1638799504699">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1326" height="394" key="GridCell.Tab.1.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1638524785529" />
-    <state width="1326" height="394" key="GridCell.Tab.1.right" timestamp="1638524785529">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1325" height="67" key="GridCell.Tab.1.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1638539673898" />
+    <state width="1324" height="67" key="GridCell.Tab.1.left/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1638799504699" />
+    <state width="1324" height="67" key="GridCell.Tab.1.right" timestamp="1638799504699">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1326" height="394" key="GridCell.Tab.1.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1638524785529" />
-    <state width="1326" height="394" key="GridCell.Tab.2.bottom" timestamp="1638524774361">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1325" height="67" key="GridCell.Tab.1.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1638539673899" />
+    <state width="1324" height="67" key="GridCell.Tab.1.right/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1638799504699" />
+    <state width="1324" height="67" key="GridCell.Tab.2.bottom" timestamp="1638799504699">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1326" height="394" key="GridCell.Tab.2.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1638524774361" />
-    <state width="1326" height="394" key="GridCell.Tab.2.center" timestamp="1638524774361">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1325" height="67" key="GridCell.Tab.2.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1638539664356" />
+    <state width="1324" height="67" key="GridCell.Tab.2.bottom/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1638799504699" />
+    <state width="1324" height="67" key="GridCell.Tab.2.center" timestamp="1638799504699">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1326" height="394" key="GridCell.Tab.2.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1638524774361" />
-    <state width="1326" height="394" key="GridCell.Tab.2.left" timestamp="1638524774361">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1325" height="67" key="GridCell.Tab.2.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1638539664356" />
+    <state width="1324" height="67" key="GridCell.Tab.2.center/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1638799504699" />
+    <state width="1324" height="67" key="GridCell.Tab.2.left" timestamp="1638799504699">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1326" height="394" key="GridCell.Tab.2.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1638524774361" />
-    <state width="1326" height="394" key="GridCell.Tab.2.right" timestamp="1638524774361">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1325" height="67" key="GridCell.Tab.2.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1638539664355" />
+    <state width="1324" height="67" key="GridCell.Tab.2.left/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1638799504699" />
+    <state width="1324" height="67" key="GridCell.Tab.2.right" timestamp="1638799504699">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1326" height="394" key="GridCell.Tab.2.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1638524774361" />
-    <state width="1326" height="394" key="GridCell.Tab.3.bottom" timestamp="1638524774361">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1325" height="67" key="GridCell.Tab.2.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1638539664356" />
+    <state width="1324" height="67" key="GridCell.Tab.2.right/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1638799504699" />
+    <state width="1324" height="67" key="GridCell.Tab.3.bottom" timestamp="1638799504700">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1326" height="394" key="GridCell.Tab.3.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1638524774361" />
-    <state width="1326" height="394" key="GridCell.Tab.3.center" timestamp="1638524774361">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1325" height="67" key="GridCell.Tab.3.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1638539664356" />
+    <state width="1324" height="67" key="GridCell.Tab.3.bottom/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1638799504700" />
+    <state width="1324" height="67" key="GridCell.Tab.3.center" timestamp="1638799504700">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1326" height="394" key="GridCell.Tab.3.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1638524774361" />
-    <state width="1326" height="394" key="GridCell.Tab.3.left" timestamp="1638524774361">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1325" height="67" key="GridCell.Tab.3.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1638539664356" />
+    <state width="1324" height="67" key="GridCell.Tab.3.center/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1638799504700" />
+    <state width="1324" height="67" key="GridCell.Tab.3.left" timestamp="1638799504700">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1326" height="394" key="GridCell.Tab.3.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1638524774361" />
-    <state width="1326" height="394" key="GridCell.Tab.3.right" timestamp="1638524774361">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1325" height="67" key="GridCell.Tab.3.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1638539664356" />
+    <state width="1324" height="67" key="GridCell.Tab.3.left/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1638799504700" />
+    <state width="1324" height="67" key="GridCell.Tab.3.right" timestamp="1638799504700">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1326" height="394" key="GridCell.Tab.3.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1638524774361" />
+    <state width="1325" height="67" key="GridCell.Tab.3.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1638539664356" />
+    <state width="1324" height="67" key="GridCell.Tab.3.right/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1638799504700" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Exporter.cs</url>
+          <line>163</line>
+          <properties documentPath="D:\CameraTracker\CameraTrackingRecorder\Assets\Scripts\Exporter.cs" initialLine="163">
+            <startOffsets>
+              <option value="5574" />
+            </startOffsets>
+            <endOffsets>
+              <option value="5589" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

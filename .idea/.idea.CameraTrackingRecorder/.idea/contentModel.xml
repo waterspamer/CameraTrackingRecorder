@@ -4,86 +4,11 @@
     <e p="C:\Users\maxim.sviridov\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
     <e p="C:\Users\maxim.sviridov\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_CameraTrackingRecorder.1651527431.00" t="ExcludeRecursive" />
     <e p="D:\CameraTracker\CameraTrackingRecorder" t="IncludeRecursive">
-      <e p="Antilatency.Integration.csproj" t="IncludeRecursive" />
-      <e p="Antilatency.Integration.Editor.csproj" t="IncludeRecursive" />
       <e p="Antilatency.UnityPrototypingTools.csproj" t="IncludeRecursive" />
       <e p="Antilatency.UnityPrototypingTools.Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="Antilatency" t="Include">
-          <e p="Integration" t="Include">
-            <e p="Antilatency.Integration.asmdef" t="Include" />
-            <e p="LICENSE.txt" t="Include" />
-            <e p="Samples" t="Include">
-              <e p="Materials" t="Include">
-                <e p="Checker.shader" t="Include" />
-                <e p="Sky.shader" t="Include" />
-              </e>
-            </e>
-            <e p="Scripts" t="Include">
-              <e p="Alt" t="Include">
-                <e p="Environment" t="Include">
-                  <e p="AltEnvironment.cs" t="Include" />
-                  <e p="AltEnvironmentComponent.cs" t="Include" />
-                  <e p="AltEnvironmentContour.cs" t="Include" />
-                  <e p="AltEnvironmentContoursDrawer.cs" t="Include" />
-                  <e p="AltEnvironmentMarkersDrawer.cs" t="Include" />
-                </e>
-                <e p="Tracking" t="Include">
-                  <e p="AltTracking.cs" t="Include" />
-                  <e p="AltTrackingDirect.cs" t="Include" />
-                  <e p="AltTrackingTag.cs" t="Include" />
-                  <e p="AltTrackingUsbSocket.cs" t="Include" />
-                </e>
-              </e>
-              <e p="Bracer" t="Include">
-                <e p="Bracer.cs" t="Include" />
-                <e p="BracerComponent.cs" t="Include" />
-              </e>
-              <e p="Core" t="Include">
-                <e p="AndroidJniWrapper.cs" t="Include" />
-                <e p="Antilatency.Alt.Tracking.cs" t="Include" />
-                <e p="Antilatency.Bracer.cs" t="Include" />
-                <e p="Antilatency.DeviceNetwork.cs" t="Include" />
-                <e p="Antilatency.DeviceNetwork.Interop.cs" t="Include" />
-                <e p="Antilatency.HardwareExtensionInterface.cs" t="Include" />
-                <e p="Antilatency.HardwareExtensionInterface.Interop.cs" t="Include" />
-                <e p="Antilatency.InterfaceContract.cs" t="Include" />
-                <e p="Antilatency.Math.cs" t="Include" />
-                <e p="Antilatency.RadioMetrics.cs" t="Include" />
-                <e p="Antilatency.RadioMetrics.Interop.cs" t="Include" />
-                <e p="Antilatency.StorageClient.cs" t="Include" />
-                <e p="Antilatency.TrackingAlignment.cs" t="Include" />
-              </e>
-              <e p="DeviceNetwork" t="Include">
-                <e p="DeviceNetwork.cs" t="Include" />
-                <e p="DeviceNetworkTypes.cs" t="Include" />
-              </e>
-              <e p="Editor" t="Include">
-                <e p="AltEnvironmentContourEditor.cs" t="Include" />
-                <e p="AltEnvironmentContoursDrawerEditor.cs" t="Include" />
-                <e p="Antilatency.Integration.Editor.asmdef" t="Include" />
-                <e p="AntilatencyInterfaceContractEnumPropertyDrawer.cs" t="Include" />
-                <e p="CustomPropertyDrawers.cs" t="Include" />
-                <e p="RadioMetricsExampleEditor.cs" t="Include" />
-              </e>
-              <e p="HardwareExtensionInterface" t="Include">
-                <e p="ExtensionBoardExample.cs" t="Include" />
-              </e>
-              <e p="Math" t="Include">
-                <e p="MathTypes.cs" t="Include" />
-              </e>
-              <e p="RadioMetrics" t="Include">
-                <e p="RadioMetricsExample.cs" t="Include" />
-              </e>
-              <e p="StorageClient.cs" t="Include" />
-            </e>
-            <e p="Shaders" t="Include">
-              <e p="AltTrackingBoundaries.shader" t="Include" />
-            </e>
-          </e>
-        </e>
         <e p="colladaTestFile.txt" t="Include" />
         <e p="Plugins" t="Include">
           <e p="NativeShare" t="Include">
@@ -107,7 +32,6 @@
           <e p="AnimationCurveBuilder.cs" t="Include" />
           <e p="BaseExporter.cs" t="Include" />
           <e p="ButtonExtension.cs" t="Include" />
-          <e p="ConnectionConfigurator.cs" t="Include" />
           <e p="CsvToAnimHelper.cs" t="Include" />
           <e p="DataVisualiser.cs" t="Include" />
           <e p="Editor" t="Include">
