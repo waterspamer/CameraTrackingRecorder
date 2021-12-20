@@ -137,11 +137,11 @@ public class Exporter : MonoBehaviour
                     break;
                 }
                 default:
-                    resultColladaFile.AppendLine(linesFromFile[i]).Replace("\n", "");
+                    resultColladaFile.AppendLine((linesFromFile[i]).Replace(System.Environment.NewLine, ""));
                     break;
             }
         }
-        File.WriteAllLines(fileName, resultColladaFile.ToString().Split('\n'));
+        File.WriteAllLines(fileName, resultColladaFile.ToString().Split(Environment.NewLine.ToCharArray()));
     }
     private Thread _writingThread;
     private UnityEvent _frameAddingCallback;

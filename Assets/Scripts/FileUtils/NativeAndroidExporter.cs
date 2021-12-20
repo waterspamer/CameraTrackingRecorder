@@ -99,20 +99,35 @@ namespace FileUtils
                     var match = Regex.Match(linesFromFile[45], valuePattern);
                     StringBuilder dataString = new StringBuilder(); 
                     foreach (var item in data)
-                        dataString.Append(item.ToString("r") + " ");
+                        dataString.Append(item.ToString("R", System.Globalization.CultureInfo.InvariantCulture) + " ");
                     var replace = linesFromFile[45].Replace(match.Value, $">{dataString}<");
                     resultColladaFile.AppendLine(replace);
                 }
                 else resultColladaFile.AppendLine(linesFromFile[i]);
             }
 
+            Debug.Log(Environment.NewLine);
 #if UNITY_EDITOR
-            File.WriteAllLines($"D:\\records\\{element.fileName}", resultColladaFile.ToString().Split('\n'));
-            return;
+
+            using (StreamWriter sWriter = new StreamWriter($"D:\\records\\{element.fileName}"))
+            {
+                sWriter.Write(resultColladaFile);
+            }
+            
+            //File.WriteAllLines($"D:\\records\\{element.fileName}", resultColladaFile.ToString().Split('\n'));
 #endif
+            
+#if UNITY_ANDROID
             string cachePath = Path.Combine( SettingsManager.GetInstance.TemporaryDataPath, $"{element.fileName}" );
-            File.WriteAllLines(cachePath, resultColladaFile.ToString().Split('\n'));
+            //File.WriteAllLines(cachePath, resultColladaFile.ToString().Split(Convert.ToChar(Environment.NewLine)));
+            using (StreamWriter sWriter = new StreamWriter(cachePath))
+            {
+                sWriter.Write(resultColladaFile);
+            }
             _nativeAndroidShare.AddFile(cachePath);
+#endif
         }
+
+
     }
 }
