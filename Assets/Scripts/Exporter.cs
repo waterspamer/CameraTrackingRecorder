@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -17,7 +18,8 @@ public class Exporter : MonoBehaviour
 {
     [SerializeField] private TextAsset referenceColladaTextAsset;
 
-    public Text recordInfoText;
+    public Text recordedFramesCountText;
+    public Text recordDurationText;
 
     public int frameCounter = 0;
     
@@ -163,7 +165,7 @@ public class Exporter : MonoBehaviour
         {
             frameCounter++;
             var timeDelta = (DateTime.Now - startTime);
-            _timeData.Add(timeDelta.ToString("s'.'fff"));
+            _timeData.Add((Math.Round((float)timeDelta.TotalSeconds, 3)).ToString(CultureInfo.InvariantCulture));
             TrackingDirect.GetTrackingState(out var state);
             _positions.Add(state.pose.position);
             _rotations.Add(state.pose.rotation);
@@ -186,7 +188,8 @@ public class Exporter : MonoBehaviour
         yield return new WaitForSeconds(.1f);
         while (_recording)
         {
-            recordInfoText.text = $"{_timeData?.Last()} s {_timeData?.Count} frames";
+            recordedFramesCountText.text = $"{_timeData?.Count} frames";
+            recordDurationText.text = $"{_timeData?.Last()} s";
             yield return new WaitForSeconds(1f/60f);
         }
     }

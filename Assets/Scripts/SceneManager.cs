@@ -1,11 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SceneManager : MonoBehaviour
 {
-    public void LoadScene(string name)
-    {
+    void Awake()=>
+        Application.targetFrameRate = 60;
+
+    public void LoadScene(string name)=>
         UnityEngine.SceneManagement.SceneManager.LoadScene(name);
-    }
+    
 }
