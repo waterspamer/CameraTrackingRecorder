@@ -14,7 +14,7 @@ namespace Helpers
 
         private void Start()
         {
-            CheckForAntilatencyServiceInstallation();
+            //CheckForAntilatencyServiceInstallation();
         }
 
         public void CheckForAntilatencyServiceInstallation()
