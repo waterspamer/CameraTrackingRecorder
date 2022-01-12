@@ -1,11 +1,11 @@
 {
   "dependencies": {
     "com.antilatency.sdk": {
-      "version": "https://github.com/AntilatencySDK/Release_3.4.0.git#subset-4ded4e3644017e6e7f407705c861c170eca4f3f5",
+      "version": "https://github.com/AntilatencySDK/Release_3.5.0-rc.git#subset-eb1e612b3275e45196b861ae97ff825554d3a830",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "c2f6864b8705546d34ec6ba8c821cc9ff2a431c9"
+      "hash": "40c4d163af8474c374adb65b285a2585bb127628"
     },
     "com.autodesk.fbx": {
       "version": "3.1.0-preview.2",

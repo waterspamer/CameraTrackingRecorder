@@ -8,10 +8,10 @@ using UnityEngine;
 
 public class EnvironmentVisualizer : AltEnvironmentMarkersDrawer
 {
-    protected new void Start() 
+    protected void Start() 
     {
-        base.Start();
-        _markerMaterial.color = Color.green;
+        //base.Start();
+        //_markerMaterial.color = Color.green;
         StartCoroutine(DelayedAction(() =>
         {
             foreach (var markerTransform in from marker in base._markers

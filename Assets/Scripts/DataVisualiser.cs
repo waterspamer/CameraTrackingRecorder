@@ -29,6 +29,33 @@ public class DataVisualiser : MonoBehaviour
         var rect = contentView.GetComponent<RectTransform>();
         rect.sizeDelta = new Vector2(0, (height)* fileInfo.Length);
     }
+
+
+    public VerticalLayoutGroup contentLayoutGroup; 
+    
+    private void CreateAlternativeContentScrollView()
+    {
+        var info = new DirectoryInfo(Application.persistentDataPath);
+        var fileInfo =  info.GetFiles().OrderByDescending(file => file.CreationTime).ToArray();
+        newElementText.SetActive(fileInfo.Length == 0);
+        Debug.Log(info.FullName);
+        var height = UIRecordPrefab.GetComponent<RectTransform>().rect.height;
+        var rect = contentView.GetComponent<RectTransform>();
+        rect.sizeDelta = new Vector2(0, (height)* fileInfo.Length);
+        var parentGameObject = contentView;
+        
+        for (int i = 0; i < fileInfo.Length; ++i) {
+            var obj = Instantiate(UIRecordPrefab, new Vector3(contentView.GetComponent<RectTransform>().rect.width/2, -(i+1) * height , 0), 
+                Quaternion.identity, parentGameObject.GetComponent<RectTransform>());
+            
+            var tmp = obj.GetComponent<UIElementManager>();
+            tmp.fileName = fileInfo[i].Name;
+            tmp.creationDate = fileInfo[i].CreationTime.ToString("dd/MMM").Replace('/', ' ');
+            tmp.fileSize = $"{(int) (fileInfo[i].Length / 1000f)} KB";
+            tmp.Initialize();
+        }
+
+    }
     
 
     private void CreateContentScrollView() {
@@ -61,5 +88,6 @@ public class DataVisualiser : MonoBehaviour
     void Awake() {
         Permission.RequestUserPermission(Permission.FineLocation);
         CreateContentScrollView();
+        //CreateAlternativeContentScrollView();
     }
 }

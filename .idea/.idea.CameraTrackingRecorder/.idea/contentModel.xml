@@ -52,6 +52,7 @@
           <e p="Helpers" t="Include">
             <e p="AntilatencyServiceChecker.cs" t="Include" />
             <e p="SceneStart.cs" t="Include" />
+            <e p="TargetFrameRate.cs" t="Include" />
           </e>
           <e p="LocalPoseTrender.cs" t="Include" />
           <e p="Maths" t="Include">
