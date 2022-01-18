@@ -20,7 +20,7 @@ public class TargetFrameRate : MonoBehaviour
     private void Update()
     {
         frameTimes.Enqueue(Time.deltaTime);
-        fps.text = (1f/frameTimes.Average()).ToString();
+        if (fps) fps.text = (1f/frameTimes.Average()).ToString();
         if (frameTimes.Count > 19) frameTimes.Dequeue();
     }
 
